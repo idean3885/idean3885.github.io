@@ -1,0 +1,73 @@
+theme: jekyll-theme-chirpy
+
+lang: ko
+timezone: Asia/Seoul
+
+title: idean3885
+tagline: AI 기반 개발 방법론
+description: >-
+  AI로 코드를 짜기 시작하면서 달라진 개발 방식,
+  자동화된 이슈 사이클, 개발 방법론을 제품처럼 다루는 이야기.
+
+url: "https://idean3885.github.io"
+baseurl: ""
+
+github:
+  username: idean3885
+
+social:
+  name: idean3885
+  links:
+    - https://github.com/idean3885
+
+theme_mode: light
+
+toc: true
+paginate: 10
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _tabs
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - "*.config.js"
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

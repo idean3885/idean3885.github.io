@@ -1,0 +1,13 @@
+.idea
+.omc
+
+# Claude Code 로컬 설정
+.claude/settings.local.json
+.claude/.gh-token
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
