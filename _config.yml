@@ -4,10 +4,10 @@ lang: ko
 timezone: Asia/Seoul
 
 title: idean3885
-tagline: AI 기반 개발 방법론
+tagline: 기술, 방법론, 그리고 성장의 기록
 description: >-
-  AI로 코드를 짜기 시작하면서 달라진 개발 방식,
-  자동화된 이슈 사이클, 개발 방법론을 제품처럼 다루는 이야기.
+  개발자로서의 기술적 탐구, 방법론의 진화,
+  운영 노하우와 의사결정의 기록을 담는 블로그.
 
 url: "https://idean3885.github.io"
 baseurl: ""
