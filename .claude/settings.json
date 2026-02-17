@@ -1,6 +1,10 @@
 {
   "permissions": {
-    "allow": [],
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep"
+    ],
     "deny": []
   }
 }
