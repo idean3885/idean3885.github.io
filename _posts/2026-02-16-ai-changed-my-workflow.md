@@ -74,7 +74,7 @@ AI에게 주는 컨텍스트는 토큰이고, 토큰은 돈입니다.
 좋은 방법론은 특정 프로젝트에 종속되지 않아야 합니다.
 
 ```bash
-curl -sL https://raw.githubusercontent.com/dykim-base-project/claude-devex/main/setup.sh | bash
+curl -sL https://raw.githubusercontent.com/idean3885/claude-devex/main/setup.sh | bash
 ```
 
 셸 스크립트 한 줄로 어떤 프로젝트에든 같은 개발 사이클을 적용할 수 있게 만들었습니다. 핵심 스킬(범용)과 프로젝트 프로필(특수성)을 분리해서, 방법론의 뼈대는 공유하되 각 프로젝트의 맥락은 존중하도록 설계했습니다.
@@ -83,7 +83,7 @@ curl -sL https://raw.githubusercontent.com/dykim-base-project/claude-devex/main/
 
 ## 만든 것
 
-이런 생각들을 반영해서 만든 게 [claude-devex](https://github.com/dykim-base-project/claude-devex)입니다.
+이런 생각들을 반영해서 만든 게 [claude-devex](https://github.com/idean3885/claude-devex)입니다.
 
 슬래시 커맨드 5개, 설치 스크립트 1개, 가이드 문서 몇 개. 복잡하지 않습니다.
 
