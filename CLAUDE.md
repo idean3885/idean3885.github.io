@@ -80,6 +80,7 @@ description: >-
 |----------|------------|-----------|
 | [claude-devex](https://github.com/idean3885/claude-devex) | [AI에게 코드를 맡기고 나서 달라진 일하는 방식](https://idean3885.github.io/posts/ai-changed-my-workflow/) | 커맨드명, setup.sh URL, 이슈 사이클 플로우 |
 | [claude-slack-to-notion](https://github.com/dykim-base-project/claude-slack-to-notion) | [방법론을 들고 첫 도구를 만들었다 — Slack to Notion 제작기](https://idean3885.github.io/posts/building-first-tool-with-ai/) | 프로젝트 구조, 데이터 흐름, 토큰 설계, README |
+| [claude-slack-to-notion](https://github.com/dykim-base-project/claude-slack-to-notion) | [만든 도구를 검증하다 — 테스트가 설계를 바꾼 이야기](https://idean3885.github.io/posts/testing-changed-architecture/) | uvx 배포 전환, 에러 한글화, 설치 경로, MCP 서버 패턴 |
 
 ## 이슈 사이클
 
