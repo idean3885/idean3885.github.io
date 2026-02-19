@@ -82,6 +82,7 @@ description: >-
 | [claude-slack-to-notion](https://github.com/dykim-base-project/claude-slack-to-notion) | [방법론을 들고 첫 도구를 만들었다 — Slack to Notion 제작기](https://idean3885.github.io/posts/building-first-tool-with-ai/) | 프로젝트 구조, 데이터 흐름, 토큰 설계, README |
 | [claude-slack-to-notion](https://github.com/dykim-base-project/claude-slack-to-notion) | [만든 도구를 검증하다 — 테스트가 설계를 바꾼 이야기](https://idean3885.github.io/posts/testing-changed-architecture/) | uvx 배포 전환, 에러 한글화, 설치 경로, MCP 서버 패턴 |
 | [claude-slack-to-notion](https://github.com/dykim-base-project/claude-slack-to-notion) | [비개발자 관점으로 써봤더니 설치부터 막혔다 — E2E 테스트가 가르쳐준 것들](https://idean3885.github.io/posts/e2e-lessons-from-non-developers/) | 대화형 setup.sh, ntn_ 프리픽스, E2E 시나리오, 토큰 설정 UX |
+| [claude-slack-to-notion](https://github.com/dykim-base-project/claude-slack-to-notion) | [uvx가 Python 버전을 고르는 법 — requires-python의 함정](https://idean3885.github.io/posts/uvx-python-version-trap/) | requires-python 동작, setup.sh Python 버전 체크, pyproject.toml 버전 설정 |
 
 ## 이슈 사이클
 
