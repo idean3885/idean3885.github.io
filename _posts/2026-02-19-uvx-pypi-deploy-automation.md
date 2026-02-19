@@ -41,6 +41,7 @@ dependencies = [
 [project.scripts]
 slack-to-notion-mcp = "slack_to_notion.mcp_server:main"
 ```
+{: file="pyproject.toml" }
 
 `[project.scripts]`가 핵심입니다.
 `uvx slack-to-notion-mcp`를 실행했을 때 어떤 Python 함수가 호출될지를 여기서 정의합니다.
@@ -87,6 +88,7 @@ PyPI에 배포된 패키지는 `.mcp.json` 설정 한 줄로 연결됩니다.
   }
 }
 ```
+{: file=".mcp.json" }
 
 Anthropic 공식 `mcp-server-git`도 `"command": "uvx"`, `"args": ["mcp-server-git"]` 구조로 동일합니다.
 
@@ -154,6 +156,7 @@ jobs:
         env:
           UV_PUBLISH_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
 ```
+{: file=".github/workflows/pypi-publish.yml" }
 
 핵심 설계는 `validate` → `publish` 2단계 분리입니다.
 태그 버전과 `pyproject.toml` 버전이 다르면 배포 전에 실패합니다.
@@ -170,9 +173,10 @@ jobs:
 | API 토큰 | GitHub Secret에 PyPI 토큰 저장 | 양호 |
 | Trusted Publisher (OIDC) | PyPI + GitHub 환경 1회 설정 | 최상 — 시크릿 불필요 |
 
-신규 프로젝트라면 처음부터 Trusted Publisher를 쓰는 것을 권장합니다.
-PyPI 프로젝트 설정에서 GitHub 저장소와 워크플로우를 등록하면
-시크릿 없이 OIDC로 인증됩니다.
+> 신규 프로젝트라면 처음부터 Trusted Publisher를 쓰는 것을 권장합니다.
+> PyPI 프로젝트 설정에서 GitHub 저장소와 워크플로우를 등록하면
+> 시크릿 없이 OIDC로 인증됩니다.
+{: .prompt-tip }
 
 ## 마무리
 

@@ -25,7 +25,7 @@ v0.2.0을 배포하고, setup.sh로 업데이트 메커니즘까지 만들었습
 ## 1. 도입 — 배포했는데 안 되는 사람이 있다
 
 v0.2.0 배포 직후, 이렇게 생각했습니다.
-`pyproject.toml`에 `requires-python = ">=3.10"`을 써놨으니
+`pyproject.toml`{: .filepath}에 `requires-python = ">=3.10"`을 써놨으니
 3.9 사용자는 설치 단계에서 막힐 거라고.
 그러면 안내 메시지가 나올 거라고.
 그러니 "왜 안 되지"라는 상황 자체가 없을 거라고.
@@ -44,6 +44,7 @@ v0.2.0 배포 직후, 이렇게 생각했습니다.
 uv 공식 문서를 찾아보니 이런 문장이 있었습니다.
 
 > "will ignore non-global Python version requests like .python-version files and the requires-python value"
+{: .prompt-warning }
 
 `requires-python`을 무시한다.
 `.python-version` 파일도 무시한다.
@@ -72,7 +73,9 @@ uvx가 실제로 Python을 고를 때 사용하는 우선순위는 이렇습니�
 3. uv가 관리하는 Python (`~/.local/share/uv/python/`)
 4. 시스템 PATH의 Python
 
-`requires-python`은 이 목록에 없습니다.
+> `requires-python`은 이 목록에 없습니다.
+{: .prompt-danger }
+
 아무것도 지정하지 않으면 시스템에서 가장 적합한 Python,
 보통은 최신 버전을 씁니다.
 
@@ -126,6 +129,7 @@ else
   uvx --python 3.10 slack-to-notion-mcp
 fi
 ```
+{: file="setup.sh" }
 
 시스템 Python이 3.10 이상이면 그대로 실행하고,
 아니면 `--python 3.10`을 붙여 uv가 적합한 Python을 찾도록 합니다.
