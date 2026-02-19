@@ -114,7 +114,8 @@ claude --plugin-dir ~/claude-slack-to-notion  # 매 세션마다
 비개발자에게 Git은 낯선 도구입니다.
 Python 가상환경 설정은 더 낯섭니다.
 
-**비개발자 설치 경로 자체가 존재하지 않았습니다.**
+> 비개발자 설치 경로 자체가 존재하지 않았습니다.
+{: .prompt-danger }
 
 E2E 테스트를 "기획"하는 단계에서
 아키텍처 문제를 발견한 겁니다.
@@ -169,8 +170,8 @@ claude mcp add slack-to-notion \
   -- uvx slack-to-notion-mcp       # 최초 1회
 ```
 
-`git clone`도, Python 설정도,
-매 세션 `--plugin-dir` 지정도 사라졌습니다.
+> 6단계에서 2단계로. `git clone`도, Python 설정도, 매 세션 `--plugin-dir` 지정도 사라졌습니다.
+{: .prompt-tip }
 
 ## 돌아보며
 

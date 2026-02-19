@@ -41,7 +41,9 @@ uvx 전환으로 `git clone`, Python 설정, 매 세션 `--plugin-dir`은 사라
 의존성 문제는 해결된 겁니다.
 
 하지만 설치는 의존성만이 아니었습니다.
-**토큰 설정 UX가 오히려 퇴보**한 상태였습니다.
+
+> 토큰 설정 UX가 오히려 퇴보한 상태였습니다.
+{: .prompt-warning }
 
 ### claude mcp add의 현실
 
@@ -55,6 +57,7 @@ claude mcp add slack-to-notion \
   -e NOTION_PARENT_PAGE_ID=https://notion.so/... \
   -- uvx slack-to-notion-mcp
 ```
+{: file="claude mcp add 명령어" }
 
 비개발자 관점에서 보면 문제가 여러 개였습니다.
 
@@ -72,11 +75,10 @@ uvx로 의존성 자동화를 얻은 대신, 토큰 설정 경험을 잃은 셈�
 명령어 한 줄을 외우게 하는 대신,
 대화형 스크립트가 하나씩 물어보도록 만들었습니다.
 
-```
-Slack 토큰을 입력하세요 (xoxb- 또는 xoxp-로 시작): ___
-Notion API Key를 입력하세요: ___
-Notion 페이지 링크를 입력하세요: ___
-```
+> `Slack 토큰을 입력하세요 (xoxb- 또는 xoxp-로 시작): ___`
+> `Notion API Key를 입력하세요: ___`
+> `Notion 페이지 링크를 입력하세요: ___`
+{: .prompt-info }
 
 입력할 때마다 형식을 검증하고,
 잘못되면 이유를 알려주고 다시 물어봅니다.
@@ -87,9 +89,8 @@ Notion 페이지 링크를 입력하세요: ___
 대화형 스크립트를 만들고 직접 테스트하는데,
 Notion API Key 입력에서 멈췄습니다.
 
-```
-✗ 올바른 형식이 아닙니다. secret_ 로 시작해야 합니다.
-```
+> `✗ 올바른 형식이 아닙니다. secret_ 로 시작해야 합니다.`
+{: .prompt-danger }
 
 정상 발급된 키인데 거부당했습니다.
 Notion이 Internal Integration Secret 형식을

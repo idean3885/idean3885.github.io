@@ -58,7 +58,7 @@ uvx도 같은 일을 합니다.
 | 임시 실행 | `uvx <tool>` | `uv cache clean` 시 삭제 |
 | 영구 설치 | `uv tool install <tool>` | `uv tool uninstall` 시 삭제 |
 
-임시 실행의 파일은 `~/.cache/uv/`에, 영구 설치는 `~/.local/share/uv/tools/`에 저장됩니다.
+임시 실행의 파일은 `~/.cache/uv/`{: .filepath}에, 영구 설치는 `~/.local/share/uv/tools/`{: .filepath}에 저장됩니다.
 MCP 서버처럼 매 세션마다 실행되는 경우엔 캐시가 자동 재사용되어
 임시 실행이어도 체감 성능 차이는 없습니다.
 
