@@ -2,7 +2,7 @@
 title: "AI에게 코드를 맡기고 나서 달라진 일하는 방식"
 date: 2026-02-15 00:00:00 +0900
 categories: [개발 기록, AI 적응기]
-tags: [AI, Claude Code, 개발방법론, DevEx, 이슈사이클, claude-devex]
+tags: [AI, Claude Code, 개발방법론, DevEx, 이슈사이클]
 description: >-
   AI로 코드를 짜기 시작했더니 반복 업무가 오히려 늘었습니다.
   이슈 생성부터 PR까지 매번 같은 흐름을 슬래시 커맨드로 자동화한 과정과,
