@@ -24,7 +24,8 @@
 
 ## 개발 환경
 
-[claude-devex](https://github.com/idean3885/claude-devex) — AI 기반 개발 사이클 자동화 도구
+[claude-devex](https://github.com/idean3885/claude-devex) 기반 개발 사이클 + 포스팅 워크플로우(`/post`).
+상세는 [`.claude/README.md`](.claude/README.md) 참고.
 
 ## 링크
 
