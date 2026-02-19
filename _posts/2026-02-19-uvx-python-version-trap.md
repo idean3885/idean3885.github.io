@@ -137,6 +137,9 @@ if [[ -n "$PYTHON_CMD" ]]; then
      { [[ "$PYTHON_MAJOR" -eq 3 ]] && [[ "$PYTHON_MINOR" -lt 10 ]]; }; then
     PYTHON_TOO_OLD=true
   fi
+else
+  # Python 미설치 — uvx가 자동으로 3.10 다운로드
+  PYTHON_TOO_OLD=true
 fi
 
 # MCP 서버 등록 시 조건 분기
@@ -167,7 +170,7 @@ uvx에서만 무시될 뿐입니다.
 |-----------|-----------|
 | requires-python이 모든 곳에서 작동한다 | uvx와 uv tool에서는 무시된다 (의도된 설계) |
 | uvx와 uv run이 같은 방식으로 Python을 고른다 | 완전히 다른 탐색 로직을 쓴다 |
-| pyproject.toml에 버전 명시하면 충분하다 | setup.sh에서 Python 버전 체크 후 `--python` 플래그를 자동 부여해야 한다 |
+| pyproject.toml에 버전 명시하면 충분하다 | setup.sh에서 버전 체크 후 `--python`을 자동 부여해야 한다 |
 | `--python` 지정하면 시스템에 해당 버전이 있어야 하나 | uv가 자동으로 다운로드하여 실행한다 |
 
 ---

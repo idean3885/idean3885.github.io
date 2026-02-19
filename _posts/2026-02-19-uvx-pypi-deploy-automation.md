@@ -141,7 +141,6 @@ PyPI 배포 과정이 없어지니 처음에는 매력적으로 보였습니다.
    Git 직접 실행에는 이런 서명 체계가 없습니다.
 
 대안을 검토해봐야 "왜 PyPI를 쓰는가"에 대한 답이 명확해집니다.
-동작하게 만드는 것과 왜 그렇게 하는지 아는 것은 다른 문제입니다.
 
 ## 자동화 — GitHub Actions
 
@@ -207,6 +206,18 @@ jobs:
 `pyproject.toml` 버전 수정 → 커밋 → `v1.0.0` 태그 push → 자동 배포.
 손으로 `uv publish`를 실행할 일이 없습니다.
 
+인증 방식은 두 가지입니다.
+
+| 방식 | 설정 | 보안 |
+|------|------|------|
+| API 토큰 | GitHub Secret에 PyPI 토큰 저장 | 양호 |
+| Trusted Publisher (OIDC) | PyPI + GitHub 환경 1회 설정 | 최상 — 시크릿 불필요 |
+
+> 신규 프로젝트라면 처음부터 Trusted Publisher를 쓰는 것을 권장합니다.
+> PyPI 프로젝트 설정에서 GitHub 저장소와 워크플로우를 등록하면
+> 시크릿 없이 OIDC로 인증됩니다.
+{: .prompt-tip }
+
 ### 태그까지 자동화 — auto-tag.yml
 
 그런데 하나 남았습니다.
@@ -234,7 +245,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT_TOKEN }}
+          token: ${{ secrets.AUTO_TAG_PAT }}
 
       - name: 버전 읽기 + 태그 생성
         run: |
@@ -251,7 +262,7 @@ jobs:
 ```
 {: file=".github/workflows/auto-tag.yml" }
 
-주의할 점은 `GITHUB_TOKEN` 대신 `PAT_TOKEN`을 써야 한다는 것입니다.
+주의할 점은 `GITHUB_TOKEN` 대신 `AUTO_TAG_PAT`을 써야 한다는 것입니다.
 `GITHUB_TOKEN`으로 생성한 태그는 다른 워크플로우를 트리거하지 않습니다.
 GitHub의 무한 루프 방지 정책 때문입니다.
 
@@ -265,18 +276,6 @@ PR 머지 (pyproject.toml version 변경 포함)
 
 손이 닿는 곳은 `pyproject.toml`의 버전 수정뿐입니다.
 
-인증 방식은 두 가지입니다.
-
-| 방식 | 설정 | 보안 |
-|------|------|------|
-| API 토큰 | GitHub Secret에 PyPI 토큰 저장 | 양호 |
-| Trusted Publisher (OIDC) | PyPI + GitHub 환경 1회 설정 | 최상 — 시크릿 불필요 |
-
-> 신규 프로젝트라면 처음부터 Trusted Publisher를 쓰는 것을 권장합니다.
-> PyPI 프로젝트 설정에서 GitHub 저장소와 워크플로우를 등록하면
-> 시크릿 없이 OIDC로 인증됩니다.
-{: .prompt-tip }
-
 ## 몰랐던 것 → 알게 된 것
 
 | 몰랐던 것 | 알게 된 것 |
@@ -285,8 +284,6 @@ PR 머지 (pyproject.toml version 변경 포함)
 | PyPI가 빌드도 해주는지 | 저장소일 뿐 빌드하지 않음 — Maven Central과 동일 |
 | Git에서 직접 실행하면 되지 않나 | 비표준 + 매번 소스 빌드 + 보안 서명 불가로 기각 |
 | 태그 push를 수동으로 해야 하나 | auto-tag.yml로 완전 자동화 가능 |
-
----
 
 ## 마무리
 
