@@ -63,6 +63,20 @@ uv build    # dist/ 에 wheel + sdist 생성
 uv publish  # PyPI에 배포
 ```
 
+`uv build`는 두 가지 산출물을 생성합니다.
+
+| 산출물 | 형식 | 역할 |
+|--------|------|------|
+| wheel (`.whl`) | 미리 빌드된 패키지 | 설치 시 빌드 불필요 — Java `.jar`과 동일 사상 |
+| sdist (`.tar.gz`) | 소스 아카이브 | wheel 미지원 환경용 폴백 |
+
+wheel의 핵심은 **사용자 환경에서 빌드를 제거**하는 것입니다.
+PyPI에 둘 다 업로드되고, `uvx`로 실행하면 wheel이 우선 사용됩니다.
+
+PyPI 자체는 빌드를 하지 않습니다.
+GitHub Actions에서 빌드한 결과물을 저장하고 배포하는 저장소입니다.
+Java의 Maven Central, Node의 npm registry와 같은 위치입니다.
+
 `uv publish`는 `UV_PUBLISH_TOKEN` 환경변수에 PyPI API 토큰을 설정하거나,
 Trusted Publisher(OIDC) 방식으로 시크릿 없이 인증할 수 있습니다.
 
@@ -101,6 +115,33 @@ uvx 기반 MCP 서버의 장점은 네 가지입니다.
 
 git clone 기반에서 uvx로 전환하면서 6단계 설치가 2단계로 줄어든 과정은
 [검증 편](https://idean3885.github.io/posts/testing-changed-architecture/)에 정리했습니다.
+
+## 왜 PyPI인가 — 대안 검토
+
+uvx는 PyPI 없이도 실행할 수 있습니다.
+
+```bash
+uvx --from git+https://github.com/user/repo slack-to-notion-mcp
+```
+
+GitHub 저장소에서 직접 소스를 받아 실행하는 방식입니다.
+PyPI 배포 과정이 없어지니 처음에는 매력적으로 보였습니다.
+
+검토 후 기각했습니다.
+이유는 세 가지입니다.
+
+1. **비표준** — Anthropic 공식 MCP 서버를 포함해
+   Python 도구는 거의 모두 PyPI로 배포합니다.
+   Git 직접 실행은 Python 진영의 일반적인 배포 방식이 아닙니다.
+2. **매번 소스 빌드** — wheel이 아닌 소스를 받으므로
+   사용자 환경에서 매번 빌드가 발생합니다.
+   wheel의 존재 이유가 바로 이 빌드를 제거하기 위한 것입니다.
+3. **보안 서명 불가** — PyPI Trusted Publishing(OIDC)은
+   빌드 환경을 검증합니다.
+   Git 직접 실행에는 이런 서명 체계가 없습니다.
+
+대안을 검토해봐야 "왜 PyPI를 쓰는가"에 대한 답이 명확해집니다.
+동작하게 만드는 것과 왜 그렇게 하는지 아는 것은 다른 문제입니다.
 
 ## 자동화 — GitHub Actions
 
@@ -166,6 +207,64 @@ jobs:
 `pyproject.toml` 버전 수정 → 커밋 → `v1.0.0` 태그 push → 자동 배포.
 손으로 `uv publish`를 실행할 일이 없습니다.
 
+### 태그까지 자동화 — auto-tag.yml
+
+그런데 하나 남았습니다.
+태그 push가 여전히 수동입니다.
+
+```
+pyproject.toml 버전 수정 → 커밋 → [수동] git tag push → 자동 배포
+```
+
+이것도 자동화했습니다.
+`pyproject.toml` 버전이 변경되어 main에 머지되면
+태그를 자동 생성하는 워크플로우입니다.
+
+```yaml
+name: Auto Tag
+
+on:
+  push:
+    branches: [main]
+    paths: ["pyproject.toml"]
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: 버전 읽기 + 태그 생성
+        run: |
+          VERSION=$(grep -m1 '^version' pyproject.toml \
+            | sed 's/.*= *"\(.*\)"/\1/')
+          TAG="v$VERSION"
+          if git ls-remote --tags origin "$TAG" | grep -q "$TAG"; then
+            echo "태그 $TAG 이미 존재 — 스킵"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git tag "$TAG" && git push origin "$TAG"
+          fi
+```
+{: file=".github/workflows/auto-tag.yml" }
+
+주의할 점은 `GITHUB_TOKEN` 대신 `PAT_TOKEN`을 써야 한다는 것입니다.
+`GITHUB_TOKEN`으로 생성한 태그는 다른 워크플로우를 트리거하지 않습니다.
+GitHub의 무한 루프 방지 정책 때문입니다.
+
+이제 배포 파이프라인이 완전 자동화됩니다.
+
+```
+PR 머지 (pyproject.toml version 변경 포함)
+  → auto-tag.yml: 태그 자동 생성
+    → pypi-publish.yml: validate + PyPI 배포
+```
+
+손이 닿는 곳은 `pyproject.toml`의 버전 수정뿐입니다.
+
 인증 방식은 두 가지입니다.
 
 | 방식 | 설정 | 보안 |
@@ -178,12 +277,30 @@ jobs:
 > 시크릿 없이 OIDC로 인증됩니다.
 {: .prompt-tip }
 
+## 몰랐던 것 → 알게 된 것
+
+| 몰랐던 것 | 알게 된 것 |
+|-----------|-----------|
+| `uv build`가 뭘 생성하는지 | wheel(미리 빌드된 패키지)과 sdist(소스 아카이브) 두 가지 |
+| PyPI가 빌드도 해주는지 | 저장소일 뿐 빌드하지 않음 — Maven Central과 동일 |
+| Git에서 직접 실행하면 되지 않나 | 비표준 + 매번 소스 빌드 + 보안 서명 불가로 기각 |
+| 태그 push를 수동으로 해야 하나 | auto-tag.yml로 완전 자동화 가능 |
+
+---
+
 ## 마무리
 
 uvx를 처음 접한 지 얼마 되지 않았지만,
 사용법부터 배포 자동화까지 한 사이클을 돌았습니다.
 자바 생태계와 개념이 거의 대응되어서,
 새로운 도구를 배운다기보다 번역하는 느낌이었습니다.
+
+한 가지 교훈이 있습니다.
+바이브 코딩으로 동작하게 만들 수는 있지만,
+"왜 이렇게 하는가"를 모르면 아키텍처 의사결정에서 흔들립니다.
+Git 직접 실행 대안을 검토하고 기각한 과정이 좋은 예입니다.
+동작하는 코드에 만족하지 않고,
+왜 그 방식인지 파고드는 시간이 필요합니다.
 
 uvx의 기본 개념과 사용법은
 [앞선 글](https://idean3885.github.io/posts/uvx-guide-for-java-developers/)에 정리했습니다.
