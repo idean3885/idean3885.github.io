@@ -107,32 +107,55 @@ uvx가 실제로 Python을 고를 때 사용하는 우선순위는 이렇습니�
 
 ---
 
-## 5. 그러면 어떻게 해야 하나
+## 5. 해결 — setup.sh에 Python 버전 체크 적용
 
-선택지는 두 가지입니다.
+방법은 두 가지입니다.
 
-하나는 사용자 안내에 `--python` 플래그를 명시하는 것입니다.
+첫째, 사용자 안내에 `--python` 플래그를 명시하는 것입니다.
 
 ```bash
 uvx --python 3.10 slack-to-notion-mcp
 ```
 
-또 하나는 setup.sh에서 Python 버전을 체크한 뒤 자동으로 붙여주는 것입니다.
+`--python 3.10`을 지정하면
+uv가 자동으로 Python 3.10을 찾거나 다운로드합니다.
+시스템에 3.10이 없어도 uv가 관리하는 Python을 설치하여 실행합니다.
+
+둘째, setup.sh에서 자동으로 처리하는 것입니다.
+이 방법을 선택하여 적용했습니다
+([claude-slack-to-notion#109](https://github.com/dykim-base-project/claude-slack-to-notion/issues/109)).
 
 ```bash
-PYTHON_VERSION=$(python3 --version 2>&1 | awk '{print $2}')
-MAJOR_MINOR=$(echo "$PYTHON_VERSION" | cut -d. -f1,2)
-
-if python3 -c "import sys; exit(0 if sys.version_info >= (3, 10) else 1)" 2>/dev/null; then
-  uvx slack-to-notion-mcp
+# Python 버전 확인 (3.10 미만이면 --python 3.10 자동 부여)
+PYTHON_TOO_OLD=false
+if [[ -n "$PYTHON_CMD" ]]; then
+  PYTHON_VERSION=$($PYTHON_CMD -c \
+    "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
+  PYTHON_MAJOR=$(echo "$PYTHON_VERSION" | cut -d. -f1)
+  PYTHON_MINOR=$(echo "$PYTHON_VERSION" | cut -d. -f2)
+  if [[ "$PYTHON_MAJOR" -lt 3 ]] || \
+     { [[ "$PYTHON_MAJOR" -eq 3 ]] && [[ "$PYTHON_MINOR" -lt 10 ]]; }; then
+    PYTHON_TOO_OLD=true
+  fi
 else
-  uvx --python 3.10 slack-to-notion-mcp
+  # Python 미설치 — uvx가 자동으로 3.10 다운로드
+  PYTHON_TOO_OLD=true
+fi
+
+# MCP 서버 등록 시 조건 분기
+if [[ "$PYTHON_TOO_OLD" == "true" ]]; then
+  claude mcp add slack-to-notion ... \
+    -- uvx --python 3.10 slack-to-notion-mcp
+else
+  claude mcp add slack-to-notion ... \
+    -- uvx slack-to-notion-mcp
 fi
 ```
-{: file="setup.sh" }
+{: file="setup.sh (발췌)" }
 
-시스템 Python이 3.10 이상이면 그대로 실행하고,
-아니면 `--python 3.10`을 붙여 uv가 적합한 Python을 찾도록 합니다.
+시스템 Python이 3.10 이상이면 그대로,
+미만이면 `--python 3.10`을 자동으로 붙입니다.
+Python 미설치 환경에서도 경고 후 `--python 3.10`을 적용합니다.
 
 그리고 `requires-python`은 지우지 않습니다.
 `pip install`로 설치하는 사용자에게는 여전히 작동합니다.
@@ -147,7 +170,8 @@ uvx에서만 무시될 뿐입니다.
 |-----------|-----------|
 | requires-python이 모든 곳에서 작동한다 | uvx와 uv tool에서는 무시된다 (의도된 설계) |
 | uvx와 uv run이 같은 방식으로 Python을 고른다 | 완전히 다른 탐색 로직을 쓴다 |
-| pyproject.toml에 버전 명시하면 충분하다 | 사용자 안내에 --python 플래그를 명시해야 한다 |
+| pyproject.toml에 버전 명시하면 충분하다 | setup.sh에서 버전 체크 후 `--python`을 자동 부여해야 한다 |
+| `--python` 지정하면 시스템에 해당 버전이 있어야 하나 | uv가 자동으로 다운로드하여 실행한다 |
 
 ---
 
