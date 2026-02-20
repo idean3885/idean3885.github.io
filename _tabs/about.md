@@ -11,6 +11,11 @@ order: 4
 AI와 함께 개발하면서 달라진 생각과 방법론을 기록하는 블로그입니다.
 코드보다 판단, 도구보다 사고 방식에 집중합니다.
 
+- **개발 기록**: 프로젝트 경험기와 도구 적응 과정
+- **생각과 방법론**: 설계 원칙, 의사결정, 개발 철학
+- **기술 노하우**: 운영 경험에서 우러난 실전 지식
+- **아티클 정리**: 간직하고 싶은 글의 요약과 리포스팅
+
 ## 주요 포스팅
 
 ### AI 적응기
@@ -37,6 +42,8 @@ MCP 플러그인 배포 과정에서 익힌 uvx/Python 실전 지식입니다.
 3. [uvx가 Python 버전을 고르는 법 — requires-python의 함정](/posts/uvx-python-version-trap/)
 
 ### 기술 노하우 — 블로그
+
+Jekyll + Chirpy 테마 운영에서 얻은 실전 팁입니다.
 
 1. [Chirpy 블로그의 SEO는 이미 되어 있었다 — Google Search Console까지](/posts/chirpy-seo-and-search-console/)
 
