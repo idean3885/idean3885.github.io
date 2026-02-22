@@ -72,6 +72,14 @@ description: >-
 - 시리즈명(하위 카테고리)은 포스팅 주제에 따라 자유롭게 생성
 - 기존 시리즈명 우선 재사용
 
+## 참조
+
+| 문서 | 위치 | 역할 |
+|------|------|------|
+| Content Architecture | [idean3885/idean3885/CONTENT_ARCHITECTURE.md](https://github.com/idean3885/idean3885/blob/main/CONTENT_ARCHITECTURE.md) | 공개 표면 설계 청사진 |
+
+About 페이지, Blog Repo About 등 표면 관련 작업 시 청사진을 먼저 확인한다.
+
 ## 참조 프로젝트
 
 이 블로그의 포스팅이 참조하는 프로젝트 목록. 참조 프로젝트가 변경되면 관련 포스팅 업데이트가 필요할 수 있다.
