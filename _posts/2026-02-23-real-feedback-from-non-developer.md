@@ -9,6 +9,11 @@ description: >-
   도구는 동작하지만, 혼자 설정까지 마치려면 아직 한 걸음이 남았습니다.
 ---
 
+> **TL;DR** 실제 비개발자에게 건넸습니다.
+> 코드 버그 0건, 문서/UX 이슈 5건.
+> 개발자의 "비개발자 관점" 테스트는 결국 상상력 안에서의 시뮬레이션이었습니다.
+{: .prompt-tip }
+
 ## 건네보기로 했다
 
 [이전 포스팅](https://idean3885.github.io/posts/e2e-lessons-from-non-developers/)에서
