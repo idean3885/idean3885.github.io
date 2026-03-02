@@ -9,6 +9,10 @@ description: >-
   생각보다 많은 디테일에서 오류를 만났습니다.
 ---
 
+> **TL;DR** 비개발자 관점으로 직접 E2E를 돌렸더니 설치 단계에서 5건이 깨졌습니다.
+> 머릿속 시뮬레이션과 실제 따라가보기는 달랐습니다.
+{: .prompt-tip }
+
 ## 아키텍처를 바꿨으니 직접 써볼 차례였다
 
 [이전 포스팅](https://idean3885.github.io/posts/testing-changed-architecture/)에서
