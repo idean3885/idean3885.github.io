@@ -9,11 +9,10 @@ description: >-
   Configuration Cascade 패턴을 정리합니다.
 ---
 
-## TL;DR
-
-여러 계층의 설정이 존재할 때,
-**가장 가까운(구체적인) 설정이 먼(일반적인) 설정을 덮어쓰는** 패턴입니다.
-CSS specificity, Git config, Spring property override 모두 같은 원리입니다.
+> **TL;DR** 여러 계층의 설정이 존재할 때,
+> **가장 가까운(구체적인) 설정이 먼(일반적인) 설정을 덮어쓰는** 패턴입니다.
+> CSS specificity, Git config, Spring property override 모두 같은 원리입니다.
+{: .prompt-tip }
 
 ## 핵심 원리
 

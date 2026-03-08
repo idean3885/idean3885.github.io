@@ -9,12 +9,11 @@ description: >-
   adapter 인프라 클래스에 한해 @Data 수용이 합리적인 이유를 설명합니다.
 ---
 
-## TL;DR
-
-JPA @IdClass 복합 키 클래스에서 @Data의 편의성을 수용할 것인가,
-@Setter 제거를 위해 어노테이션을 개별 선언할 것인가의 트레이드오프입니다.
-adapter 인프라 클래스에 한해 @Data 수용은 합리적 판단입니다.
-**단, @Data는 @NoArgsConstructor를 포함하지 않으므로 반드시 명시해야 합니다.**
+> **TL;DR** JPA @IdClass 복합 키 클래스에서 @Data의 편의성을 수용할 것인가,
+> @Setter 제거를 위해 어노테이션을 개별 선언할 것인가의 트레이드오프입니다.
+> adapter 인프라 클래스에 한해 @Data 수용은 합리적 판단입니다.
+> **단, @Data는 @NoArgsConstructor를 포함하지 않으므로 반드시 명시해야 합니다.**
+{: .prompt-tip }
 
 ## 핵심 원리
 
