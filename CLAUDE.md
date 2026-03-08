@@ -39,6 +39,18 @@ description: >-
 - Mermaid 다이어그램 사용 가능
 - 마지막 줄: `*이 글은 Claude의 도움을 받아 작성했습니다.*`
 
+### Chirpy 스타일링 규칙
+
+| 요소 | 마크업 | 용도 |
+|------|--------|------|
+| TL;DR | `> **TL;DR** 내용`<br>`{: .prompt-tip }` | 글 상단 핵심 요약 (필수) |
+| 정보 | `> 내용`<br>`{: .prompt-info }` | 보충 설명, 참고 사항 |
+| 경고 | `> 내용`<br>`{: .prompt-warning }` | 주의 사항 |
+| 위험 | `> 내용`<br>`{: .prompt-danger }` | 치명적 주의 사항 |
+
+- TL;DR은 `## TL;DR` 헤딩 대신 blockquote + `.prompt-tip`으로 작성
+- 모든 포스트에 TL;DR 필수
+
 ### 마크다운 줄바꿈 규칙 (Semantic Line Breaks)
 
 **원칙:** [Semantic Line Breaks(sembr.org)](https://sembr.org/) 기반.
