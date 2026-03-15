@@ -1,6 +1,7 @@
 ---
 title: "5분 주기 시계열 수집 시스템에서 쓰기 경합을 해결한 방법"
 date: 2026-03-11 00:00:00 +0900
+last_modified_at: 2026-03-16 00:22:46 +0900
 categories: [개발 기록, 시스템 구축기]
 tags: [설계, 아키텍처]
 description: >-
@@ -333,3 +334,7 @@ CQRS라고 하면 이벤트 소싱이나 별도 읽기 저장소를 떠올리기
 - [CQRS - Martin Fowler](https://martinfowler.com/bliki/CQRS.html) — Command Query Responsibility Segregation 패턴 개요
 - [Configuring Multiple Data Sources - Baeldung](https://www.baeldung.com/spring-boot-configure-multiple-datasources) — Spring Boot 멀티 DataSource 설정 가이드
 - [MySQL Replication](https://dev.mysql.com/doc/refman/8.0/en/replication.html) — 마스터/슬레이브 복제 공식 문서
+
+---
+
+*이 글의 작성에 AI(Claude Code)를 활용했습니다.*

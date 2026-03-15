@@ -1,6 +1,7 @@
 ---
 title: "만든 도구를 검증하다 — 테스트가 설계를 바꾼 이야기"
 date: 2026-02-18 00:00:00 +0900
+last_modified_at: 2026-03-16 00:22:46 +0900
 categories: [개발 기록, AI 적응기 — 실전편]
 tags: [AI, Claude Code, MCP, 테스트, 아키텍처, uvx, PyPI, 이슈사이클]
 description: >-
@@ -198,4 +199,4 @@ claude mcp add slack-to-notion \
 
 ---
 
-*이 글은 Claude의 도움을 받아 작성했습니다.*
+*이 글의 작성에 AI(Claude Code)를 활용했습니다.*

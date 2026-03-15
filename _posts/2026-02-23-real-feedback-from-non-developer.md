@@ -1,6 +1,7 @@
 ---
 title: "건네도 될까에서 건넸다로 — 비개발자 실전 피드백"
 date: 2026-02-23 00:00:00 +0900
+last_modified_at: 2026-03-16 00:22:46 +0900
 categories: [개발 기록, AI 적응기 — 실전편]
 tags: [AI, Claude Code, MCP, 비개발자, 피드백, UX, Slack, Notion]
 description: >-
@@ -164,4 +165,4 @@ Notion URL이 바뀐 것도 직접 가보기 전에는 몰랐습니다.
 
 ---
 
-*이 글은 Claude의 도움을 받아 작성했습니다.*
+*이 글의 작성에 AI(Claude Code)를 활용했습니다.*
