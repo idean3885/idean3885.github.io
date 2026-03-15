@@ -1,0 +1,32 @@
+# idean3885.github.io
+
+> 개발자의 기술적 탐구, 방법론의 진화, 운영 노하우와 의사결정의 기록을 담는 한국어 기술 블로그.
+> Jekyll + Chirpy 테마 기반. GitHub Pages로 배포.
+
+## 카테고리
+
+- 개발 기록: 프로젝트 경험기, 도구 적응기
+- 생각과 방법론: 사상, 철학, 설계 원칙, 의사결정
+- 기술 노하우: 운영 경험 기반 실전 지식
+
+## 주요 시리즈
+
+### AI 적응기
+- [AI에게 코드를 맡기고 나서 달라진 일하는 방식](https://idean3885.github.io/posts/ai-changed-my-workflow/)
+- [코딩에서 사고로 — AI 시대 개발자의 역할 전환](https://idean3885.github.io/posts/from-coding-to-thinking/)
+- [방법론을 들고 첫 도구를 만들었다 — Slack to Notion 제작기](https://idean3885.github.io/posts/building-first-tool-with-ai/)
+- [만든 도구를 검증하다 — 테스트가 설계를 바꾼 이야기](https://idean3885.github.io/posts/testing-changed-architecture/)
+- [비개발자 관점으로 써봤더니 설치부터 막혔다](https://idean3885.github.io/posts/e2e-lessons-from-non-developers/)
+- [건네도 될까에서 건넸다로 — 비개발자 실전 피드백](https://idean3885.github.io/posts/real-feedback-from-non-developer/)
+- [.mcpb 원클릭 설치 — Desktop Extension까지](https://idean3885.github.io/posts/mcpb-one-click-install/)
+
+### 기술 노하우
+- [uvx requires-python의 함정](https://idean3885.github.io/posts/uvx-python-version-trap/)
+- [Java 개발자를 위한 uvx 가이드](https://idean3885.github.io/posts/uvx-guide-for-java-developers/)
+- [uvx + PyPI 배포 자동화](https://idean3885.github.io/posts/uvx-pypi-deploy-automation/)
+- [Chirpy 블로그의 SEO는 이미 되어 있었다](https://idean3885.github.io/posts/chirpy-seo-and-search-console/)
+- [설정 캐스케이드 — 계층형 설정 병합 패턴](https://idean3885.github.io/posts/configuration-cascade/)
+- [JPA IdClass와 @Data 어노테이션 트레이드오프](https://idean3885.github.io/posts/jpa-idclass-data-annotation-tradeoff/)
+
+### 시스템 구축기
+- [시계열 수집 시스템 쓰기 경합 해결](https://idean3885.github.io/posts/timeseries-write-contention/)

@@ -32,6 +32,13 @@ description: >-
 ---
 ```
 
+### 수정 시 규칙
+
+- 포스트 수정 시 front matter에 `last_modified_at` 추가/갱신
+  - 형식: `last_modified_at: YYYY-MM-DD HH:MM:SS +0900`
+  - jekyll-seo-tag가 JSON-LD `dateModified`에 반영
+  - 웹에서는 수정 일시가 보이지 않으나, 검색엔진/AI에는 freshness 신호로 작용
+
 ### 작성 규칙
 
 - 본문은 `##`부터 시작 (h1은 title이 대체)
