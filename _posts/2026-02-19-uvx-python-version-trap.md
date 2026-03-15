@@ -1,6 +1,7 @@
 ---
 title: "uvx가 Python 버전을 고르는 법 — requires-python의 함정"
 date: 2026-02-19 02:00:00 +0900
+last_modified_at: 2026-03-16 00:22:46 +0900
 categories: [기술 노하우, Python]
 tags: [uvx, uv, Python, MCP, requires-python]
 description: >-
@@ -188,4 +189,4 @@ Python uvx에서는 그렇지 않습니다.
 
 ---
 
-*이 글은 Claude의 도움을 받아 작성했습니다.*
+*이 글의 작성에 AI(Claude Code)를 활용했습니다.*

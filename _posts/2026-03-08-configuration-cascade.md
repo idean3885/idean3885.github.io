@@ -1,6 +1,7 @@
 ---
 title: "Configuration Cascade — 로컬이 글로벌을 이기는 설정 전략"
 date: 2026-03-08 00:00:00 +0900
+last_modified_at: 2026-03-16 00:22:46 +0900
 categories: [기술 노하우, 개발 사전]
 tags: [개발사전, 설계, 아키텍처]
 description: >-
@@ -67,4 +68,4 @@ context-path는 기본값 `/api`를 그대로 씁니다.
 port는 부분 덮어쓰기, context-path는 폴백 —
 캐스케이드의 두 축이 동시에 작동합니다.
 
-*이 글은 Claude의 도움을 받아 작성했습니다.*
+*이 글의 작성에 AI(Claude Code)를 활용했습니다.*

@@ -1,6 +1,7 @@
 ---
 title: "방법론을 들고 첫 도구를 만들었다 — Slack to Notion 제작기"
 date: 2026-02-17 00:00:00 +0900
+last_modified_at: 2026-03-16 00:22:46 +0900
 categories: [개발 기록, AI 적응기 — 실전편]
 tags: [AI, Claude Code, Slack, Notion, MCP, 이슈사이클, 도구제작]
 description: >-
@@ -142,4 +143,4 @@ URL을 그대로 붙여넣으면 Page ID가 자동 추출되도록 코드를 수
 
 ---
 
-*이 글은 Claude의 도움을 받아 작성했습니다.*
+*이 글의 작성에 AI(Claude Code)를 활용했습니다.*

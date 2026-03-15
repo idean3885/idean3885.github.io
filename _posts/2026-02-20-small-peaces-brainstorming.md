@@ -1,6 +1,7 @@
 ---
 title: "떠다니는 생각을 잡아두고 싶다 — small-peaces 브레인스토밍"
 date: 2026-02-20 00:00:00 +0900
+last_modified_at: 2026-03-16 00:22:46 +0900
 categories: [생각과 방법론, small-peaces]
 tags: [브레인스토밍, 토이프로젝트, 개인프로젝트]
 description: >-
@@ -125,4 +126,4 @@ description: >-
 > 다음 글에서 조금씩 구체화해 나가겠습니다.
 {: .prompt-tip }
 
-*이 글은 Claude의 도움을 받아 작성했습니다.*
+*이 글의 작성에 AI(Claude Code)를 활용했습니다.*
