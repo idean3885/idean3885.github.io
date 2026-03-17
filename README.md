@@ -24,8 +24,12 @@
 
 ## 개발 환경
 
-[claude-devex](https://github.com/idean3885/claude-devex) 기반 개발 사이클 + 포스팅 워크플로우(`/post`).
-상세는 [`.claude/README.md`](.claude/README.md) 참고.
+이 레포는 콘텐츠(`_posts/`)만 관리하며, 개발 도구는 글로벌 플러그인으로 분리되어 있습니다.
+
+| 플러그인 | 역할 |
+|----------|------|
+| [claude-devex](https://github.com/idean3885/claude-devex) | 개발 워크플로우 — 이슈 사이클, 커밋, PR |
+| [claude-blog-publisher](https://github.com/idean3885/claude-blog-publisher) | 블로그 퍼블리시 — 콘텐츠 변환, 포스팅 작성 |
 
 ## 링크
 
