@@ -27,6 +27,12 @@
 - [Chirpy 블로그의 SEO는 이미 되어 있었다](https://idean3885.github.io/posts/chirpy-seo-and-search-console/)
 - [설정 캐스케이드 — 계층형 설정 병합 패턴](https://idean3885.github.io/posts/configuration-cascade/)
 - [JPA IdClass와 @Data 어노테이션 트레이드오프](https://idean3885.github.io/posts/jpa-idclass-data-annotation-tradeoff/)
+- [GEO 대응 — 개발 블로그가 AI에게 읽히려면](https://idean3885.github.io/posts/geo-for-dev-blog/)
+
+### 생각과 방법론
+- [작은 조각들 브레인스토밍](https://idean3885.github.io/posts/small-peaces-brainstorming/)
 
 ### 시스템 구축기
 - [시계열 수집 시스템 쓰기 경합 해결](https://idean3885.github.io/posts/timeseries-write-contention/)
+- [시계열 집계 배치의 점진적 진화](https://idean3885.github.io/posts/timeseries-aggregation-batch-evolution/)
+- [사용자 도메인 인증서 자동 발급 — certbot 학습에서 ACME4j 구현까지](https://idean3885.github.io/posts/domain-ssl-automation-certbot-to-acme4j/)
