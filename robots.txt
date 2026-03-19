@@ -3,4 +3,4 @@ layout: null
 ---
 User-agent: *
 Allow: /
-Sitemap: https://idean3885.github.io
+Sitemap: https://idean3885.github.io/sitemap-manual.xml
