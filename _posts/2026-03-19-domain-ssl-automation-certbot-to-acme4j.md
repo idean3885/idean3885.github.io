@@ -232,9 +232,9 @@ NOT_LINK → LINK_SUCCESS (연결 확인)
 
 ```java
 public class Certificate {
-    private IssuanceStatusKind issuanceStatus;          // 발급 상태
-    private ServiceRegistrationStatusKind serviceRegistrationStatus;  // 서비스 등록 상태
-    private DomainServiceLinkStatusKind domainServiceLinkStatus;      // 도메인 연결 상태
+    private IssuanceStatus issuanceStatus;          // 발급 상태
+    private ServiceRegistrationStatus serviceRegistrationStatus;  // 서비스 등록 상태
+    private DomainServiceLinkStatus domainServiceLinkStatus;      // 도메인 연결 상태
     private int issuanceAttemptCount;                    // 시도 횟수
     private ZonedDateTime jobRunExpectAt;                // 다음 Job 실행 예정 시각
 
@@ -451,7 +451,7 @@ APPLICATION 상태로 전환하고,
 Rate Limit에 걸리는 문제가 발생했습니다.
 
 ```java
-// LetsEncryptSpecKind.java
+// LetsEncryptSpec.java
 ACCOUNT_SPEC(10, Duration.ofHours(1)),
     // 시간당 10개 제한
 ACCOUNT_ORDER_SPEC(300, Duration.ofHours(3));
