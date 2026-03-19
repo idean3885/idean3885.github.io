@@ -1,7 +1,7 @@
 ---
 title: "사용자 도메인 인증서 자동 발급 — certbot 학습에서 ACME4j 구현까지"
 date: 2026-03-18 23:45:00 +0900
-last_modified_at: 2026-03-19 20:38:00 +0900
+last_modified_at: 2026-03-19 23:07:00 +0900
 categories: [개발 기록, 시스템 구축기]
 tags: [Let's Encrypt, ACME, 인증서, 자동화, 헥사고날 아키텍처, Java, Spring Boot]
 description: >-
