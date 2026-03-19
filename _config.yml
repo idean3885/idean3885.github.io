@@ -86,3 +86,8 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# _config.yml 하단에 추가
+plugins:
+  - jekyll-feed
+  # - jekyll-sitemap  <-- 이 줄을 주석 처리하여 자동 생성을 막습니다.
