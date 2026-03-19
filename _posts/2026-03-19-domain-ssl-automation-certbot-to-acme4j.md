@@ -152,7 +152,7 @@ cert/
 
 ```
 [UseCase (Input Port)]                    [Output Port]
-CertificateUseCase ──┐      ┌── CertificateIssuerPort
+CertificateSystemUseCase ──┐      ┌── CertificateIssuerPort
 CertificateJobUseCase ─────┤      ├── DomainVerifyPort
                            ▼      ├── CertificateRepository
                      [Domain]     └── CertificateValidator
@@ -161,10 +161,10 @@ CertificateJobUseCase ─────┤      ├── DomainVerifyPort
 
 | 포트 | 역할 | 어댑터 구현 |
 |------|------|-----------|
-| `CertificateIssuerPort` | ACME 인증서 발급 | `CertificateIssuerAdapter` (ACME4j 래핑) |
-| `DomainVerifyPort` | 도메인 소유권 검증 | `DomainVerifyAdapter` (Verifier 모듈 연동) |
-| `CertificateRepository` | 인증서 영속화 | `CertificateRepositoryAdapter` (JPA) |
-| `CertificateValidator` | 상태 전이 검증 | `CertificateValidatorAdapter` |
+| `CertificateIssuerPort` | ACME 인증서 발급 | `CertificateIssuerPortImpl` (ACME4j 래핑) |
+| `DomainVerifyPort` | 도메인 소유권 검증 | `DomainVerifyPortImpl` (Verifier 모듈 연동) |
+| `CertificateRepository` | 인증서 영속화 | `CertificateRepositoryImpl` (JPA) |
+| `CertificateValidator` | 상태 전이 검증 | `CertificateValidatorImpl` |
 
 ### 서비스 모듈과의 연동
 
@@ -297,16 +297,16 @@ public class Certificate {
 ### 발급 흐름
 
 ```
-CertificateIssuerAdapter.issue()
+CertificateIssuerPortImpl.issue()
   │
   ├─ 1. Acme4jService.createOrder(도메인)     ─── ACME 주문 생성
   ├─ 2. Acme4jService.createChallenge(주문)    ─── HTTP-01 챌린지 생성
-  ├─ 3. VerifierClient.saveChallengeToken()     ─── 토큰을 Verifier에 저장
+  ├─ 3. VerifierFeign.saveChallengeToken()     ─── 토큰을 Verifier에 저장
   ├─ 4. Acme4jService.triggerChallenge()       ─── Let's Encrypt에 검증 요청
   │      └─ Let's Encrypt → Verifier 서버:
   │         GET /.well-known/acme-challenge/{token}
   ├─ 5. Acme4jService.createCertificate()      ─── 인증서 생성
-  └─ 6. VerifierClient.deleteChallengeToken()   ─── 토큰 정리 (finally)
+  └─ 6. VerifierFeign.deleteChallengeToken()   ─── 토큰 정리 (finally)
 ```
 
 ### Verifier 모듈의 역할
@@ -320,10 +320,10 @@ Verifier 모듈은 이 역할을 담당합니다.
 쿠버네티스 클러스터에 배포되어 사용자 도메인의 트래픽을 수신합니다.
 
 ```java
-// CertificateVerifyController — 외부(Let's Encrypt)에서 접근하는 엔드포인트
+// CertificateVerifyUserController — 외부(Let's Encrypt)에서 접근하는 엔드포인트
 @GetMapping("/.well-known/acme-challenge/{tokenName}")
 public String getToken(@PathVariable String tokenName) {
-    return certificateVerifyUseCase.getValid(tokenName);
+    return certificateVerifyUserUseCase.getValid(tokenName);
 }
 ```
 
@@ -332,8 +332,8 @@ ACME 챌린지 토큰은 발급 과정에서만 필요한 일회성 데이터이
 DB에 저장할 필요가 없습니다.
 
 ```java
-// CertificateVerifyRepositoryAdapter — 인메모리 저장소
-public class CertificateVerifyRepositoryAdapter
+// CertificateVerifyRepositoryImpl — 인메모리 저장소
+public class CertificateVerifyRepositoryImpl
         implements CertificateVerifyRepository {
     private final Map<String, CertificateVerify> store =
         new HashMap<>();
@@ -351,15 +351,15 @@ public class CertificateVerifyRepositoryAdapter
 먼저 확인합니다.
 
 ```java
-// DomainVerifyAdapter
+// DomainVerifyPortImpl
 public void verifyServiceLink(CertificateDomain domain) {
     String token = UUID.randomUUID().toString();
 
     // 1. Verifier에 검증 토큰 저장
-    verifierClient.createDomainVerifyData(token);
+    verifierFeign.createDomainVerifyData(token);
 
     // 2. 사용자 도메인으로 직접 요청하여 토큰 확인
-    String response = verifierClient.getDomainVerifyData(domain);
+    String response = verifierFeign.getDomainVerifyData(domain);
 
     // 3. 토큰 불일치 시 예외 발생
     if (!token.equals(response)) {
