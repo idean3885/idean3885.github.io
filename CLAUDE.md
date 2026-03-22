@@ -58,6 +58,18 @@ description: >-
 - TL;DR은 `## TL;DR` 헤딩 대신 blockquote + `.prompt-tip`으로 작성
 - 모든 포스트에 TL;DR 필수
 
+### AI 협업 표기 (필수)
+
+모든 포스트 본문 최하단에 AI 협업 표기를 포함한다.
+
+```markdown
+> 이 글은 Claude와 함께 작업했습니다.
+{: .prompt-info }
+```
+
+- 어떤 발행 경로(스킬, 수기, 직접 편집)든 블로그에 게시되면 반드시 포함
+- 위치: 본문 마지막 섹션 이후, front matter 메타 이전
+
 ### 마크다운 줄바꿈 규칙 (Semantic Line Breaks)
 
 **원칙:** [Semantic Line Breaks(sembr.org)](https://sembr.org/) 기반.
