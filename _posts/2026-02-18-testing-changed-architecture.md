@@ -2,7 +2,7 @@
 title: "만든 도구를 검증하다 — 테스트가 설계를 바꾼 이야기"
 date: 2026-02-18 00:00:00 +0900
 last_modified_at: 2026-03-16 00:22:46 +0900
-categories: [개발 기록, AI 적응기 — 실전편]
+categories: [개발 기록, Slack to Notion 제작기]
 tags: [AI, Claude Code, MCP, 테스트, 아키텍처, uvx, PyPI, 이슈사이클]
 description: >-
   도구를 검증하려 했더니 설계를 바꾸게 됐습니다.

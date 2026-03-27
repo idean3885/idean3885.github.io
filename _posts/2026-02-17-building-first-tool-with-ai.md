@@ -2,7 +2,7 @@
 title: "방법론을 들고 첫 도구를 만들었다 — Slack to Notion 제작기"
 date: 2026-02-17 00:00:00 +0900
 last_modified_at: 2026-03-16 00:22:46 +0900
-categories: [개발 기록, AI 적응기 — 실전편]
+categories: [개발 기록, Slack to Notion 제작기]
 tags: [AI, Claude Code, Slack, Notion, MCP, 이슈사이클, 도구제작]
 description: >-
   적응기에서 정립한 이슈 사이클과 설계 원칙을 가지고 첫 번째 도구를 만들었습니다.
