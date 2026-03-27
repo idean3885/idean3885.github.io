@@ -2,7 +2,7 @@
 title: "남은 한 걸음 — .mcpb로 원클릭 설치까지"
 date: 2026-03-11 00:00:00 +0900
 last_modified_at: 2026-03-16 00:22:46 +0900
-categories: [개발 기록, AI 적응기 — 실전편]
+categories: [개발 기록, Slack to Notion 제작기]
 tags: [AI, Claude Code, MCP, mcpb, Desktop Extension, 비개발자, UX]
 description: >-
   6편에서 남겨둔 "한 걸음"을 채웠습니다.

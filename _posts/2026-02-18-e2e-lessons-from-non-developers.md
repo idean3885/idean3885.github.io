@@ -2,7 +2,7 @@
 title: "비개발자 관점으로 써봤더니 설치부터 막혔다 — E2E 테스트가 가르쳐준 것들"
 date: 2026-02-18 12:00:00 +0900
 last_modified_at: 2026-03-16 00:22:46 +0900
-categories: [개발 기록, AI 적응기 — 실전편]
+categories: [개발 기록, Slack to Notion 제작기]
 tags: [AI, Claude Code, MCP, E2E, 비개발자, uvx, UX, 테스트]
 description: >-
   아키텍처를 바꾼 뒤 비개발자 관점으로 직접 E2E 테스트를 돌렸습니다.
