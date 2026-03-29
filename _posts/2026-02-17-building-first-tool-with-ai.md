@@ -34,7 +34,7 @@ Slack 스레드는 대화가 길어질수록 맥락이 뒤섞입니다.
 
 ## 무엇을 만들었는가
 
-[claude-slack-to-notion](https://github.com/dykim-base-project/claude-slack-to-notion) —
+[claude-slack-to-notion](https://github.com/idean3885/claude-slack-to-notion) —
 Slack 채널의 대화를 수집하고,
 AI가 분석해서,
 Notion 페이지로 정리하는 도구입니다.

@@ -124,7 +124,7 @@ uv가 자동으로 Python 3.10을 찾거나 다운로드합니다.
 
 둘째, setup.sh에서 자동으로 처리하는 것입니다.
 이 방법을 선택하여 적용했습니다
-([claude-slack-to-notion#109](https://github.com/dykim-base-project/claude-slack-to-notion/issues/109)).
+([claude-slack-to-notion#109](https://github.com/idean3885/claude-slack-to-notion/issues/109)).
 
 ```bash
 # Python 버전 확인 (3.10 미만이면 --python 3.10 자동 부여)
