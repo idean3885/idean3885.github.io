@@ -20,7 +20,7 @@ description: >-
 [지난 포스팅](https://idean3885.github.io/posts/building-first-tool-with-ai/)에서
 이슈 사이클로 첫 도구를 만들었습니다.
 Slack 스레드를 Notion으로 정리하는 MCP 플러그인,
-[claude-slack-to-notion](https://github.com/dykim-base-project/claude-slack-to-notion)이었습니다.
+[claude-slack-to-notion](https://github.com/idean3885/claude-slack-to-notion)이었습니다.
 
 만들고 나서 실전에 투입하고 싶었습니다.
 그런데 그 전에 해야 할 일이 있었습니다.
