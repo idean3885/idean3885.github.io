@@ -60,10 +60,10 @@ certbot과 DNS-01 Challenge의 동작 원리를 학습했습니다.
 
 ### 와일드카드 인증서의 제약
 
-와일드카드 인증서(`*.example.com`)는
+와일드카드 인증서(`*.platform.com`)는
 HTTP-01 Challenge를 사용할 수 없습니다.
 반드시 DNS-01 Challenge,
-즉 `_acme-challenge.example.com` TXT 레코드를 설정하여
+즉 `_acme-challenge.platform.com` TXT 레코드를 설정하여
 도메인 소유권을 증명해야 합니다.
 
 certbot은 `--manual-auth-hook`으로 TXT 레코드 설정을 자동화할 수 있지만,
@@ -99,8 +99,8 @@ certbot의 auth-hook이 request 파일을 생성하면,
 호스트의 DNS Handler가 감지하여 처리하고 done 파일로 응답합니다.
 
 **challenge 값 누적**:
-`*.example.com`과 `example.com`은
-같은 `_acme-challenge.example.com` TXT 레코드를 사용합니다.
+`*.platform.com`과 `platform.com`은
+같은 `_acme-challenge.platform.com` TXT 레코드를 사용합니다.
 certbot은 이를 순차적으로 요청하므로,
 이전 challenge 값을 유지한 채 새 값을 추가해야 합니다.
 도메인별 challenge 파일에 값을 누적하여
