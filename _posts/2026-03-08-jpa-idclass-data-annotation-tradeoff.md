@@ -25,8 +25,8 @@ description: >-
 **주의: @RequiredArgsConstructor ≠ @NoArgsConstructor**
 
 - @RequiredArgsConstructor는 final/@NonNull 필드 대상 생성자를 생성합니다.
-- final 필드가 없으면 매개변수 없는 생성자가 만들어지지만,
-  이것은 **@NoArgsConstructor와 동일하지 않습니다.**
+- final 필드가 없으면 매개변수 없는 생성자가 생성됩니다.
+  하지만 **@NoArgsConstructor와 동일하지 않습니다.**
 - Hibernate는 @IdClass/@Embeddable 클래스에 명시적 no-arg constructor를 요구합니다.
 - **@Data + @AllArgsConstructor만으로는 Hibernate가 인스턴스를 생성하지 못해
   런타임 에러가 발생합니다.**
@@ -47,8 +47,8 @@ description: >-
 ### @IdClass에서 Record를 쓸 수 없는 이유
 
 JPA 스펙은 @IdClass에 no-arg constructor를 요구합니다.
-Hibernate 구현체는 no-arg constructor로 인스턴스 생성 후
-리플렉션으로 필드를 세팅하는 순서로 동작합니다.
+Hibernate 구현체는 no-arg constructor로 인스턴스를 생성합니다.
+이후 리플렉션으로 필드를 세팅합니다.
 
 Java 리플렉션 자체는 Record의 final 필드도 setAccessible(true)로 강제 세팅 가능하지만,
 Hibernate가 @IdClass에 대해 이 방식을 지원하지 않습니다.
