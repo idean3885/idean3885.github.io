@@ -66,8 +66,8 @@ HTTP-01 Challenge를 사용할 수 없습니다.
 즉 `_acme-challenge.platform.com` TXT 레코드를 설정하여
 도메인 소유권을 증명해야 합니다.
 
-certbot은 `--manual-auth-hook`으로 TXT 레코드 설정을 자동화할 수 있지만,
-NHN Cloud DNS Plus에는 certbot 공식 플러그인이 없습니다.
+certbot은 `--manual-auth-hook`으로 TXT 설정을 자동화할 수 있습니다.
+하지만 NHN Cloud DNS Plus에는 공식 플러그인이 없습니다.
 DNS API를 직접 호출해야 합니다.
 
 ### Docker와 호스트의 분리
