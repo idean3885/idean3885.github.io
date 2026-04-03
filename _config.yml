@@ -30,6 +30,18 @@ avatar: /assets/img/avatar.PNG
 
 social_preview_image: /assets/img/og-image.png
 
+comments:
+  provider: giscus
+  giscus:
+    repo: idean3885/idean3885.github.io
+    repo_id: R_kgDORQ49gw
+    category: General
+    category_id: DIC_kwDORQ49g84C59HT
+    mapping: pathname
+    lang: ko
+    input_position: bottom
+    reactions_enabled: 1
+
 theme_mode: light
 
 toc: true
@@ -46,7 +58,7 @@ defaults:
       type: posts
     values:
       layout: post
-      comments: false
+      comments: true
       toc: true
       permalink: /posts/:title/
   - scope:
