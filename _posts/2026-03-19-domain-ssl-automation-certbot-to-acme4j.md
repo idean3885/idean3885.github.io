@@ -225,6 +225,8 @@ NOT_LINK → LINK_SUCCESS (연결 확인)
 
 `Certificate` 엔티티는 상태 전이 로직을 내부에 캡슐화합니다.
 
+엔티티가 관리하는 주요 필드는 발급 상태, 서비스 등록 상태, 도메인 연결 상태, 시도 횟수, 다음 Job 실행 예정 시각입니다.
+
 ```java
 public class Certificate {
     private IssuanceStatusKind issuanceStatus;          // 발급 상태
@@ -232,7 +234,13 @@ public class Certificate {
     private DomainServiceLinkStatusKind domainServiceLinkStatus;      // 도메인 연결 상태
     private int issuanceAttemptCount;                    // 시도 횟수
     private ZonedDateTime jobRunExpectAt;                // 다음 Job 실행 예정 시각
+}
+```
 
+`issueStart()`는 APPLICATION → PROCESSING 전이를 담당합니다.
+`issueProcess()`는 도메인 내부에서 Output Port(`issuerPort`)를 호출하는 Rich Domain 패턴으로, 발급 성공 시 상태 전이·키 저장·갱신 예정 시각 계산을 모두 수행합니다.
+
+```java
     // 발급 시작: APPLICATION → PROCESSING
     public void issueStart(Duration jobExpectDuration) {
         this.issuanceAttemptCount += 1;
@@ -260,7 +268,11 @@ public class Certificate {
             return new IssueProcessResponse(false);
         }
     }
+```
 
+`renewalApply()`는 갱신 주기가 도래한 SUCCESS 상태 인증서를 APPLICATION으로 되돌려 재발급 흐름을 시작합니다.
+
+```java
     // 갱신 신청: SUCCESS → APPLICATION
     public RenewalApplyResponse renewalApply() {
         this.issuanceStatus = APPLICATION;
@@ -268,7 +280,6 @@ public class Certificate {
         this.jobRunExpectAt = ZonedDateTime.now();
         return new RenewalApplyResponse(true);
     }
-}
 ```
 
 주목할 점은 `issueProcess()` 메서드입니다.

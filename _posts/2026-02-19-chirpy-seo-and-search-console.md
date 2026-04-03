@@ -107,7 +107,7 @@ Chirpy의 `head.html`에 `{% raw %}{% seo %}{% endraw %}` 태그가 삽입되어
 
 **robots.txt** — 크롤러 접근 규칙 + sitemap 위치:
 
-```
+```text
 User-agent: *
 Sitemap: https://idean3885.github.io/sitemap.xml
 ```
