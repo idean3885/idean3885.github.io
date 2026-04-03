@@ -1,16 +1,28 @@
 <!-- The Top Bar -->
 
 <style>
+  /* sticky topbar: 부모 .container 패딩을 상쇄하여 #main-wrapper 전체 너비 사용 */
+  #main-wrapper > .container {
+    position: relative;
+  }
   #topbar-wrapper {
     position: sticky;
     top: 0;
     z-index: 1020;
     background-color: var(--topbar-bg, var(--body-bg, #fff));
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    padding-left: calc(50vw - 50%);
-    padding-right: calc(50vw - 50%);
+    margin-left: calc(-1 * var(--bs-gutter-x, 12px));
+    margin-right: calc(-1 * var(--bs-gutter-x, 12px));
+    padding-left: var(--bs-gutter-x, 12px);
+    padding-right: var(--bs-gutter-x, 12px);
+  }
+  @media (min-width: 1400px) {
+    #topbar-wrapper {
+      margin-left: -3rem;
+      margin-right: -3rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 </style>
 <header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
