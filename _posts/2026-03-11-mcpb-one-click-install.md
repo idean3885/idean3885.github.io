@@ -1,7 +1,7 @@
 ---
 title: "남은 한 걸음 — .mcpb로 원클릭 설치까지"
 date: 2026-03-11 00:00:00 +0900
-last_modified_at: 2026-03-16 00:22:46 +0900
+last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [개발 기록, Slack to Notion 제작기]
 tags: [AI, Claude Code, MCP, mcpb, Desktop Extension, 비개발자, UX]
 description: >-
@@ -198,4 +198,5 @@ Slack 앱을 만들고, Notion Integration을 설정하는 과정은
 
 ---
 
-*이 글의 작성에 AI(Claude Code)를 활용했습니다.*
+> 이 글은 Claude와 함께 작업했습니다.
+{: .prompt-info }
