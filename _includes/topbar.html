@@ -1,7 +1,12 @@
 <!-- The Top Bar -->
 
 <style>
-  #topbar-wrapper { position: sticky; top: 0; z-index: 1020; }
+  #topbar-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: var(--topbar-bg, var(--body-bg, #fff));
+  }
 </style>
 <header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
   <div
