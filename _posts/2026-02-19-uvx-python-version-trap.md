@@ -10,6 +10,10 @@ description: >-
   어떻게 대응해야 하는지 정리합니다.
 ---
 
+## TL;DR
+
+`uvx`는 `requires-python`을 의도적으로 무시합니다. 시스템에 설치된 Python 버전이 패키지 요구사항보다 낮아도 설치와 실행이 진행되며, 버전 불일치는 런타임 오동작으로 드러납니다. 배포자는 `setup.sh`에서 Python 버전을 직접 확인하고 조건에 따라 `--python` 플래그를 자동 부여하는 방식으로 대응해야 합니다.
+
 > 시리즈: 몰랐던 것을 알게 되다 #3
 
 [앞선 글](https://idean3885.github.io/posts/uvx-pypi-deploy-automation/)에서

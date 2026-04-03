@@ -10,7 +10,7 @@ description: >-
   그리고 MCP 효율 논란에 대한 팩트 체크를 정리합니다.
 ---
 
-> **TL;DR** `.mcpb` Desktop Extension으로 JSON 수동 편집 없이 원클릭 설치를 만들었습니다.
+> **TL;DR** `.mcpb` 데스크톱 익스텐션(Desktop Extension)으로 JSON 수동 편집 없이 원클릭 설치를 만들었습니다.
 > 비개발자가 혼자 설정까지 마칠 수 있는 수준에 도달했습니다.
 {: .prompt-tip }
 
