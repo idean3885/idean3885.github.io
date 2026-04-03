@@ -1,7 +1,7 @@
 ---
 title: "uvx 사용법 — 설치부터 실행까지"
 date: 2026-02-19 00:00:00 +0900
-last_modified_at: 2026-03-16 00:22:46 +0900
+last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, Python]
 tags: [uvx, uv, Python, MCP, pyproject.toml]
 description: >-
@@ -125,4 +125,5 @@ GitHub Actions로 자동화하는 과정은 다음 글에서 다룹니다.
 왜 이 패턴을 선택했는지, 전환 과정에서 무엇이 달라졌는지는
 [검증 편](https://idean3885.github.io/posts/testing-changed-architecture/)에 정리했습니다.
 
-*이 글의 작성에 AI(Claude Code)를 활용했습니다.*
+> 이 글은 Claude와 함께 작업했습니다.
+{: .prompt-info }

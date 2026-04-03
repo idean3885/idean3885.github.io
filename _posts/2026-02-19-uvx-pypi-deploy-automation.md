@@ -1,7 +1,7 @@
 ---
 title: "uvx로 MCP 플러그인 배포하기 — PyPI부터 GitHub Actions까지"
 date: 2026-02-19 01:00:00 +0900
-last_modified_at: 2026-03-16 00:22:46 +0900
+last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, Python]
 tags: [uvx, uv, PyPI, MCP, GitHub Actions, CI/CD]
 description: >-
@@ -303,4 +303,5 @@ Git 직접 실행 대안을 검토하고 기각한 과정이 좋은 예입니다
 uvx의 기본 개념과 사용법은
 [앞선 글](https://idean3885.github.io/posts/uvx-guide-for-java-developers/)에 정리했습니다.
 
-*이 글의 작성에 AI(Claude Code)를 활용했습니다.*
+> 이 글은 Claude와 함께 작업했습니다.
+{: .prompt-info }
