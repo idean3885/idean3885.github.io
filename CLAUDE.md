@@ -6,7 +6,7 @@ Jekyll + Chirpy 테마 기반 블로그 프로젝트
 
 | 항목 | 내용 |
 |------|------|
-| 사이트 | https://idean3885.github.io |
+| 사이트 | https://blog.idean.me |
 | 테마 | [jekyll-theme-chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) |
 | 언어 | 한국어 (ko) |
 | 배포 | GitHub Pages (GitHub Actions) |

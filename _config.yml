@@ -9,13 +9,15 @@ description: >-
   개발자로서의 기술적 탐구, 방법론의 진화,
   운영 노하우와 의사결정의 기록을 담는 블로그.
 
-url: "https://idean3885.github.io"
+url: "https://blog.idean.me"
 baseurl: ""
 
 github:
   username: idean3885
 
-author: idean3885
+author:
+  name: idean3885
+  url: https://github.com/idean3885
 logo: /assets/img/favicons/favicon-96x96.png
 
 social:
