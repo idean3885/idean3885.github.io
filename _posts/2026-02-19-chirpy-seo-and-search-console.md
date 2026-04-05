@@ -1,5 +1,5 @@
 ---
-title: "Chirpy 블로그의 SEO는 이미 되어 있었다 — Google Search Console까지"
+title: "Chirpy 블로그의 SEO는 이미 되어 있었다: Google Search Console까지"
 date: 2026-02-19 03:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, 블로그]
@@ -20,7 +20,7 @@ SEO를 챙겨야 한다는 건 알았지만, 어디서부터 시작해야 할지
 
 ---
 
-## 1. 점검 전 예상 — 할 일이 많을 줄 알았다
+## 1. 점검 전 예상: 할 일이 많을 줄 알았다
 
 SEO 최적화라고 하면 이런 것들이 떠오릅니다.
 
@@ -94,7 +94,7 @@ Chirpy의 `head.html`에 `{% raw %}{% seo %}{% endraw %}` 태그가 삽입되어
 
 빌드 시 `_site/` 디렉토리에 두 파일을 생성합니다.
 
-**sitemap.xml** — 모든 포스트와 페이지의 URL 목록:
+**sitemap.xml**: 모든 포스트와 페이지의 URL 목록
 
 ```xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -105,7 +105,7 @@ Chirpy의 `head.html`에 `{% raw %}{% seo %}{% endraw %}` 태그가 삽입되어
 </urlset>
 ```
 
-**robots.txt** — 크롤러 접근 규칙 + sitemap 위치:
+**robots.txt**: 크롤러 접근 규칙 + sitemap 위치
 
 ```text
 User-agent: *
@@ -117,7 +117,7 @@ Sitemap: https://idean3885.github.io/sitemap.xml
 
 ---
 
-## 3. 점검 결과 — 뭐가 되어 있고 뭐가 안 되어 있나
+## 3. 점검 결과: 뭐가 되어 있고 뭐가 안 되어 있나
 
 | 항목 | 상태 | 비고 |
 |------|------|------|
@@ -162,7 +162,7 @@ GSC가 없으면 다음을 알 수 없습니다.
 
 ---
 
-## 5. GSC 등록 절차 — Chirpy에서는 한 줄
+## 5. GSC 등록 절차: Chirpy에서는 한 줄
 
 ### 5-1. 속성 추가
 

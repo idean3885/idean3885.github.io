@@ -1,5 +1,5 @@
 ---
-title: "시계열 수집의 쓰기 경합 — 5분 주기 시스템에서 동시성을 해결한 방법"
+title: "시계열 수집의 쓰기 경합: 5분 주기 시스템에서 동시성을 해결한 방법"
 date: 2026-03-11 00:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
@@ -10,7 +10,7 @@ description: >-
   쓰기 경합을 제거한 과정을 공유합니다.
 ---
 
-> **TL;DR** — 5분 수집과 10분 집계가 겹치는 환경에서, 스키마 분리와 `@Transactional(readOnly)` 기반 라우팅으로 쓰기 경합을 제거했습니다.
+> **TL;DR** 5분 수집과 10분 집계가 겹치는 환경에서, 스키마 분리와 `@Transactional(readOnly)` 기반 라우팅으로 쓰기 경합을 제거했습니다.
 {: .prompt-tip }
 
 ---
@@ -330,10 +330,10 @@ CQRS라고 하면 이벤트 소싱이나 별도 읽기 저장소를 떠올리기
 
 ## 참고
 
-- [AbstractRoutingDataSource - Spring Framework](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.html) — 트랜잭션 기반 DataSource 라우팅의 기반 클래스
-- [CQRS - Martin Fowler](https://martinfowler.com/bliki/CQRS.html) — Command Query Responsibility Segregation 패턴 개요
-- [Configuring Multiple Data Sources - Baeldung](https://www.baeldung.com/spring-boot-configure-multiple-datasources) — Spring Boot 멀티 DataSource 설정 가이드
-- [MySQL Replication](https://dev.mysql.com/doc/refman/8.0/en/replication.html) — 마스터/슬레이브 복제 공식 문서
+- [AbstractRoutingDataSource - Spring Framework](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.html): 트랜잭션 기반 DataSource 라우팅의 기반 클래스
+- [CQRS - Martin Fowler](https://martinfowler.com/bliki/CQRS.html): Command Query Responsibility Segregation 패턴 개요
+- [Configuring Multiple Data Sources - Baeldung](https://www.baeldung.com/spring-boot-configure-multiple-datasources): Spring Boot 멀티 DataSource 설정 가이드
+- [MySQL Replication](https://dev.mysql.com/doc/refman/8.0/en/replication.html): 마스터/슬레이브 복제 공식 문서
 
 ---
 

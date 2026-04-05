@@ -1,5 +1,5 @@
 ---
-title: "방법론을 들고 첫 도구를 만들었다 — Slack to Notion 제작기"
+title: "방법론을 들고 첫 도구를 만들었다: Slack to Notion 제작기"
 date: 2026-02-17 00:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [개발 기록, Slack to Notion 제작기]
@@ -34,7 +34,7 @@ Slack 스레드는 대화가 길어질수록 맥락이 뒤섞입니다.
 
 ## 무엇을 만들었는가
 
-[claude-slack-to-notion](https://github.com/idean3885/claude-slack-to-notion) —
+[claude-slack-to-notion](https://github.com/idean3885/claude-slack-to-notion):
 Slack 채널의 대화를 수집하고,
 AI가 분석해서,
 Notion 페이지로 정리하는 도구입니다.
@@ -72,7 +72,7 @@ graph LR
 
 모든 변경이 이 흐름을 따랐습니다.
 초기 구조 설계, Slack 수집 모듈, 분석 모듈, Notion 연동,
-MCP 서버 통합, 리팩토링까지 —
+MCP 서버 통합, 리팩토링까지,
 각 단계가 하나의 이슈-명세-구현-PR로 완결되는 단위였습니다.
 
 방법론을 실제로 돌려보니 보이는 것들이 있었습니다.
@@ -129,8 +129,8 @@ URL을 그대로 붙여넣으면 Page ID가 자동 추출되도록 코드를 수
 ## 만들고 나서 든 생각
 
 적응기에서 만든 방법론이 실제로 동작하는 걸 확인했습니다.
-이슈 사이클이 강제하는 흐름 —
-명세 먼저, 이슈 단위로 완결, 추적 가능한 변경 —
+이슈 사이클이 강제하는 흐름,
+명세 먼저, 이슈 단위로 완결, 추적 가능한 변경,
 이 구조 덕분에 방향을 잃지 않고 만들 수 있었습니다.
 
 동시에 부족한 점도 보였습니다.

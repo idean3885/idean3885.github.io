@@ -1,5 +1,5 @@
 ---
-title: "떠다니는 생각을 잡아두고 싶다 — small-peaces 브레인스토밍"
+title: "떠다니는 생각을 잡아두고 싶다: small-peaces 브레인스토밍"
 date: 2026-02-20 00:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [생각과 방법론, small-peaces]
