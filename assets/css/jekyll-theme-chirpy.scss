@@ -122,12 +122,13 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* Breadcrumb: flex 자식 min-width 보정 + overflow 처리 */
-#topbar #breadcrumb {
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+/* toc-bar: fixed topbar 아래로 위치 보정 (테마 기본값 top:0 → topbar 뒤에 겹침) */
+#toc-bar {
+  top: 3rem;
+
+  &.invisible {
+    top: 0;
+  }
 }
 
 /* TOC: card style + topbar clearance */
