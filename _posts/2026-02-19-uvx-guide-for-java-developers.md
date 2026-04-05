@@ -1,5 +1,5 @@
 ---
-title: "uvx 사용법: 설치부터 실행까지"
+title: "uvx 사용법 - 설치부터 실행까지"
 date: 2026-02-19 00:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, Python]

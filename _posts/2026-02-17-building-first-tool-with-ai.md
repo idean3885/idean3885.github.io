@@ -1,5 +1,5 @@
 ---
-title: "방법론을 들고 첫 도구를 만들었다: Slack to Notion 제작기"
+title: "방법론을 들고 첫 도구를 만들었다 - Slack to Notion 제작기"
 date: 2026-02-17 00:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [개발 기록, Slack to Notion 제작기]
