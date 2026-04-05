@@ -1,4 +1,4 @@
-# idean3885.github.io
+# blog.idean.me
 
 > 개발자의 기술적 탐구, 방법론의 진화, 운영 노하우와 의사결정의 기록을 담는 한국어 기술 블로그.
 > Jekyll + Chirpy 테마 기반. GitHub Pages로 배포.
