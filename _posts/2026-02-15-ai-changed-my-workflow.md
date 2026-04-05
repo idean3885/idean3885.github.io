@@ -1,7 +1,7 @@
 ---
 title: "AI에게 코드를 맡기고 나서 달라진 일하는 방식"
 date: 2026-02-15 00:00:00 +0900
-last_modified_at: 2026-04-03 00:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [개발 기록, AI 적응기]
 tags: [AI, Claude Code, 개발방법론, DevEx, 이슈사이클]
 description: >-

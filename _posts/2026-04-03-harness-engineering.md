@@ -1,7 +1,7 @@
 ---
 title: "하네스 엔지니어링 - LLM 에이전트의 구조적 행동 제어"
 date: 2026-04-03 03:00:00 +0900
-last_modified_at: 2026-04-05 09:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [생각과 방법론]
 tags: [AI, Claude Code, DevEx, 설계, 아키텍처]
 description: >-

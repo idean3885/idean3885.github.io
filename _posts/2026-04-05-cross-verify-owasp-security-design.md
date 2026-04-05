@@ -1,6 +1,7 @@
 ---
 title: "교차 검증의 맹점 - OWASP에서 배운 보안 설계 관점"
 date: 2026-04-05 14:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [개발 기록, AI 교차 검증]
 tags: [AI, Claude Code, OWASP, 설계, 비판적사고, 보안]
 description: >-

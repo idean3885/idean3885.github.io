@@ -1,7 +1,7 @@
 ---
 title: "교차 검증 도구의 구현 - 자체 검증에서 실전까지"
 date: 2026-03-29 00:00:00 +0900
-last_modified_at: 2026-03-29 12:17:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [개발 기록, AI 교차 검증]
 tags: [AI, Claude Code, 설계, 비판적사고, 테스트]
 description: >-

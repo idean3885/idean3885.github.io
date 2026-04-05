@@ -1,7 +1,7 @@
 ---
 title: "사내 업무 자동화 체계 구축 - devex에서 toolkit까지"
 date: 2026-04-03 01:00:00 +0900
-last_modified_at: 2026-04-05 16:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [개발 기록, AI 적응기]
 tags: [Claude Code, DevEx, AI, 도구제작]
 description: >-

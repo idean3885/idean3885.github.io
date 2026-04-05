@@ -1,7 +1,7 @@
 ---
 title: "AI 위임의 경계 - 인프라 자동화의 빛과 그림자"
 date: 2026-04-03 02:00:00 +0900
-last_modified_at: 2026-04-05 16:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 실무 노하우]
 tags: [Claude Code, DevEx, AI, 도구제작, SSH, MySQL]
 description: >-

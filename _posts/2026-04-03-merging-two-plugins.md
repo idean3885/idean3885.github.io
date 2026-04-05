@@ -1,7 +1,7 @@
 ---
 title: "두 플러그인을 하나로 - devex 사상의 실무 적용"
 date: 2026-04-03 00:00:00 +0900
-last_modified_at: 2026-04-05 16:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [개발 기록, AI 적응기]
 tags: [AI, Claude Code, DevEx, 개발방법론, 설계, 도구제작, 아키텍처]
 description: >-

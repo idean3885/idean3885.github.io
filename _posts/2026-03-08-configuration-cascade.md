@@ -1,7 +1,7 @@
 ---
 title: "Configuration Cascade - 로컬이 글로벌을 이기는 설정 전략"
 date: 2026-03-08 00:00:00 +0900
-last_modified_at: 2026-04-03 00:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 개발 사전]
 tags: [개발사전, 설계, 아키텍처]
 description: >-
