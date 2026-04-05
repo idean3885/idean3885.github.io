@@ -1,6 +1,7 @@
 ---
 title: "AI 위임의 경계 — 인프라 자동화의 빛과 그림자"
 date: 2026-04-03 02:00:00 +0900
+last_modified_at: 2026-04-05 16:00:00 +0900
 categories: [기술 노하우, 실무 노하우]
 tags: [Claude Code, DevEx, AI, 도구제작, SSH, MySQL]
 description: >-
@@ -63,7 +64,7 @@ AI에게 "알아서 해줘"라고 위임한 것은 판단 착오였습니다.
 ### 3-1. db-client 스킬
 
 toolkit에 포함된 `db-client` 스킬은
-NHN Cloud RDS에 MySQL 8.0 클라이언트로 접속합니다.
+클라우드 RDS에 MySQL 8.0 클라이언트로 접속합니다.
 접속 가능한 환경은 다음과 같습니다.
 
 | 환경 | 용도 |

@@ -1,6 +1,7 @@
 ---
 title: "두 플러그인을 하나로 — devex 사상의 실무 적용"
 date: 2026-04-03 00:00:00 +0900
+last_modified_at: 2026-04-05 16:00:00 +0900
 categories: [개발 기록, AI 적응기]
 tags: [AI, Claude Code, DevEx, 개발방법론, 설계, 도구제작, 아키텍처]
 description: >-
@@ -22,7 +23,7 @@ description: >-
 이슈 생성, 커밋, PR — 모두 GitHub API를 직접 호출하는 구조였습니다.
 
 문제는 사내 프로젝트였습니다.
-사내에서는 Dooray를 이슈 트래커로, GitHub Enterprise를 코드 저장소로 사용합니다.
+사내에서는 별도의 이슈 트래커와 GitHub Enterprise를 코드 저장소로 사용합니다.
 devex의 GitHub 이슈 스킬을 그대로 쓸 수 없었고,
 결국 사내 전용 workflow 플러그인을 별도로 만들었습니다.
 
