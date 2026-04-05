@@ -122,13 +122,9 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* toc-bar: fixed topbar 아래로 위치 보정 (테마 기본값 top:0 → topbar 뒤에 겹침) */
+/* toc-bar: 축소 화면에서 불필요 — 스크롤 프로그레스로 대체 */
 #toc-bar {
-  top: 3rem;
-
-  &.invisible {
-    top: 0;
-  }
+  display: none !important;
 }
 
 /* TOC: card style + topbar clearance */
