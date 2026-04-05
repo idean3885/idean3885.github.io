@@ -3,7 +3,7 @@ title: "와일드카드 인증서 갱신 완전 자동화 - Docker IPC에서 Jen
 date: 2026-04-01 12:00:00 +0900
 categories: [개발 기록, 인증서 자동화 구축기]
 tags: [Certbot, Jenkins, Let's Encrypt, DNS-01, Claude Code, 자동화, 인프라, Shell Script, Docker]
-last_modified_at: 2026-04-03 19:23:58 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 description: >-
   클라우드 DNS 서비스에 certbot 플러그인이 없어 와일드카드 인증서를 수동 갱신해야 했습니다.
   Docker IPC로 DNS-01 Challenge를 자동화하고, 4개 클러스터 배포와 Jenkins 파이프라인까지

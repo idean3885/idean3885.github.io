@@ -1,7 +1,7 @@
 ---
 title: "건네도 될까에서 건넸다로 - 비개발자 실전 피드백"
 date: 2026-02-23 00:00:00 +0900
-last_modified_at: 2026-04-03 00:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [개발 기록, Slack to Notion 제작기]
 tags: [AI, Claude Code, MCP, 비개발자, 피드백, UX, Slack, Notion]
 description: >-

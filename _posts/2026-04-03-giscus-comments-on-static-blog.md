@@ -1,6 +1,7 @@
 ---
 title: "정적 블로그에 댓글을 달았다 - Giscus와 GitHub Discussions"
 date: 2026-04-03 22:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 블로그]
 tags: [Jekyll, Chirpy, Giscus, GitHub Discussions, 댓글]
 description: >-

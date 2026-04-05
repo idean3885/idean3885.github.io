@@ -1,7 +1,7 @@
 ---
 title: "떠다니는 생각을 잡아두고 싶다 - small-peaces 브레인스토밍"
 date: 2026-02-20 00:00:00 +0900
-last_modified_at: 2026-04-03 00:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [생각과 방법론, small-peaces]
 tags: [브레인스토밍, 토이프로젝트, 개인프로젝트]
 description: >-

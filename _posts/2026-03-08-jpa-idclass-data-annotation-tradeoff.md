@@ -1,7 +1,7 @@
 ---
 title: "@Data vs 개별 어노테이션 - JPA 복합 키 클래스의 트레이드오프"
 date: 2026-03-08 00:00:00 +0900
-last_modified_at: 2026-04-03 00:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 실무 노하우]
 tags: [설계, 아키텍처, 개발사전]
 description: >-

@@ -1,6 +1,7 @@
 ---
 title: "*.github.io에서 벗어나니 사이트맵이 바로 됐다 - 커스텀 도메인과 GA4"
 date: 2026-04-05 15:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 블로그]
 tags: [GitHub Pages, Google Search Console, GA4, 커스텀 도메인, Cloudflare, SEO]
 description: >-

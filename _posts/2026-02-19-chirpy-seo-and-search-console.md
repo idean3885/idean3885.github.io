@@ -1,7 +1,7 @@
 ---
 title: "Chirpy 블로그의 SEO는 이미 되어 있었다 - Google Search Console까지"
 date: 2026-02-19 03:00:00 +0900
-last_modified_at: 2026-04-03 00:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 블로그]
 tags: [Jekyll, Chirpy, SEO, Google Search Console, jekyll-seo-tag]
 description: >-

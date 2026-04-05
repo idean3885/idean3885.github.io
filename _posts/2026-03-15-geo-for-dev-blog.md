@@ -1,7 +1,7 @@
 ---
 title: "GEO 시대, 개발 블로그는 뭘 해야 하나 - Chirpy 블로그에 적용한 기록"
 date: 2026-03-15 23:30:00 +0900
-last_modified_at: 2026-04-03 00:00:00 +0900
+last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 블로그]
 tags: [SEO, GEO, Jekyll, Chirpy, JSON-LD, AI 검색]
 description: >-
