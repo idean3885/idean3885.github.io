@@ -1,5 +1,5 @@
 ---
-title: "uvx 사용법 — 설치부터 실행까지"
+title: "uvx 사용법: 설치부터 실행까지"
 date: 2026-02-19 00:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, Python]
@@ -18,7 +18,7 @@ Anthropic 공식 MCP 서버인 `mcp-server-git`도 uvx 기반으로 배포됩니
 
 [검증 편](https://idean3885.github.io/posts/testing-changed-architecture/)에서
 "왜 uvx를 선택했는가"와 전환 과정을 다뤘습니다.
-이 글은 그 이후 — "어떻게 쓰는가" — 를 정리합니다.
+이 글은 그 이후, "어떻게 쓰는가"를 정리합니다.
 
 ## 자바 개발자를 위한 대응표
 
@@ -81,7 +81,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 기본 실행 명령어입니다.
 
 ```bash
-# 임시 실행 — 설치 없이 바로 사용
+# 임시 실행 - 설치 없이 바로 사용
 uvx ruff check .
 uvx black --check .
 
@@ -89,7 +89,7 @@ uvx black --check .
 uvx ruff@0.3.0 check .
 uvx ruff@latest check .
 
-# 버전 범위 지정 — --from 필수
+# 버전 범위 지정 - --from 필수
 uvx --from 'ruff>0.2.0,<0.3.0' ruff check .
 
 # 패키지명과 커맨드명이 다를 때

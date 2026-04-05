@@ -1,5 +1,5 @@
 ---
-title: "GitHub Pages 이중 도메인 구성기 — Cloudflare Worker로 QR코드와 커스텀 도메인 양립시키기"
+title: "GitHub Pages 이중 도메인 구성기: Cloudflare Worker로 QR코드와 커스텀 도메인 양립시키기"
 date: 2026-04-05 20:00:00 +0900
 categories: [기술 노하우, 실무 노하우]
 tags: [GitHub Pages, Cloudflare, DNS, 도메인]

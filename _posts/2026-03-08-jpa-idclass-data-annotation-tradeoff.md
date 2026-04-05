@@ -1,5 +1,5 @@
 ---
-title: "@Data vs 개별 어노테이션 — JPA 복합 키 클래스의 트레이드오프"
+title: "@Data vs 개별 어노테이션: JPA 복합 키 클래스의 트레이드오프"
 date: 2026-03-08 00:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, 실무 노하우]
@@ -77,7 +77,7 @@ Hibernate가 @IdClass에 대해 이 방식을 지원하지 않습니다.
 
 ```java
 // @IdClass 키 클래스 - @Data 사용
-// ⚠️ @NoArgsConstructor 필수 — @Data는 이를 포함하지 않음
+// ⚠️ @NoArgsConstructor 필수 - @Data는 이를 포함하지 않음
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

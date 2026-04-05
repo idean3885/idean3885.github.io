@@ -1,5 +1,5 @@
 ---
-title: "Configuration Cascade — 로컬이 글로벌을 이기는 설정 전략"
+title: "Configuration Cascade: 로컬이 글로벌을 이기는 설정 전략"
 date: 2026-03-08 00:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, 개발 사전]
@@ -52,20 +52,20 @@ Spring Boot도 같은 원리로 동작합니다.
 | 4 (최저) | 기본 YAML | `application.yml` |
 
 ```yaml
-# application.yml — 기본값
+# application.yml - 기본값
 server:
   port: 8080
   servlet:
     context-path: /api
 
-# application-dev.yml — port만 덮어씁니다
+# application-dev.yml - port만 덮어씁니다
 server:
   port: 8081
 ```
 
 `dev` 프로필로 실행하면 port는 8081이 되고,
 context-path는 기본값 `/api`를 그대로 씁니다.
-port는 부분 덮어쓰기, context-path는 폴백 —
+port는 부분 덮어쓰기, context-path는 폴백.
 캐스케이드의 두 축이 동시에 작동합니다.
 
 > 이 글은 Claude와 함께 작업했습니다.

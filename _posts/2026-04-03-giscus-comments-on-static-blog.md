@@ -1,5 +1,5 @@
 ---
-title: "정적 블로그에 댓글을 달았다 — Giscus와 GitHub Discussions"
+title: "정적 블로그에 댓글을 달았다: Giscus와 GitHub Discussions"
 date: 2026-04-03 22:00:00 +0900
 categories: [기술 노하우, 블로그]
 tags: [Jekyll, Chirpy, Giscus, GitHub Discussions, 댓글]
@@ -35,7 +35,7 @@ GitHub 로그인으로 댓글을 남기는 구조였습니다.
   ↓ iframe (Giscus 위젯)
   ↓ GitHub OAuth2 로그인
   ↓ GitHub GraphQL API
-GitHub 저장소 — Discussions 탭
+GitHub 저장소: Discussions 탭
 ```
 
 GitHub 저장소에는 코드(Git) 외에 **Discussions**라는 별도 기능이 있습니다.
@@ -113,7 +113,7 @@ Announcements는 관리자만 글 작성이 가능하므로, 방문자 댓글에
 
 변경한 내용은 두 가지입니다.
 
-**댓글 활성화** — defaults 섹션의 `comments: false`를 `true`로 변경:
+**댓글 활성화**: defaults 섹션의 `comments: false`를 `true`로 변경:
 
 ```yaml
 defaults:
@@ -125,7 +125,7 @@ defaults:
       comments: true    # false → true
 ```
 
-**Giscus provider 설정** — 최상위에 comments 블록 추가:
+**Giscus provider 설정**: 최상위에 comments 블록 추가:
 
 ```yaml
 comments:

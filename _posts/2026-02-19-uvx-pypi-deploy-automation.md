@@ -1,5 +1,5 @@
 ---
-title: "uvx로 MCP 플러그인 배포하기 — PyPI부터 GitHub Actions까지"
+title: "uvx로 MCP 플러그인 배포하기: PyPI부터 GitHub Actions까지"
 date: 2026-02-19 01:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, Python]
@@ -15,7 +15,7 @@ description: >-
 uvx의 개념과 기본 사용법을 정리했습니다.
 이 글에서는 직접 만든 MCP 플러그인을 uvx로 배포하고 자동화한 과정을 다룹니다.
 
-## 배포하기 — pyproject.toml
+## 배포하기: pyproject.toml
 
 uvx로 실행 가능한 패키지를 만들려면 두 가지가 필요합니다.
 PyPI에 배포된 패키지, 그리고 진입점이 정의된 `pyproject.toml`입니다.
@@ -38,7 +38,7 @@ dependencies = [
     "mcp[cli]>=1.0.0",
 ]
 
-# uvx가 실행할 커맨드 정의 — 이것이 핵심
+# uvx가 실행할 커맨드 정의 - 이것이 핵심
 [project.scripts]
 slack-to-notion-mcp = "slack_to_notion.mcp_server:main"
 ```
@@ -68,7 +68,7 @@ uv publish  # PyPI에 배포
 
 | 산출물 | 형식 | 역할 |
 |--------|------|------|
-| wheel (`.whl`) | 미리 빌드된 패키지 | 설치 시 빌드 불필요 — Java `.jar`과 동일 사상 |
+| wheel (`.whl`) | 미리 빌드된 패키지 | 설치 시 빌드 불필요 (Java `.jar`과 동일 사상) |
 | sdist (`.tar.gz`) | 소스 아카이브 | wheel 미지원 환경용 폴백 |
 
 wheel의 핵심은 **사용자 환경에서 빌드를 제거**하는 것입니다.
@@ -109,15 +109,15 @@ Anthropic 공식 `mcp-server-git`도 `"command": "uvx"`, `"args": ["mcp-server-g
 
 uvx 기반 MCP 서버의 장점은 네 가지입니다.
 
-1. **사용자 환경 설정 불필요** — uvx가 가상환경 생성과 의존성 설치를 모두 처리합니다.
-2. **버전 고정 가능** — `args`에 `"slack-to-notion-mcp@0.2.0"`처럼 버전을 명시할 수 있습니다.
-3. **의존성 격리** — 사용자 프로젝트의 Python 환경과 충돌하지 않습니다.
-4. **업데이트 간편** — 설정 파일의 버전 번호만 바꾸면 됩니다.
+1. **사용자 환경 설정 불필요**: uvx가 가상환경 생성과 의존성 설치를 모두 처리합니다.
+2. **버전 고정 가능**: `args`에 `"slack-to-notion-mcp@0.2.0"`처럼 버전을 명시할 수 있습니다.
+3. **의존성 격리**: 사용자 프로젝트의 Python 환경과 충돌하지 않습니다.
+4. **업데이트 간편**: 설정 파일의 버전 번호만 바꾸면 됩니다.
 
 git clone 기반에서 uvx로 전환하면서 6단계 설치가 2단계로 줄어든 과정은
 [검증 편](https://idean3885.github.io/posts/testing-changed-architecture/)에 정리했습니다.
 
-## 왜 PyPI인가 — 대안 검토
+## 왜 PyPI인가: 대안 검토
 
 uvx는 PyPI 없이도 실행할 수 있습니다.
 
@@ -131,19 +131,19 @@ PyPI 배포 과정이 없어지니 처음에는 매력적으로 보였습니다.
 검토 후 기각했습니다.
 이유는 세 가지입니다.
 
-1. **비표준** — Anthropic 공식 MCP 서버를 포함해
+1. **비표준**: Anthropic 공식 MCP 서버를 포함해
    Python 도구는 거의 모두 PyPI로 배포합니다.
    Git 직접 실행은 Python 진영의 일반적인 배포 방식이 아닙니다.
-2. **매번 소스 빌드** — wheel이 아닌 소스를 받으므로
+2. **매번 소스 빌드**: wheel이 아닌 소스를 받으므로
    사용자 환경에서 매번 빌드가 발생합니다.
    wheel의 존재 이유가 바로 이 빌드를 제거하기 위한 것입니다.
-3. **보안 서명 불가** — PyPI Trusted Publishing(OIDC)은
+3. **보안 서명 불가**: PyPI Trusted Publishing(OIDC)은
    빌드 환경을 검증합니다.
    Git 직접 실행에는 이런 서명 체계가 없습니다.
 
 대안을 검토해봐야 "왜 PyPI를 쓰는가"에 대한 답이 명확해집니다.
 
-## 자동화 — GitHub Actions
+## 자동화: GitHub Actions
 
 처음에는 수동으로 `uv publish`를 실행했습니다.
 태그를 push하면 자동 배포되도록 바꾼 건 버전 불일치를 한 번 겪고 나서입니다.
@@ -212,14 +212,14 @@ jobs:
 | 방식 | 설정 | 보안 |
 |------|------|------|
 | API 토큰 | GitHub Secret에 PyPI 토큰 저장 | 양호 |
-| Trusted Publisher (OIDC) | PyPI + GitHub 환경 1회 설정 | 최상 — 시크릿 불필요 |
+| Trusted Publisher (OIDC) | PyPI + GitHub 환경 1회 설정 | 최상 (시크릿 불필요) |
 
 > 신규 프로젝트라면 처음부터 Trusted Publisher를 쓰는 것을 권장합니다.
 > PyPI 프로젝트 설정에서 GitHub 저장소와 워크플로우를 등록하면
 > 시크릿 없이 OIDC로 인증됩니다.
 {: .prompt-tip }
 
-### 태그까지 자동화 — auto-tag.yml
+### 태그까지 자동화: auto-tag.yml
 
 그런데 하나 남았습니다.
 태그 push가 여전히 수동입니다.
@@ -254,7 +254,7 @@ jobs:
             | sed 's/.*= *"\(.*\)"/\1/')
           TAG="v$VERSION"
           if git ls-remote --tags origin "$TAG" | grep -q "$TAG"; then
-            echo "태그 $TAG 이미 존재 — 스킵"
+            echo "태그 $TAG 이미 존재 - 스킵"
           else
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -282,7 +282,7 @@ PR 머지 (pyproject.toml version 변경 포함)
 | 몰랐던 것 | 알게 된 것 |
 |-----------|-----------|
 | `uv build`가 뭘 생성하는지 | wheel(미리 빌드된 패키지)과 sdist(소스 아카이브) 두 가지 |
-| PyPI가 빌드도 해주는지 | 저장소일 뿐 빌드하지 않음 — Maven Central과 동일 |
+| PyPI가 빌드도 해주는지 | 저장소일 뿐 빌드하지 않음 (Maven Central과 동일) |
 | Git에서 직접 실행하면 되지 않나 | 비표준 + 매번 소스 빌드 + 보안 서명 불가로 기각 |
 | 태그 push를 수동으로 해야 하나 | auto-tag.yml로 완전 자동화 가능 |
 
