@@ -16,4 +16,4 @@
 | 플러그인 | 역할 |
 |----------|------|
 | [claude-devex](https://github.com/idean3885/claude-devex) | 개발 워크플로우 — 이슈 사이클, 커밋, PR |
-| [claude-blog-publisher](https://github.com/idean3885/claude-blog-publisher) | 블로그 퍼블리시 — 콘텐츠 변환, 포스팅 작성 |
+| [claude-blog-publisher](https://github.com/idean3885/claude-blog-publisher) | 콘텐츠 발행 — 원고를 블로그 포스트로 변환·발행 |
