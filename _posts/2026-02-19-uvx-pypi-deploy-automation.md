@@ -1,5 +1,5 @@
 ---
-title: "uvx로 MCP 플러그인 배포하기: PyPI부터 GitHub Actions까지"
+title: "uvx로 MCP 플러그인 배포하기 - PyPI부터 GitHub Actions까지"
 date: 2026-02-19 01:00:00 +0900
 last_modified_at: 2026-04-03 00:00:00 +0900
 categories: [기술 노하우, Python]
@@ -15,7 +15,7 @@ description: >-
 uvx의 개념과 기본 사용법을 정리했습니다.
 이 글에서는 직접 만든 MCP 플러그인을 uvx로 배포하고 자동화한 과정을 다룹니다.
 
-## 배포하기: pyproject.toml
+## 배포하기 - pyproject.toml
 
 uvx로 실행 가능한 패키지를 만들려면 두 가지가 필요합니다.
 PyPI에 배포된 패키지, 그리고 진입점이 정의된 `pyproject.toml`입니다.
@@ -117,7 +117,7 @@ uvx 기반 MCP 서버의 장점은 네 가지입니다.
 git clone 기반에서 uvx로 전환하면서 6단계 설치가 2단계로 줄어든 과정은
 [검증 편](https://idean3885.github.io/posts/testing-changed-architecture/)에 정리했습니다.
 
-## 왜 PyPI인가: 대안 검토
+## 왜 PyPI인가 - 대안 검토
 
 uvx는 PyPI 없이도 실행할 수 있습니다.
 
@@ -143,7 +143,7 @@ PyPI 배포 과정이 없어지니 처음에는 매력적으로 보였습니다.
 
 대안을 검토해봐야 "왜 PyPI를 쓰는가"에 대한 답이 명확해집니다.
 
-## 자동화: GitHub Actions
+## 자동화 - GitHub Actions
 
 처음에는 수동으로 `uv publish`를 실행했습니다.
 태그를 push하면 자동 배포되도록 바꾼 건 버전 불일치를 한 번 겪고 나서입니다.
@@ -219,7 +219,7 @@ jobs:
 > 시크릿 없이 OIDC로 인증됩니다.
 {: .prompt-tip }
 
-### 태그까지 자동화: auto-tag.yml
+### 태그까지 자동화 - auto-tag.yml
 
 그런데 하나 남았습니다.
 태그 push가 여전히 수동입니다.

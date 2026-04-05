@@ -1,5 +1,5 @@
 ---
-title: "와일드카드 인증서 갱신 완전 자동화: Docker IPC에서 Jenkins 배치까지"
+title: "와일드카드 인증서 갱신 완전 자동화 - Docker IPC에서 Jenkins 배치까지"
 date: 2026-04-01 12:00:00 +0900
 categories: [개발 기록, 인증서 자동화 구축기]
 tags: [Certbot, Jenkins, Let's Encrypt, DNS-01, Claude Code, 자동화, 인프라, Shell Script, Docker]
