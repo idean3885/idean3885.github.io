@@ -61,7 +61,9 @@ GPU 클라우드 서비스의 사용량 수집·집계 시스템을 설계하고
 
 ## 프로젝트
 
+- [trip-planner](https://github.com/idean3885/trip-planner) - 우리의 여행 앱 만들기 — React + GitHub Pages 모바일 웹
 - [claude-devex](https://github.com/idean3885/claude-devex) - AI 기반 개발 사이클 자동화 도구
+- [claude-cross-verify](https://github.com/idean3885/claude-cross-verify) - 의사결정·설계·문서·구현 4축 교차 검증 에이전트
 - [claude-slack-to-notion](https://github.com/idean3885/claude-slack-to-notion) - Slack 스레드를 Notion으로 정리하는 MCP 플러그인
 
 ## 링크
