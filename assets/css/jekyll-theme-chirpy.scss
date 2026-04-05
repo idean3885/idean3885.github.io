@@ -122,6 +122,14 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* Breadcrumb: xl 이상에서도 overflow 처리 (테마 기본값은 lg~xl만 적용) */
+#topbar #breadcrumb {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100% - 200px);
+}
+
 /* TOC: card style + topbar clearance */
 #toc-wrapper {
   top: 4rem;
