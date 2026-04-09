@@ -1,7 +1,7 @@
 ---
 title: "시계열 수집의 쓰기 경합 - 5분 주기 시스템에서 동시성을 해결한 방법"
 date: 2026-03-11 00:00:00 +0900
-last_modified_at: 2026-04-06 00:00:00 +0900
+last_modified_at: 2026-04-09 00:00:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
 tags: [설계, 아키텍처]
 description: >-
@@ -189,7 +189,7 @@ adapter/
     ├── configs/
     │   ├── SourceDataSourceConfig.java   # 마스터/슬레이브 라우팅
     │   └── SourceJpaConfig.java          # 별도 EntityManager
-    ├── entities/           # SourceInstance 엔티티
+    ├── entities/           # 노드별 원천 데이터 엔티티
     └── repositories/
 ```
 
@@ -216,11 +216,11 @@ public class ReadWriteRoutingDataSource extends AbstractRoutingDataSource {
 ```java
 // 집계 시 원천 조회 → 슬레이브로 라우팅
 @Transactional(value = "sourceTransactionManager", readOnly = true)
-public List<SourceInstance> findByRange(Instant from, Instant to) { ... }
+public List<SourceMetric> findByRange(Instant from, Instant to) { ... }
 
 // 원천 수집 → 마스터로 라우팅
 @Transactional(value = "sourceTransactionManager")
-public void saveAll(List<SourceInstance> instances) { ... }
+public void saveAll(List<SourceMetric> instances) { ... }
 ```
 
 **별도 JPA 영역**
