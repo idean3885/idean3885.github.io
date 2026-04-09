@@ -189,7 +189,7 @@ adapter/
     ├── configs/
     │   ├── SourceDataSourceConfig.java   # 마스터/슬레이브 라우팅
     │   └── SourceJpaConfig.java          # 별도 EntityManager
-    ├── entities/           # 노드별 원천 데이터 엔티티
+    ├── entities/           # Pod별 원천 데이터 엔티티
     └── repositories/
 ```
 
