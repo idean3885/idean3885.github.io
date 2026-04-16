@@ -10,8 +10,8 @@ description: >-
   Cloudflare DNS 프록시 모드와 Workers를 처음 써보며 겪은 삽질 기록입니다.
 ---
 
-> **TL;DR**
-> GitHub Pages는 리포지토리당 커스텀 도메인을 1개만 지원합니다.
+> **TL;DR**<br>
+> GitHub Pages는 리포지토리당 커스텀 도메인을 1개만 지원합니다.<br>
 > QR코드에 찍힌 기존 도메인을 살리면서 짧은 커스텀 도메인을 추가하기 위해
 > Cloudflare Workers 무료 플랜으로 리버스 프록시를 구성했습니다.
 {: .prompt-tip }

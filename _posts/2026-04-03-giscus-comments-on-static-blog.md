@@ -10,10 +10,10 @@ description: >-
   Chirpy 테마에서의 설정 과정을 정리합니다.
 ---
 
-> **TL;DR**
-> 정적 블로그에 댓글이 안 될 거라 생각했는데, Giscus를 쓰면 됩니다.
+> **TL;DR**<br>
+> 정적 블로그에 댓글이 안 될 거라 생각했는데, Giscus를 쓰면 됩니다.<br>
 > GitHub Discussions API를 활용하는 오픈소스 위젯이고,
-> Chirpy 테마는 기본 지원하므로 `_config.yml` 13줄 추가로 끝납니다.
+> Chirpy 테마는 기본 지원하므로 `_config.yml` 13줄 추가로 끝납니다.<br>
 > 비용은 0원입니다.
 {: .prompt-tip }
 
@@ -60,7 +60,7 @@ Giscus는 이 Discussions를 댓글 저장소로 사용합니다.
 댓글은 클라이언트(브라우저)에서 GitHub API로 직접 통신하므로 서버가 필요 없습니다.
 댓글이 100개 달려도 Git 커밋 로그에는 아무것도 남지 않습니다.
 
-> Git 커밋이 아니라 Discussions API입니다.
+> Git 커밋이 아니라 Discussions API입니다.<br>
 > Issues에 댓글 다는 것과 동일한 방식으로, 코드에는 영향이 없습니다.
 {: .prompt-info }
 
@@ -158,7 +158,7 @@ comments:
 
 설치 후 새로고침하니 정상 동작했습니다.
 
-> Giscus App 설치를 빠뜨리면 설정은 맞는데 동작하지 않습니다.
+> Giscus App 설치를 빠뜨리면 설정은 맞는데 동작하지 않습니다.<br>
 > `_config.yml` 외에 App 설치가 필수라는 점을 기억해두면 좋습니다.
 {: .prompt-warning }
 

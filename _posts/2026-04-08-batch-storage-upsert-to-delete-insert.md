@@ -8,8 +8,9 @@ description: >-
   2,500행 기준 ODKU는 5,000회 연산이지만, DELETE + INSERT는 2회입니다.
 ---
 
-> **TL;DR** MySQL `ON DUPLICATE KEY UPDATE`는 행마다 내부 SELECT가 발생합니다.
-> 2,500행 기준 ODKU는 5,000회 연산이지만, DELETE + INSERT는 2회입니다.
+> **TL;DR**<br>
+> MySQL `ON DUPLICATE KEY UPDATE`는 행마다 내부 SELECT가 발생합니다.
+> 2,500행 기준 ODKU는 5,000회 연산이지만, DELETE + INSERT는 2회입니다.<br>
 > 5인 B2B2C GPU 서비스에서 유지보수 효율성이 성능보다 우선합니다.
 > 이런 판단은 AI 딥리서치가 아닌 팀원 자문에서 나왔습니다.
 {: .prompt-tip }
@@ -73,7 +74,7 @@ B2B2C 정적 환경에서 인프라 한계가 곧 최대치 제약입니다.
 
 > AI에게 아무리 딥리서치를 시키고 다른 사례를 살펴도 이런 결론은 나오지 않았습니다.
 > "~2,000 Pod 상한의 B2B2C GPU 서비스에서 5인이 유지보수합니다"는 맥락은
-> 어떤 리서치에서도 다뤄지지 않습니다.
+> 어떤 리서치에서도 다뤄지지 않습니다.<br>
 > 이 판단은 서비스의 맥락을 이해하는 팀원에게서 나왔습니다.
 {: .prompt-info }
 

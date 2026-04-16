@@ -9,8 +9,8 @@ description: >-
   Jekyll + Chirpy 블로그에 저비용으로 적용한 과정을 정리합니다.
 ---
 
-> **TL;DR**
-> AI 검색엔진(Claude, Gemini, ChatGPT 등)이 콘텐츠를 인용하는 시대가 왔습니다.
+> **TL;DR**<br>
+> AI 검색엔진(Claude, Gemini, ChatGPT 등)이 콘텐츠를 인용하는 시대가 왔습니다.<br>
 > GEO를 조사해보니 Chirpy는 이미 상당 부분 친화적이었고,
 > JSON-LD author 누락 같은 기본기만 보완하면 충분했습니다.
 {: .prompt-tip }

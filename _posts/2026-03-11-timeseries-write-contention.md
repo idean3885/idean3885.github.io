@@ -10,7 +10,8 @@ description: >-
   쓰기 경합을 제거한 과정을 공유합니다.
 ---
 
-> **TL;DR** 5분 수집과 10분 집계가 겹치는 환경에서, 스키마 분리와 `@Transactional(readOnly)` 기반 라우팅으로 쓰기 경합을 제거했습니다.
+> **TL;DR**<br>
+> 5분 수집과 10분 집계가 겹치는 환경에서, 스키마 분리와 `@Transactional(readOnly)` 기반 라우팅으로 쓰기 경합을 제거했습니다.
 {: .prompt-tip }
 
 ---
