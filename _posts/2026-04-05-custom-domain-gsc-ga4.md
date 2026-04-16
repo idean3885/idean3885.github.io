@@ -10,9 +10,9 @@ description: >-
   GA4 도입까지 정리합니다.
 ---
 
-> **TL;DR**
-> GitHub Pages의 `*.github.io` 도메인에서 GSC(Google Search Console) 사이트맵이 2개월간 "읽을 수 없음" 상태였습니다.
-> 기술적으로는 모두 정상이었고, 커스텀 도메인을 연결하자 즉시 해소되었습니다.
+> **TL;DR**<br>
+> GitHub Pages의 `*.github.io` 도메인에서 GSC(Google Search Console) 사이트맵이 2개월간 "읽을 수 없음" 상태였습니다.<br>
+> 기술적으로는 모두 정상이었고, 커스텀 도메인을 연결하자 즉시 해소되었습니다.<br>
 > 같은 시점에 GA4(Google Analytics 4)도 도입하여 검색 노출(GSC)과 방문자 행동(GA4) 양쪽을 볼 수 있게 되었습니다.
 {: .prompt-tip }
 

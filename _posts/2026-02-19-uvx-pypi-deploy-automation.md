@@ -214,7 +214,7 @@ jobs:
 | API 토큰 | GitHub Secret에 PyPI 토큰 저장 | 양호 |
 | Trusted Publisher (OIDC) | PyPI + GitHub 환경 1회 설정 | 최상 (시크릿 불필요) |
 
-> 신규 프로젝트라면 처음부터 Trusted Publisher를 쓰는 것을 권장합니다.
+> 신규 프로젝트라면 처음부터 Trusted Publisher를 쓰는 것을 권장합니다.<br>
 > PyPI 프로젝트 설정에서 GitHub 저장소와 워크플로우를 등록하면
 > 시크릿 없이 OIDC로 인증됩니다.
 {: .prompt-tip }
