@@ -17,6 +17,10 @@ layout: default
   {% assign posts = posts | push: post %}
 {% endfor %}
 
+<p class="post-list-summary text-muted mb-4 ps-md-2">
+  총 <strong>{{ site.posts | size }}</strong>편
+</p>
+
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for post in posts %}
     <article class="card-wrapper card">
