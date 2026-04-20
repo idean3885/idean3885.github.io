@@ -1,6 +1,7 @@
 ---
 title: "MySQL 파티셔닝 도입기: JPA 복합 키 전환부터 시간 독립 DDL까지"
 date: 2026-04-16 21:30:00 +0900
+last_modified_at: 2026-04-20 23:20:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
 tags: [설계, 아키텍처, 테스트]
 description: >-
@@ -148,7 +149,7 @@ public class IntervalAggregationKey implements Serializable {
 | `findByGeneratedId` | "generated"는 구현 상세 노출 |
 | `findByIdEquals` | "Equals"는 노이즈 |
 
-**최종**: `findByKeyId` — "복합 Key의 Id로 찾는다"
+**최종**: `findByKeyId` ("복합 Key의 Id로 찾는다")
 
 ```java
 @Query("SELECT e FROM IntervalAggregationEntity e WHERE e.id = :id")
@@ -269,8 +270,8 @@ Operator Controller를 통해 수동 트리거도 가능합니다.
 | 속성 | 미터링 시스템 적용 |
 |------|-------------------|
 | **멱등성** | DELETE + INSERT 패턴 (이전 편에서 전환 완료) |
-| **복구 윈도우** | `max-recovery-days: 7` — 파티션 보관 주기(13개월) 내이므로 데이터 항상 존재 |
-| **누락 탐지** | JobHistory 기반 gap 탐지 — 마지막 성공 시점 이후 빈 구간 자동 식별 |
+| **복구 윈도우** | `max-recovery-days: 7`. 파티션 보관 주기(13개월) 내이므로 데이터 항상 존재 |
+| **누락 탐지** | JobHistory 기반 gap 탐지. 마지막 성공 시점 이후 빈 구간 자동 식별 |
 
 > 재시도는 '같은 시도를 반복'하는 것이고,
 > Self-healing backfill은 '다음 기회에 빠진 부분을 채우는' 것입니다.<br>
@@ -280,7 +281,7 @@ Operator Controller를 통해 수동 트리거도 가능합니다.
 ### 배운 것
 
 이번 작업에서 가장 먼저 부딪힌 벽은 MySQL의 파티셔닝 제약이었습니다.
-"파티션 키 ⊆ 유일성 키" — 이 한 줄의 제약 때문에
+"파티션 키는 유일성 키의 부분집합이어야 한다". 이 한 줄의 제약 때문에
 서로게이트 키 단독 PK라는 익숙한 구조를 포기해야 했습니다.
 
 그 다음 벽은 JPA였습니다.
