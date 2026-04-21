@@ -122,6 +122,125 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* === Sidebar Collapse (desktop only, lg breakpoint 이상) === */
+
+/* 접힘 상태 토글 버튼 — 기본 상태(펼침)에서 '<' 아이콘 */
+#sidebar-collapse-toggle {
+  margin-left: auto; /* sidebar-bottom 우측 정렬 */
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+
+  i {
+    transition: transform 0.25s ease;
+  }
+}
+
+/* 모바일(<lg)에서는 데스크톱 전용 토글 숨김 — 햄버거 메뉴 유지 */
+@media (max-width: 849px) {
+  #sidebar-collapse-toggle {
+    display: none;
+  }
+}
+
+/* lg 이상에서만 접힘/펼침 폭 전환을 애니메이션 */
+@media (min-width: 850px) {
+  #sidebar,
+  #main-wrapper {
+    transition: width 0.25s ease, margin-left 0.25s ease;
+  }
+}
+
+/* 접힘 상태: 아이콘만 표시, 폭 축소 */
+html[data-sidebar-collapsed='true'] {
+  @media (min-width: 850px) {
+    #sidebar {
+      width: 5rem;
+
+      .site-title,
+      .site-subtitle {
+        display: none;
+      }
+
+      .profile-wrapper {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-top: 1.75rem;
+        margin-bottom: 1.75rem;
+      }
+
+      #avatar {
+        width: 3rem;
+        height: 3rem;
+
+        @media (min-width: 576px) {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+
+      ul li.nav-item {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        a.nav-link {
+          justify-content: center;
+
+          i {
+            margin-right: 0;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      .sidebar-bottom {
+        justify-content: center;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        > a,
+        > #mode-toggle,
+        > .icon-border {
+          display: none;
+        }
+      }
+
+      #sidebar-collapse-toggle {
+        margin-left: 0;
+        display: flex;
+
+        i {
+          transform: rotate(180deg); /* 접힘 상태에서 '>' 방향 */
+        }
+      }
+    }
+
+    #main-wrapper {
+      margin-left: 5rem;
+    }
+  }
+
+  @media (min-width: 1650px) {
+    #main-wrapper {
+      margin-left: 5rem;
+    }
+  }
+}
+
+/* === 코드블록 좌측 패딩 === */
+/* Rouge non-lineno 출력(`<div class="highlight"><pre><code>`)은
+   기본 좌측 패딩이 없어 텍스트가 경계에 붙는다.
+   lineno 모드와 시각적 여백을 맞춘다. */
+.highlight {
+  pre {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 /* toc-bar: 축소 화면에서 불필요 — 스크롤 프로그레스로 대체 */
 #toc-bar {
   display: none !important;
