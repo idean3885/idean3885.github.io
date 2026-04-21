@@ -110,19 +110,22 @@
       {% endif %}
     {% endfor %}
 
-    <button type="button" class="btn btn-link nav-link sidebar-collapse-toggle" aria-label="Toggle sidebar" id="sidebar-collapse-toggle">
-      <i class="fas fa-angle-left"></i>
-    </button>
   </div>
   <!-- .sidebar-bottom -->
 </aside>
 <!-- #sidebar -->
+
+<button type="button" aria-label="Toggle sidebar" id="sidebar-collapse-toggle">
+  <i class="fas fa-chevron-left"></i>
+</button>
 
 <script>
   (function () {
     var btn = document.getElementById('sidebar-collapse-toggle');
     if (!btn) return;
     btn.addEventListener('click', function () {
+      // 태블릿 이하에서는 미디어쿼리가 상태를 강제하므로 토글 무효화
+      if (window.innerWidth < 850) return;
       var isCollapsed = document.documentElement.getAttribute('data-sidebar-collapsed') === 'true';
       if (isCollapsed) {
         document.documentElement.removeAttribute('data-sidebar-collapsed');

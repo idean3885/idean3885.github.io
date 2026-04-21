@@ -11,15 +11,29 @@
     background-color: var(--topbar-bg, var(--body-bg, #fff));
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   }
-  /* 사이드바 표시 시 (>= 850px) 사이드바 너비만큼 왼쪽 오프셋 */
+  /* 사이드바 표시 시 사이드바 너비만큼 왼쪽 오프셋
+     — 576-849: 5rem 고정(토글 불가)
+     — ≥850: 기본 260px, 접힘 시 5rem
+     — ≥1650: 기본 300px, 접힘 시 5rem */
+  @media (min-width: 576px) and (max-width: 849px) {
+    #topbar-wrapper {
+      left: 5rem;
+    }
+  }
   @media (min-width: 850px) {
     #topbar-wrapper {
       left: 260px;
+    }
+    html[data-sidebar-collapsed="true"] #topbar-wrapper {
+      left: 5rem;
     }
   }
   @media (min-width: 1650px) {
     #topbar-wrapper {
       left: 300px;
+    }
+    html[data-sidebar-collapsed="true"] #topbar-wrapper {
+      left: 5rem;
     }
   }
   /* topbar 높이만큼 본문 여백 확보 */
@@ -35,14 +49,25 @@
     z-index: 1019;
     height: 3px;
   }
+  @media (min-width: 576px) and (max-width: 849px) {
+    #reading-progress-wrap {
+      left: 5rem;
+    }
+  }
   @media (min-width: 850px) {
     #reading-progress-wrap {
       left: 260px;
+    }
+    html[data-sidebar-collapsed="true"] #reading-progress-wrap {
+      left: 5rem;
     }
   }
   @media (min-width: 1650px) {
     #reading-progress-wrap {
       left: 300px;
+    }
+    html[data-sidebar-collapsed="true"] #reading-progress-wrap {
+      left: 5rem;
     }
   }
   #reading-progress {
@@ -125,6 +150,8 @@
     <div id="topbar-title">
       {% if page.layout == 'home' %}
         {{- site.data.locales[include.lang].title | default: site.title -}}
+      {% elsif page.layout == 'post' %}
+        {{- page.title -}}
       {% elsif page.collection == 'tabs' or page.layout == 'page' %}
         {%- capture tab_key -%}{{ page.url | split: '/' }}{%- endcapture -%}
         {{- site.data.locales[include.lang].tabs[tab_key] | default: page.title -}}

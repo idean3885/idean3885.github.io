@@ -124,34 +124,71 @@ h1, h2, h3, h4, h5 {
 
 /* === Sidebar Collapse (desktop only, lg breakpoint 이상) === */
 
-/* 접힘 상태 토글 버튼 — 기본 상태(펼침)에서 '<' 아이콘 */
+/* 오버플로 방어: 접힘 상태 폭이 좁아질 때 제목이 바깥으로 번지지 않도록 */
+#sidebar {
+  overflow-x: hidden;
+}
+
+/* 엣지 마운트 원형 토글 — Vercel 대시보드 스타일 */
 #sidebar-collapse-toggle {
-  margin-left: auto; /* sidebar-bottom 우측 정렬 */
-  width: 1.75rem;
-  height: 1.75rem;
+  display: none; /* 모바일 기본 숨김, lg 이상에서만 표시 */
+  position: fixed;
+  top: 50%;
+  left: calc(260px - 0.75rem); /* sidebar-width - 절반 버튼 */
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
   border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+  color: #6b7280;
+  font-size: 0.7rem;
+  z-index: 1030;
+  cursor: pointer;
+  transition: left 0.25s ease, background-color 0.15s ease, color 0.15s ease,
+    box-shadow 0.15s ease;
 
   i {
     transition: transform 0.25s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: #f9fafb;
+    color: #111827;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
   }
 }
 
-/* 모바일(<lg)에서는 데스크톱 전용 토글 숨김 — 햄버거 메뉴 유지 */
-@media (max-width: 849px) {
-  #sidebar-collapse-toggle {
-    display: none;
-  }
-}
-
-/* lg 이상에서만 접힘/펼침 폭 전환을 애니메이션 */
+/* lg 이상(>=850px)에서만 표시/애니메이션 */
 @media (min-width: 850px) {
   #sidebar,
   #main-wrapper {
     transition: width 0.25s ease, margin-left 0.25s ease;
   }
+
+  #sidebar-collapse-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-/* 접힘 상태: 아이콘만 표시, 폭 축소 */
+/* xxxl(>=1650px)에서 sidebar 폭이 300px로 확장 — 토글 위치도 보정 */
+@media (min-width: 1650px) {
+  #sidebar-collapse-toggle {
+    left: calc(300px - 0.75rem);
+  }
+}
+
+/* 접힘 상태(data-sidebar-collapsed=true) — ≥850px에서 사용자가 토글로 접은 경우 */
 html[data-sidebar-collapsed='true'] {
   @media (min-width: 850px) {
     #sidebar {
@@ -159,73 +196,124 @@ html[data-sidebar-collapsed='true'] {
 
       .site-title,
       .site-subtitle {
-        display: none;
+        display: none !important;
       }
 
-      .profile-wrapper {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        margin-top: 1.75rem;
-        margin-bottom: 1.75rem;
-      }
-
+      /* 아바타 축소 — 폭 5rem 안에 들어오도록 */
       #avatar {
-        width: 3rem;
-        height: 3rem;
-
-        @media (min-width: 576px) {
-          width: 3rem;
-          height: 3rem;
-        }
+        width: 2.5rem;
+        height: 2.5rem;
       }
 
-      ul li.nav-item {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+      /* 아이콘을 아바타와 같은 중심축(사이드바 중앙)에 정렬 */
+      ul li.nav-item a.nav-link {
+        justify-content: center;
 
-        a.nav-link {
-          justify-content: center;
+        i {
+          margin-right: 0;
+        }
 
-          i {
-            margin-right: 0;
-          }
-
-          span {
-            display: none;
-          }
+        span {
+          display: none;
         }
       }
 
       .sidebar-bottom {
-        justify-content: center;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-
         > a,
         > #mode-toggle,
         > .icon-border {
           display: none;
         }
       }
-
-      #sidebar-collapse-toggle {
-        margin-left: 0;
-        display: flex;
-
-        i {
-          transform: rotate(180deg); /* 접힘 상태에서 '>' 방향 */
-        }
-      }
     }
 
     #main-wrapper {
       margin-left: 5rem;
+    }
+
+    #sidebar-collapse-toggle {
+      left: calc(5rem - 0.75rem);
+
+      i {
+        transform: rotate(180deg);
+      }
     }
   }
 
   @media (min-width: 1650px) {
     #main-wrapper {
       margin-left: 5rem;
+    }
+
+    #sidebar-collapse-toggle {
+      left: calc(5rem - 0.75rem);
+    }
+  }
+}
+
+/* === 태블릿/좁은 랩톱(576-849): 아이콘 사이드바 고정 ===
+   attribute와 무관하게 5rem 접힘 레이아웃 강제.
+   토글은 시각적으로 표시되지만 클릭 불가(디스에이블). */
+@media (min-width: 576px) and (max-width: 849px) {
+  #sidebar {
+    /* theme의 mx.slide가 걸어놓은 translateX 무효화 */
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    width: 5rem;
+
+    .site-title,
+    .site-subtitle {
+      display: none !important;
+    }
+
+    #avatar {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    ul li.nav-item a.nav-link {
+      justify-content: center;
+
+      i {
+        margin-right: 0;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    .sidebar-bottom {
+      > a,
+      > #mode-toggle,
+      > .icon-border {
+        display: none;
+      }
+    }
+  }
+
+  #sidebar-trigger {
+    display: none !important;
+  }
+
+  #main-wrapper {
+    margin-left: 5rem !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  /* 토글 버튼: 표시하되 디스에이블 — 현재 폭에서는 전환 불가 표시 */
+  #sidebar-collapse-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    left: calc(5rem - 0.75rem);
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    i {
+      transform: rotate(180deg);
     }
   }
 }
@@ -239,6 +327,20 @@ html[data-sidebar-collapsed='true'] {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+/* === topbar-title: 긴 제목 한 줄 + 말줄임 === */
+/* theme 기본값(width: 70%, word-break: keep-all)은 긴 한글 제목을 개행시킨다.
+   flex 중간 영역을 신축적으로 가져가고, 넘치면 "..." 으로 줄인다. */
+#topbar-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto !important;
+  max-width: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.5rem;
 }
 
 /* toc-bar: 축소 화면에서 불필요 — 스크롤 프로그레스로 대체 */
