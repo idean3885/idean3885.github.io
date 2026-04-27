@@ -4,6 +4,7 @@ date: 2026-03-11 00:00:00 +0900
 last_modified_at: 2026-04-09 00:00:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
 tags: [설계, 아키텍처]
+pin: true
 description: >-
   5분 수집과 10분 집계가 겹치는 환경에서,
   스키마 분리와 @Transactional(readOnly) 기반 라우팅으로
