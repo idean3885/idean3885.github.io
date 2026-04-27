@@ -4,6 +4,7 @@ date: 2026-03-18 23:45:00 +0900
 last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [개발 기록, 인증서 자동화 구축기]
 tags: [Let's Encrypt, ACME, 인증서, 자동화, 헥사고날 아키텍처, Java, Spring Boot]
+pin: true
 description: >-
   앱 배포 플랫폼에 사용자 도메인 연결 기능이 추가되면서, 개별 도메인마다 SSL 인증서를 자동 발급해야 하는 과제가 생겼습니다.
   certbot으로 ACME 프로토콜을 학습하고 ACME4j로 Java BE에 통합한 과정과 실전 이슈 해결을 공유합니다.

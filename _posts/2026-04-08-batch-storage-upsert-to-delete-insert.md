@@ -3,6 +3,7 @@ title: "미터링 배치 저장 전략 통일: UPSERT → DELETE + INSERT 전환
 date: 2026-04-08 00:00:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
 tags: [설계, 아키텍처]
+pin: true
 description: >-
   MySQL ON DUPLICATE KEY UPDATE는 행마다 내부 SELECT가 발생합니다.
   2,500행 기준 ODKU는 5,000회 연산이지만, DELETE + INSERT는 2회입니다.

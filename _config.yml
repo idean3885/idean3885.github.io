@@ -4,10 +4,11 @@ lang: ko
 timezone: Asia/Seoul
 
 title: idean3885
-tagline: 기술, 방법론, 그리고 성장의 기록
+tagline: 의사결정 흔적과 트레이드오프 기록
 description: >-
-  개발자로서의 기술적 탐구, 방법론의 진화,
-  운영 노하우와 의사결정의 기록을 담는 블로그.
+  팀 상황 안에서의 트레이드오프와 정량 의사결정에 관심이 많은
+  7년차 백엔드 개발자의 기록.
+  GPU 기반 PaaS, 시계열 파이프라인, 자동화 시스템 사례를 정리합니다.
 
 url: "https://blog.idean.me"
 baseurl: ""
