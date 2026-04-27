@@ -29,6 +29,15 @@ GPU 기반 PaaS·시계열 파이프라인·자동화 시스템 사례를
 
 </div>
 
+## 추천 글
+
+의사결정과 트레이드오프의 흔적이 가장 잘 드러난 글입니다.
+
+{% assign pinned = site.posts | where: "pin", true | sort: "date" | reverse %}
+{% for post in pinned %}
+1. [{{ post.title }}]({{ post.url | relative_url }})
+{%- endfor %}
+
 ## 최신 포스트
 
 {% for post in site.posts limit:5 %}
