@@ -167,8 +167,8 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* lg 이상(>=850px)에서만 표시/애니메이션 */
-@media (min-width: 850px) {
+/* lg(850-1199)에서만 토글 표시/애니메이션 — xl 이상에서는 사이드바 항상 펴짐 */
+@media (min-width: 850px) and (max-width: 1199px) {
   #sidebar,
   #main-wrapper {
     transition: width 0.25s ease, margin-left 0.25s ease;
@@ -181,16 +181,9 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* xxxl(>=1650px)에서 sidebar 폭이 300px로 확장 — 토글 위치도 보정 */
-@media (min-width: 1650px) {
-  #sidebar-collapse-toggle {
-    left: calc(300px - 0.75rem);
-  }
-}
-
-/* 접힘 상태(data-sidebar-collapsed=true) — ≥850px에서 사용자가 토글로 접은 경우 */
+/* 접힘 상태(data-sidebar-collapsed=true) — lg(850-1199) 좁은 데스크톱에서만 적용 */
 html[data-sidebar-collapsed='true'] {
-  @media (min-width: 850px) {
+  @media (min-width: 850px) and (max-width: 1199px) {
     #sidebar {
       width: 5rem;
 
@@ -237,16 +230,6 @@ html[data-sidebar-collapsed='true'] {
       i {
         transform: rotate(180deg);
       }
-    }
-  }
-
-  @media (min-width: 1650px) {
-    #main-wrapper {
-      margin-left: 5rem;
-    }
-
-    #sidebar-collapse-toggle {
-      left: calc(5rem - 0.75rem);
     }
   }
 }
