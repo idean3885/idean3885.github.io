@@ -1,15 +1,5 @@
 <!-- The Side Bar (project override: adds desktop collapse toggle) -->
 
-<script>
-  (function () {
-    try {
-      if (localStorage.getItem('sidebar-collapsed') === 'true') {
-        document.documentElement.setAttribute('data-sidebar-collapsed', 'true');
-      }
-    } catch (_) {}
-  })();
-</script>
-
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
@@ -123,16 +113,16 @@
   (function () {
     var btn = document.getElementById('sidebar-collapse-toggle');
     if (!btn) return;
+    // 이전 버전에서 영구 저장된 collapsed 상태 정리
+    try { localStorage.removeItem('sidebar-collapsed'); } catch (_) {}
     btn.addEventListener('click', function () {
-      // 태블릿 이하에서는 미디어쿼리가 상태를 강제하므로 토글 무효화
-      if (window.innerWidth < 850) return;
+      // lg(850-1199)에서만 토글 동작. xl 이상에서는 사이드바가 항상 펴짐.
+      if (window.innerWidth < 850 || window.innerWidth >= 1200) return;
       var isCollapsed = document.documentElement.getAttribute('data-sidebar-collapsed') === 'true';
       if (isCollapsed) {
         document.documentElement.removeAttribute('data-sidebar-collapsed');
-        try { localStorage.setItem('sidebar-collapsed', 'false'); } catch (_) {}
       } else {
         document.documentElement.setAttribute('data-sidebar-collapsed', 'true');
-        try { localStorage.setItem('sidebar-collapsed', 'true'); } catch (_) {}
       }
     });
   })();
