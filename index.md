@@ -35,6 +35,7 @@ GPU 기반 PaaS·시계열 파이프라인·자동화 시스템 사례를
 
 ### 데이터 정합성과 트레이드오프
 
+- [미터링 용량을 3중 제약 교차로 역산한 이유 - 단일 제약만 보면 틀린다](/posts/metering-capacity-triple-constraint/)
 - [미터링 배치 저장 전략 통일 - UPSERT → DELETE + INSERT 전환](/posts/batch-storage-upsert-to-delete-insert/)
 - [시계열 수집의 쓰기 경합 - 5분 주기 시스템에서 동시성을 해결한 방법](/posts/timeseries-write-contention/)
 - [MySQL 파티셔닝 도입기 - JPA 복합 키 전환부터 시간 독립 DDL까지](/posts/mysql-partitioning-jpa-composite-key/)
