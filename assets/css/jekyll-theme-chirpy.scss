@@ -145,7 +145,8 @@ h1, h2, h3, h4, h5 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
   color: #6b7280;
   font-size: 0.7rem;
-  z-index: 1030;
+  z-index: 1050;
+  isolation: isolate; /* hit-test가 다른 요소에 가로채지지 않도록 stacking context 강제 */
   cursor: pointer;
   transition: left 0.25s ease, background-color 0.15s ease, color 0.15s ease,
     box-shadow 0.15s ease;
@@ -167,8 +168,8 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* lg(850-1199)에서만 토글 표시/애니메이션 — xl 이상에서는 사이드바 항상 펴짐 */
-@media (min-width: 850px) and (max-width: 1199px) {
+/* 데스크톱(>=850px)에서 토글 표시/애니메이션 */
+@media (min-width: 850px) {
   #sidebar,
   #main-wrapper {
     transition: width 0.25s ease, margin-left 0.25s ease;
@@ -181,9 +182,16 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-/* 접힘 상태(data-sidebar-collapsed=true) — lg(850-1199) 좁은 데스크톱에서만 적용 */
+/* xxxl(>=1650px)에서 sidebar 폭이 300px로 확장 — 토글 위치 보정 */
+@media (min-width: 1650px) {
+  #sidebar-collapse-toggle {
+    left: calc(300px - 0.75rem);
+  }
+}
+
+/* 접힘 상태(data-sidebar-collapsed=true) — 데스크톱에서 사용자가 토글로 접은 경우 */
 html[data-sidebar-collapsed='true'] {
-  @media (min-width: 850px) and (max-width: 1199px) {
+  @media (min-width: 850px) {
     #sidebar {
       width: 5rem;
 
@@ -230,6 +238,16 @@ html[data-sidebar-collapsed='true'] {
       i {
         transform: rotate(180deg);
       }
+    }
+  }
+
+  @media (min-width: 1650px) {
+    #main-wrapper {
+      margin-left: 5rem;
+    }
+
+    #sidebar-collapse-toggle {
+      left: calc(5rem - 0.75rem);
     }
   }
 }

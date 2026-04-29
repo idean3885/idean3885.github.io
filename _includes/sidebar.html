@@ -116,8 +116,8 @@
     // 이전 버전에서 영구 저장된 collapsed 상태 정리
     try { localStorage.removeItem('sidebar-collapsed'); } catch (_) {}
     btn.addEventListener('click', function () {
-      // lg(850-1199)에서만 토글 동작. xl 이상에서는 사이드바가 항상 펴짐.
-      if (window.innerWidth < 850 || window.innerWidth >= 1200) return;
+      // 데스크톱(>=850)에서만 토글 동작. 그 미만에서는 미디어쿼리가 상태를 강제.
+      if (window.innerWidth < 850) return;
       var isCollapsed = document.documentElement.getAttribute('data-sidebar-collapsed') === 'true';
       if (isCollapsed) {
         document.documentElement.removeAttribute('data-sidebar-collapsed');
