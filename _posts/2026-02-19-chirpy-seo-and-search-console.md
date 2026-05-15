@@ -1,7 +1,7 @@
 ---
 title: "Chirpy 블로그의 SEO는 이미 되어 있었다 - Google Search Console까지"
 date: 2026-02-19 03:00:00 +0900
-last_modified_at: 2026-04-06 00:00:00 +0900
+last_modified_at: 2026-05-15 11:30:00 +0900
 categories: [기술 노하우, 블로그]
 tags: [Jekyll, Chirpy, SEO, Google Search Console, jekyll-seo-tag]
 description: >-
@@ -298,7 +298,7 @@ Rich Results로 이어질 수 있습니다.
 | sitemap.xml을 직접 만들어야 한다 | jekyll-sitemap이 빌드마다 자동 생성 |
 | JSON-LD를 직접 작성해야 한다 | jekyll-seo-tag가 BlogPosting 스키마를 자동 생성 |
 | GSC 등록이 복잡하다 | Chirpy에서는 `_config.yml` 한 줄로 인증 완료 |
-| OG 이미지가 SEO 랭킹에 직접 영향을 준다 | 직접 영향은 없지만, 소셜 공유 CTR을 통해 간접 영향 |
+| OG 이미지가 SEO 랭킹에 직접 영향을 준다 | 직접 영향은 없지만, 소셜 공유 CTR로 간접 영향 |
 
 ---
 

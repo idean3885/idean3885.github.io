@@ -1,7 +1,7 @@
 ---
 title: "교차 검증 도구의 구현 - 자체 검증에서 실전까지"
 date: 2026-03-29 00:00:00 +0900
-last_modified_at: 2026-04-06 00:00:00 +0900
+last_modified_at: 2026-05-15 11:30:00 +0900
 categories: [개발 기록, AI 교차 검증]
 tags: [AI, Claude Code, 설계, 비판적사고, 테스트]
 description: >-
@@ -224,7 +224,7 @@ DELETE+INSERT에 `@Transactional`이 없으나,
 ## 6. AI 도구로서의 위치
 
 > 교차 검증은 AI에게 판단을 맡기는 도구가 아닙니다.<br>
-> AI를 또 하나의 시선으로 활용하여,
+> AI를 또 하나의 시선으로 사용하여,
 > 개발자가 소통하며 최종 확인을 하는 구조입니다.
 {: .prompt-info }
 
