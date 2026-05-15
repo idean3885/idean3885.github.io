@@ -1,7 +1,7 @@
 ---
 title: "MySQL 파티셔닝 도입기: JPA 복합 키 전환부터 시간 독립 DDL까지"
 date: 2026-04-16 21:30:00 +0900
-last_modified_at: 2026-04-20 23:20:00 +0900
+last_modified_at: 2026-05-15 11:30:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
 tags: [설계, 아키텍처, 테스트]
 pin: true
@@ -227,7 +227,7 @@ PartitionJobService
 ```
 
 2개 스키마를 다루므로 DataSource별 JdbcTemplate을 분리했습니다.
-Operator Controller를 통해 수동 트리거도 가능합니다.
+Operator Controller로 수동 트리거도 가능합니다.
 
 테스트는 Spock으로 7개 케이스를 작성했습니다.
 

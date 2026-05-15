@@ -1,7 +1,7 @@
 ---
 title: "사용자 도메인 인증서 자동 발급 - certbot 학습에서 ACME4j 구현까지"
 date: 2026-03-18 23:45:00 +0900
-last_modified_at: 2026-04-06 00:00:00 +0900
+last_modified_at: 2026-05-15 11:30:00 +0900
 categories: [개발 기록, 인증서 자동화 구축기]
 tags: [Let's Encrypt, ACME, 인증서, 자동화, 헥사고날 아키텍처, Java, Spring Boot]
 pin: true
@@ -296,7 +296,7 @@ public class Certificate {
 예를 들어, `APPLICATION` 상태가 아닌 인증서에 대해 `issueStart()`를 호출하면
 예외가 발생합니다.
 
-## 6. ACME4j를 활용한 HTTP-01 Challenge 구현
+## 6. ACME4j를 사용한 HTTP-01 Challenge 구현
 
 실제 Let's Encrypt와의 통신은
 [acme4j](https://github.com/shred/acme4j) 라이브러리를 사용합니다.
