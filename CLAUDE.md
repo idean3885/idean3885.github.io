@@ -131,8 +131,10 @@ description: >-
 | 문서 | 위치 | 역할 |
 |------|------|------|
 | Content Architecture | [idean3885/idean3885/CONTENT_ARCHITECTURE.md](https://github.com/idean3885/idean3885/blob/main/CONTENT_ARCHITECTURE.md) | 공개 표면 설계 청사진 |
+| 의사결정 기록 (ADR) | [docs/adr/](docs/adr/) | 블로그 운영 결정의 영구 기록. CLAUDE.md가 *현재 규칙*이라면 ADR은 *왜 그 규칙으로 정했는가* |
 
 About 페이지, Blog Repo About 등 표면 관련 작업 시 청사진을 먼저 확인한다.
+운영 규칙을 신설·변경할 때는 `docs/adr/`에 ADR을 작성한 뒤 CLAUDE.md를 갱신한다.
 
 ## 참조 프로젝트
 
