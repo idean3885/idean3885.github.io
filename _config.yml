@@ -4,11 +4,12 @@ lang: ko
 timezone: Asia/Seoul
 
 title: idean3885
-tagline: 의사결정 흔적과 트레이드오프 기록
+tagline: 백엔드 개발자의 일·공부 기록
 description: >-
-  팀 상황 안에서의 트레이드오프와 정량 의사결정에 관심이 많은
-  7년차 백엔드 개발자의 기록.
-  GPU 기반 PaaS, 시계열 파이프라인, 자동화 시스템 사례를 정리합니다.
+  Spring Boot·Kubernetes 기반 클라우드 서비스를 설계·운영하는
+  7년차 백엔드 개발자.
+  GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은 운영 사례와
+  공부 기록을 꾸준히 쌓습니다.
 
 url: "https://blog.idean.me"
 baseurl: ""
