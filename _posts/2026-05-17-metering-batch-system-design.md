@@ -6,6 +6,11 @@ tags: [설계, 아키텍처, 배치, JPA, JobRunr, 멱등성, Tumbling Window, Y
 description: >-
   Prometheus → 5분 수집 → 10분 집계 → 일간 집계 파이프라인을 만들면서 내린 네 가지 의사결정을 한 글로 응축.
   쓰기 경합을 스키마 분리와 트랜잭션 라우팅으로 해결, 4단계 진화 청사진과 전환 시그널, 적용 패턴에 이름 붙이기, UPSERT를 DELETE+INSERT 로 통일한 YAGNI 사례.
+redirect_from:
+  - /posts/timeseries-write-contention/
+  - /posts/timeseries-aggregation-batch-evolution/
+  - /posts/batch-patterns-naming/
+  - /posts/batch-storage-upsert-to-delete-insert/
 ---
 
 > **TL;DR**<br>

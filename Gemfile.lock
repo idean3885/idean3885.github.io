@@ -102,6 +102,8 @@ GEM
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
@@ -209,6 +211,7 @@ PLATFORMS
 DEPENDENCIES
   html-proofer (~> 5.0)
   jekyll-feed
+  jekyll-redirect-from
   jekyll-sitemap
   jekyll-theme-chirpy (~> 7.4)
   tzinfo (>= 1, < 3)

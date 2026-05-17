@@ -15,8 +15,8 @@ end
 
 gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
 
-# Gemfile 하단에 추가
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-sitemap"
+  gem "jekyll-redirect-from"
 end

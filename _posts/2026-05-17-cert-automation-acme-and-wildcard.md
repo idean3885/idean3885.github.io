@@ -7,6 +7,10 @@ pin: true
 description: >-
   사용자 도메인 인증서 BE 자동 발급(8주)과 1년 뒤 와일드카드 인증서 갱신 자동화(Jenkins) 두 사이클을 한 글에 응축합니다.
   ACME 프로토콜·헥사고날 상태 머신·Docker IPC·4 클러스터 배포·실전 이슈를 단일 흐름으로 묶었습니다.
+redirect_from:
+  - /posts/user-domain-cert-automation/
+  - /posts/domain-ssl-automation-certbot-to-acme4j/
+  - /posts/wildcard-cert-automation-docker-ipc-jenkins/
 ---
 
 > **TL;DR**<br>

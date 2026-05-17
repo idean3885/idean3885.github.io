@@ -6,6 +6,11 @@ tags: [Jekyll, Chirpy, SEO, GEO, Giscus, GitHub Pages, GA4, 커스텀 도메인]
 description: >-
   Jekyll + Chirpy 블로그를 운영하면서 SEO 점검, GEO 보강, Giscus 댓글, 커스텀 도메인 전환과 GA4 도입까지 거친 과정의 응축.
   대부분의 결정이 "Chirpy가 이미 하고 있던 것을 확인하는 일"이었다는 점을 기록합니다.
+redirect_from:
+  - /posts/chirpy-seo-and-search-console/
+  - /posts/geo-for-dev-blog/
+  - /posts/giscus-comments-on-static-blog/
+  - /posts/custom-domain-gsc-ga4/
 ---
 
 > **TL;DR**<br>

@@ -8,6 +8,11 @@ description: >-
   코드 짜는 시간이 줄어든 자리에는 판단이 들어왔습니다.
   이슈 사이클을 도구로 만들고, 사상-전략-전술 3겹으로 판단하고,
   두 플러그인을 Provider 추상화로 통합한 3단계 응축 기록.
+redirect_from:
+  - /posts/ai-changed-my-workflow/
+  - /posts/from-coding-to-thinking/
+  - /posts/building-automation-toolkit/
+  - /posts/merging-two-plugins/
 ---
 
 > **TL;DR**<br>
