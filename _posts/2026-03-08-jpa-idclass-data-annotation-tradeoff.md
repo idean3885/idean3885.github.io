@@ -39,7 +39,7 @@ description: >-
 
 | 항목 | @IdClass | @EmbeddedId |
 |------|-----------|---------------|
-| @GeneratedValue | **지원** (필드가 엔티티에 직접 선언) | JPA 스펙 미보장 (@Embeddable 내 비표준) |
+| @GeneratedValue | **지원** (필드가 엔티티에 직접 선언) | JPA 스펙 미지원 (@Embeddable 내 비표준) |
 | 필드 접근 | entity.getId() (flat) | entity.getId().getId() (중첩) |
 | Record 사용 | 불가 | Hibernate 6+ 지원 |
 
