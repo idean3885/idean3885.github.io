@@ -1,0 +1,22 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- assign posts = site.posts | where_exp: "post", "post.sitemap != false" -%}
+  {%- for post in posts %}
+  <url>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    {%- if post.last_modified_at or post.date %}
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endfor %}
+  <url>
+    <loc>{{ '/' | absolute_url | xml_escape }}</loc>
+  </url>
+</urlset>
