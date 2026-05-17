@@ -1,6 +1,7 @@
 ---
+permalink: /robots.txt
 layout: null
 ---
 User-agent: *
 Allow: /
-Sitemap: https://blog.idean.me/sitemap-manual.xml
+Sitemap: {{ '/sitemap.xml' | absolute_url }}
