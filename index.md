@@ -31,24 +31,16 @@ GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
 
 ## 추천 글
 
-최근 자주 다시 펼쳐보는 글입니다.
-
-### 데이터 정합성과 트레이드오프
-
-- [어디까지 견뎌야 하는가 - 미터링 용량을 세 가지 제약으로 역산한 의사결정](/posts/metering-capacity-triple-constraint/)
-- [미터링 배치 시스템 설계: 쓰기 경합·청사진·패턴 명명·저장 전략 통일까지](/posts/metering-batch-system-design/)
-- [MySQL 파티셔닝 도입기: JPA 복합 키 전환부터 시간 독립 DDL까지](/posts/mysql-partitioning-jpa-composite-key/)
-
-### 무중단 운영과 자동화
+시리즈에 묶이지 않은 단독 글입니다.
 
 - [Expand-and-Contract 패턴: 무중단 DB 스키마 변경을 3단계 PR로 분할하기](/posts/expand-and-contract-pattern/)
-- [인증서 자동화: 사용자 도메인 ACME4j 구현부터 와일드카드 Jenkins 갱신까지](/posts/cert-automation-acme-and-wildcard/)
 
 ## 주요 시리즈
 
 ### 미터링 시스템 구축
 
 GPU 클라우드 서비스의 사용량 수집·집계 시스템을 설계하고 구현한 과정입니다.
+쓰기 경합·용량 트레이드오프·저장 전략 통일 같은 데이터 정합성 결정을 다룹니다.
 
 {% assign series = site.posts | where: "categories", "미터링 시스템 구축" | sort: "date" -%}
 {% for post in series %}
@@ -57,7 +49,8 @@ GPU 클라우드 서비스의 사용량 수집·집계 시스템을 설계하고
 
 ### 인증서 자동화 구축기
 
-사용자 도메인 인증서 발급·갱신을 완전 자동화한 과정입니다.
+사용자 도메인 인증서 발급·갱신을 무중단으로 자동화한 과정입니다.
+ACME 프로토콜 학습·헥사고날 상태 머신·Jenkins 격월 크론으로 운영 부담을 끊었습니다.
 
 {% assign series = site.posts | where: "categories", "인증서 자동화 구축기" | sort: "date" -%}
 {% for post in series %}
