@@ -1,6 +1,7 @@
 ---
-title: "비개발자에게 도구를 건넨다는 것: Slack to Notion 7개월 응축기"
+title: "비개발자에게 도구를 건넨다는 것: Slack to Notion 7개월 기록"
 date: 2026-05-17 18:30:00 +0900
+last_modified_at: 2026-05-18 15:05:00 +0900
 categories: [개발 기록, Slack to Notion]
 tags: [AI, Claude Code, MCP, mcpb, uvx, 비개발자, UX, 테스트]
 description: >-
