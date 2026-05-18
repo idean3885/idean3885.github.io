@@ -1,10 +1,11 @@
 ---
-title: "Chirpy 블로그 운영 응축: SEO·GEO·댓글·커스텀 도메인까지"
+title: "Chirpy 블로그 운영: SEO·GEO·댓글·커스텀 도메인까지"
 date: 2026-05-17 22:40:00 +0900
+last_modified_at: 2026-05-18 15:05:00 +0900
 categories: [기술 노하우, 블로그]
 tags: [Jekyll, Chirpy, SEO, GEO, Giscus, GitHub Pages, GA4, 커스텀 도메인]
 description: >-
-  Jekyll + Chirpy 블로그를 운영하면서 SEO 점검, GEO 보강, Giscus 댓글, 커스텀 도메인 전환과 GA4 도입까지 거친 과정의 응축.
+  Jekyll + Chirpy 블로그를 운영하면서 SEO 점검, GEO 보강, Giscus 댓글, 커스텀 도메인 전환과 GA4 도입까지 거친 과정의 기록.
   대부분의 결정이 "Chirpy가 이미 하고 있던 것을 확인하는 일"이었다는 점을 기록합니다.
 redirect_from:
   - /posts/chirpy-seo-and-search-console/
@@ -252,7 +253,7 @@ analytics:
 | 커스텀 도메인 | 도메인 선택 + DNS + GitHub Pages 설정 | 큼 (2개월 함정 해소 + 장기 의사결정) |
 | GA4 | 측정 ID 한 줄 | 작음 (행동 데이터 확보) |
 
-4편의 운영기를 응축하면서 가장 일관된 발견은 "Chirpy 가 이미 하고 있는 것이 많다" 였습니다. SEO 도, GEO 의 절반도, 댓글 위젯도, GA4 도 테마가 들고 있습니다. 운영자가 하는 일은 누락된 한 두 가지를 채우는 것과 도메인 같은 장기 의사결정입니다.
+4편의 운영기를 한 글로 묶으면서 가장 일관된 발견은 "Chirpy 가 이미 하고 있는 것이 많다" 였습니다. SEO 도, GEO 의 절반도, 댓글 위젯도, GA4 도 테마가 들고 있습니다. 운영자가 하는 일은 누락된 한 두 가지를 채우는 것과 도메인 같은 장기 의사결정입니다.
 
 다음 과제는 OG 이미지 자동화와 카테고리별 큐레이션 페이지입니다. 운영을 단순화할수록 글쓰기에 시간이 더 갑니다.
 
