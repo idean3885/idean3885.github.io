@@ -36,14 +36,13 @@ GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
 ### 데이터 정합성과 트레이드오프
 
 - [미터링 용량을 3중 제약 교차로 역산한 이유 - 단일 제약만 보면 틀린다](/posts/metering-capacity-triple-constraint/)
-- [미터링 배치 저장 전략 통일 - UPSERT → DELETE + INSERT 전환](/posts/batch-storage-upsert-to-delete-insert/)
-- [시계열 수집의 쓰기 경합 - 5분 주기 시스템에서 동시성을 해결한 방법](/posts/timeseries-write-contention/)
+- [미터링 배치 시스템 설계 - 쓰기 경합, 청사진, 패턴 명명, 저장 전략 통일](/posts/metering-batch-system-design/)
 - [MySQL 파티셔닝 도입기 - JPA 복합 키 전환부터 시간 독립 DDL까지](/posts/mysql-partitioning-jpa-composite-key/)
 
 ### 무중단 운영과 자동화
 
 - [Expand-and-Contract 패턴 - 무중단 DB 스키마 변경을 3단계 PR로 분할하기](/posts/expand-and-contract-pattern/)
-- [사용자 도메인 인증서 자동 발급 - certbot 학습에서 ACME4j 구현까지](/posts/domain-ssl-automation-certbot-to-acme4j/)
+- [인증서 자동화 - 사용자 도메인 ACME4j 구현부터 와일드카드 Jenkins 갱신까지](/posts/cert-automation-acme-and-wildcard/)
 
 ## 주요 시리즈
 
