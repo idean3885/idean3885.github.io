@@ -7,6 +7,12 @@ description: >-
   Slack 스레드를 Notion으로 정리하는 MCP 플러그인을 만들고,
   여러 번의 테스트와 피드백을 거쳐 비개발자 셀프서비스에 도달한 7개월 기록.
   비개발자에게 닿는 도구는 코드가 아닌 다른 곳에서 결정된다는 점을 정리합니다.
+redirect_from:
+  - /posts/building-first-tool-with-ai/
+  - /posts/e2e-lessons-from-non-developers/
+  - /posts/testing-changed-architecture/
+  - /posts/real-feedback-from-non-developer/
+  - /posts/mcpb-one-click-install/
 ---
 
 > **TL;DR**<br>

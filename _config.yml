@@ -107,8 +107,8 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
-# _config.yml에 추가 또는 수정
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
 

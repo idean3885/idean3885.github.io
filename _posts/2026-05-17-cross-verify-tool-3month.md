@@ -8,6 +8,10 @@ description: >-
   반복 검증 패턴을 4축(의사결정·설계·문서·구현)으로 정리하고,
   프롬프트-only 플러그인으로 구현한 뒤 3개월간 운영하면서
   프로필 자산화에 도달한 응축 기록.
+redirect_from:
+  - /posts/cross-verification-in-ai-collaboration/
+  - /posts/cross-verify-implementation/
+  - /posts/cross-verify-3month-retrospective/
 ---
 
 > **TL;DR**<br>
