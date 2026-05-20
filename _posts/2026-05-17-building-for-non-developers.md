@@ -2,7 +2,7 @@
 title: "비개발자에게 도구를 건넨다는 것: Slack to Notion 7개월 기록"
 date: 2026-05-17 18:30:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
-categories: [개발 기록, Slack to Notion]
+categories: [개발 기록]
 tags: [AI, Claude Code, MCP, mcpb, uvx, 비개발자, UX, 테스트]
 description: >-
   Slack 스레드를 Notion으로 정리하는 MCP 플러그인을 만들고,
