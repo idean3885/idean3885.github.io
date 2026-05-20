@@ -65,3 +65,4 @@ Accepted (YYYY-MM-DD)
 | [0001](0001-adopt-adr-for-blog-decisions.md) | 블로그 의사결정을 ADR로 기록 | Accepted | 2026-05-15 |
 | [0002](0002-kubernetes-as-strength-surface.md) | Kubernetes를 별도 시리즈로 노출하여 강점 가시화 | Accepted | 2026-05-15 |
 | [0003](0003-deprecate-series-keep-category-depth-2.md) | 시리즈 운영 폐지 + 카테고리 뎁스 2 유지 | Accepted | 2026-05-17 |
+| [0004](0004-limit-category-depth-2-to-multi-post-nests.md) | 카테고리 뎁스 2를 다중 글 둥지로 한정 | Accepted | 2026-05-20 |

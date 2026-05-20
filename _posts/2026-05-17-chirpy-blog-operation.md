@@ -2,7 +2,7 @@
 title: "Chirpy 블로그 운영: SEO·GEO·댓글·커스텀 도메인까지"
 date: 2026-05-17 22:40:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
-categories: [기술 노하우, 블로그]
+categories: [기술 노하우]
 tags: [Jekyll, Chirpy, SEO, GEO, Giscus, GitHub Pages, GA4, 커스텀 도메인]
 description: >-
   Jekyll + Chirpy 블로그를 운영하면서 SEO 점검, GEO 보강, Giscus 댓글, 커스텀 도메인 전환과 GA4 도입까지 거친 과정의 기록.

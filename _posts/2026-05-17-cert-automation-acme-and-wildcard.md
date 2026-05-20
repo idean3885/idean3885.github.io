@@ -2,7 +2,7 @@
 title: "인증서 자동화: 사용자 도메인 ACME4j 구현부터 와일드카드 Jenkins 갱신까지"
 date: 2026-05-17 23:00:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
-categories: [개발 기록, 인증서 자동화 구축기]
+categories: [개발 기록]
 tags: [Let's Encrypt, ACME, ACME4j, certbot, 헥사고날 아키텍처, Docker, Jenkins, 자동화, Spring Boot]
 pin: true
 description: >-
