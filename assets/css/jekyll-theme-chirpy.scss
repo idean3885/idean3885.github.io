@@ -366,3 +366,15 @@ html[data-sidebar-collapsed='true'] {
 .toc-border-cover {
   display: none;
 }
+
+/* === 홈 포스트 목록 카드: 대문 카드와 테두리 톤 통일 ===
+   Chirpy 기본 `#post-list .card`는 border: 0 이라 그림자만 보인다.
+   대문 home-card와 같은 회색 반투명 테두리를 줘 톤을 맞춘다. */
+#post-list .card-wrapper .card {
+  border: 1px solid rgba(128, 128, 128, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#post-list .card-wrapper:hover .card {
+  border-color: rgba(128, 128, 128, 0.45);
+}
