@@ -6,8 +6,8 @@ layout: page
 /* 소개 섹션 한정: 단락 사이 세로 간격 축소 */
 .intro p { margin-bottom: 0.5rem; }
 .intro ul { margin-top: 1rem; }
-/* 외부 링크(새 탭) 밑줄 제거 */
-a[target="_blank"] { text-decoration: none; }
+/* 대문 본문 모든 링크 밑줄 제거 (Chirpy는 border-bottom으로 밑줄을 그림) */
+.content a { border-bottom: none !important; text-decoration: none !important; }
 /* 블로그/레포 섹션 구분선 강조 */
 hr { border: none; border-top: 3px solid; opacity: 0.3; margin: 2.5rem 0; }
 </style>
