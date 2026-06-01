@@ -9,7 +9,15 @@
     right: 0;
     z-index: 1020;
     background-color: var(--topbar-bg, var(--body-bg, #fff));
+    /* 반투명 배경 뒤로 스크롤되는 콘텐츠를 흐리게 처리 (프로스티드 글래스) */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  /* 우측 패널 sticky 고정 위치를 탑바(높이 3rem) 아래로 내려
+     반투명 탑바를 통해 패널 카드가 비치는 침범 현상 방지 */
+  #panel-wrapper .access {
+    top: 3.5rem;
   }
   /* 사이드바 표시 시 사이드바 너비만큼 왼쪽 오프셋
      — 576-849: 5rem 고정(토글 불가)
