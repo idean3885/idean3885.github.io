@@ -75,42 +75,25 @@ GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
 
 </div>
 
+## 주요 글
+
+<div class="home-card" markdown="1">
+
+운영 사례를 정리한 글입니다.
+
+- [여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스](/posts/multi-cluster-delegation-layer/)
+- [미터링 배치 시스템 설계: 쓰기 경합·청사진·패턴 명명·저장 전략 통일까지](/posts/metering-batch-system-design/)
+- [인증서 자동화: 사용자 도메인 ACME4j 구현부터 와일드카드 Jenkins 갱신까지](/posts/cert-automation-acme-and-wildcard/)
+
+</div>
+
 ## 추천 글
 
 <div class="home-card" markdown="1">
 
-시리즈에 묶이지 않은 단독 글입니다.
+다른 글과 묶이지 않고 단독으로 공부한 글입니다.
 
 - [Expand-and-Contract 패턴: 무중단 DB 스키마 변경을 3단계 PR로 분할하기](/posts/expand-and-contract-pattern/)
-
-</div>
-
-## 주요 시리즈
-
-<div class="home-card" markdown="1">
-
-### 미터링 시스템 구축
-
-GPU 클라우드 서비스의 사용량 수집·집계 시스템을 설계하고 구현한 과정입니다.
-쓰기 경합·용량 트레이드오프·저장 전략 통일 같은 데이터 정합성 결정을 다룹니다.
-
-{% assign series = site.posts | where: "categories", "미터링 시스템 구축" | sort: "date" -%}
-{% for post in series %}
-1. [{{ post.title }}]({{ post.url | relative_url }})
-{%- endfor %}
-
-</div>
-
-<div class="home-card" markdown="1">
-
-### AI 교차 검증
-
-AI 협업에서 판단을 검증하는 방법과 도구 구현을 다루는 시리즈입니다.
-
-{% assign series = site.posts | where: "categories", "AI 교차 검증" | sort: "date" -%}
-{% for post in series %}
-1. [{{ post.title }}]({{ post.url | relative_url }})
-{%- endfor %}
 
 </div>
 
