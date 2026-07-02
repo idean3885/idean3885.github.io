@@ -186,3 +186,6 @@ CNAME 변경 → SSL 에러 → 블로그 노출 → DNS 꼬임을 거쳐
 GitHub Pages의 단일 커스텀 도메인 제약은 문서에 명시되어 있지만,
 실제로 부딪혀봐야 체감되는 제약이었습니다.
 Cloudflare Workers는 이런 틈새 문제를 무료로 해결할 수 있는 좋은 도구였습니다.
+
+> 이 글은 Claude와 함께 작업했습니다.
+{: .prompt-info }
