@@ -1,8 +1,8 @@
 ---
 title: "여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스"
 date: 2026-07-02 09:40:00 +0900
-last_modified_at: 2026-07-02 23:30:00 +0900
-categories: [기술 노하우, Kubernetes]
+last_modified_at: 2026-07-08 01:30:00 +0900
+categories: [기술 노하우, 실무 노하우]
 tags: [아키텍처, 설계, 의사결정, 헥사고날, 쿠버네티스]
 pin: true
 description: >-
