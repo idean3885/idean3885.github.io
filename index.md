@@ -107,9 +107,9 @@ GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
 
 <div class="home-card" markdown="1">
 
-#### <a href="https://github.com/idean3885/claude-devex" target="_blank" rel="noopener">claude-devex</a>
+#### <a href="https://github.com/idean3885/claude-ops-agent" target="_blank" rel="noopener">claude-ops-agent</a>
 
-* 이슈 플로우·콘텐츠 작성·교차 검증을 묶은 개인 개발 어시스턴트
+* 이슈 플로우·콘텐츠 작성·교차 검증을 묶은 개인 개발 운영 하네스
 * 작성 원칙·워크플로우 규칙을 하네스(SessionStart·hook·스킬)에 주입
 * 매 세션 같은 출발선에서 시작
 
