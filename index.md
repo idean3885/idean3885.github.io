@@ -72,7 +72,7 @@ Spring Boot·Kubernetes 기반 멀티테넌시 서비스를 개발·운영하는
 
 직접 설계하고 운영한 대표 작업입니다.
 
-- [여러 개발 플러그인을 하나로: 컨텍스트가 1M이 되자 분리가 손해였다](/posts/dev-plugins-into-one-assistant/)
+- [여러 개발 플러그인을 하나의 에이전트로 통합하기: 1M 컨텍스트와 유지보수 비용](/posts/dev-plugins-into-one-assistant/)
 - [미터링 배치 시스템 설계: 쓰기 경합·청사진·패턴 명명·저장 전략 통일까지](/posts/metering-batch-system-design/)
 - [여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스](/posts/multi-cluster-delegation-layer/)
 - [인증서 자동화: 사용자 도메인 ACME4j 구현부터 와일드카드 Jenkins 갱신까지](/posts/cert-automation-acme-and-wildcard/)
