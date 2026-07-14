@@ -4,10 +4,7 @@ date: 2026-04-16 21:30:00 +0900
 last_modified_at: 2026-05-15 11:30:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
 tags: [설계, 아키텍처, 테스트]
-description: >-
-  미터링 테이블 5개에 월별 RANGE COLUMNS 파티셔닝을 도입했습니다.
-  MySQL의 파티션 키 제약으로 복합 PK 전환, JPA @IdClass 도입,
-  시간 독립 DDL 확보까지의 과정을 정리합니다.
+description: "미터링 테이블에 월별 RANGE 파티셔닝을 도입하며 겪은 복합 PK 전환과 시간 독립 DDL 과정."
 ---
 
 > **TL;DR**<br>

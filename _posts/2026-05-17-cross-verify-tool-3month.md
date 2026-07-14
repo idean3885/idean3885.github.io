@@ -4,11 +4,7 @@ date: 2026-05-17 19:10:00 +0900
 last_modified_at: 2026-07-14 10:00:00 +0900
 categories: [개발 기록]
 tags: [AI, Claude Code, 교차검증, DevEx, 설계, 비판적사고, 보안, OWASP]
-description: >-
-  AI 코딩 도구로 코드 작성은 빨라졌지만 설계 검증 시간이 더 들었습니다.
-  반복 검증 패턴을 4축(의사결정·설계·문서·구현)으로 정리해 프롬프트-only 플러그인으로 만들고,
-  3개월간 운영하며 프로필 자산화에 도달했습니다.
-  마지막엔 도구가 자기 자신을 검증해 빠져 있던 보안 관점을 찾아 보강한 기록까지 담았습니다.
+description: "코드 작성보다 늘어난 설계 검증 시간을 4축 교차 검증 플러그인으로 잡고 3개월 운영하며 보안 맹점까지 찾은 기록."
 redirect_from:
   - /posts/cross-verification-in-ai-collaboration/
   - /posts/cross-verify-implementation/

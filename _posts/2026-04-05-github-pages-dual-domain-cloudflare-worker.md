@@ -4,10 +4,7 @@ date: 2026-04-05 20:00:00 +0900
 last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 실무 노하우]
 tags: [GitHub Pages, Cloudflare, DNS, 도메인]
-description: >-
-  GitHub Pages에서 QR코드용 기존 도메인을 유지하면서
-  깔끔한 커스텀 도메인을 추가한 과정을 정리합니다.
-  Cloudflare DNS 프록시 모드와 Workers를 처음 써보며 겪은 삽질 기록입니다.
+description: "GitHub Pages에서 QR용 기존 도메인을 유지하며 커스텀 도메인을 추가한 Cloudflare Worker 삽질 기록."
 ---
 
 > **TL;DR**<br>

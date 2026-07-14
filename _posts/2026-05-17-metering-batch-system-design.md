@@ -4,9 +4,7 @@ date: 2026-05-17 23:20:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
 tags: [설계, 아키텍처, 배치, JPA, JobRunr, 멱등성, Tumbling Window, YAGNI]
-description: >-
-  Prometheus → 5분 수집 → 10분 집계 → 일간 집계 파이프라인을 만들면서 내린 네 가지 의사결정을 한 글로 정리.
-  쓰기 경합을 스키마 분리와 트랜잭션 라우팅으로 해결, 4단계 진화 청사진과 전환 시그널, 적용 패턴에 이름 붙이기, UPSERT를 DELETE+INSERT 로 통일한 YAGNI 사례.
+description: "미터링 배치 파이프라인을 만들며 내린 쓰기 경합·청사진·패턴 명명·저장 전략 네 의사결정."
 redirect_from:
   - /posts/timeseries-write-contention/
   - /posts/timeseries-aggregation-batch-evolution/

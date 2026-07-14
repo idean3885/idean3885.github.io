@@ -4,9 +4,7 @@ date: 2026-05-17 22:50:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
 categories: [기술 노하우]
 tags: [uvx, uv, Python, MCP, pyproject.toml, PyPI, GitHub Actions, requires-python]
-description: >-
-  MCP 플러그인 배포로 uvx를 처음 접한 자바 개발자의 입문·배포·함정 기록.
-  pyproject.toml 의 진입점, GitHub Actions 자동화, requires-python 무시 문제까지 한 번에 다룹니다.
+description: "자바 개발자가 uvx로 MCP 플러그인을 PyPI에 배포하며 겪은 입문·GitHub Actions·requires-python 함정."
 redirect_from:
   - /posts/uvx-guide-for-java-developers/
   - /posts/uvx-pypi-deploy-automation/

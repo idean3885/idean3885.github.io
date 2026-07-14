@@ -4,10 +4,7 @@ date: 2026-03-08 00:00:00 +0900
 last_modified_at: 2026-04-20 23:20:00 +0900
 categories: [기술 노하우, 실무 노하우]
 tags: [설계, 아키텍처, 개발사전]
-description: >-
-  JPA @IdClass 복합 키 클래스에서 @Data의 편의성과 @Setter 제거 사이의
-  트레이드오프를 정리합니다.
-  adapter 인프라 클래스에 한해 @Data 수용이 합리적인 이유를 설명합니다.
+description: "JPA @IdClass 복합 키 클래스에서 @Data와 개별 어노테이션 사이의 트레이드오프를 짚습니다."
 ---
 
 > **TL;DR**<br>

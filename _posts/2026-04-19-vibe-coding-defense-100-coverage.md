@@ -3,8 +3,7 @@ title: "바이브코딩 방어로 시도한 100% 커버리지"
 date: 2026-04-19 14:05:00 +0900
 categories: [개발 기록]
 tags: [AI, 테스트, 커버리지, 바이브코딩, AX]
-description: >-
-  사람이 하면 허상이었던 100% 커버리지를 trip-planner v2.1에서 다시 꺼낸 이유와 1회차 실험 회고.
+description: "사람이 하면 허상이던 100% 커버리지를 trip-planner v2.1에서 다시 시도한 이유와 1회차 회고."
 ---
 
 > **TL;DR**<br>
