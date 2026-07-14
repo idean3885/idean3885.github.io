@@ -59,9 +59,9 @@ layout: page
 Spring Boot·Kubernetes 기반 클라우드 서비스를 설계·운영하는
 7년차 백엔드 개발자입니다.
 
-GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
-백엔드 운영 사례를 다루고,
-마주친 결정과 공부한 것을 꾸준히 기록합니다.
+과금 미터링 데이터 파이프라인을 설계해 일 수십만 건을 수집·집계하고,
+서비스 개발과 운영을 함께 맡아 리소스·노드 안정화 같은 운영 이슈를 인프라와 함께 풀어왔습니다.
+마주친 결정과 공부한 것을 기록합니다.
 
 좋은 글은 결과도 중요하지만 분석에서 갈린다고 봅니다.
 얼마나 깊이 분석했는가에 따라 방향이 정해지고,
@@ -79,21 +79,12 @@ GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
 
 <div class="home-card" markdown="1">
 
-운영 사례를 정리한 글입니다.
+포트폴리오에 실은 핵심 작업 글입니다.
 
-- [여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스](/posts/multi-cluster-delegation-layer/)
 - [미터링 배치 시스템 설계: 쓰기 경합·청사진·패턴 명명·저장 전략 통일까지](/posts/metering-batch-system-design/)
+- [여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스](/posts/multi-cluster-delegation-layer/)
 - [인증서 자동화: 사용자 도메인 ACME4j 구현부터 와일드카드 Jenkins 갱신까지](/posts/cert-automation-acme-and-wildcard/)
-
-</div>
-
-## 추천 글
-
-<div class="home-card" markdown="1">
-
-다른 글과 묶이지 않고 단독으로 공부한 글입니다.
-
-- [Expand-and-Contract 패턴: 무중단 DB 스키마 변경을 3단계 PR로 분할하기](/posts/expand-and-contract-pattern/)
+- [교차 검증 도구 3개월: 사상·구현·운영과 스스로 찾은 맹점](/posts/cross-verify-tool-3month/)
 
 </div>
 
