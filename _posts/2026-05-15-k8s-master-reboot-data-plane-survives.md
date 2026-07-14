@@ -4,8 +4,7 @@ date: 2026-05-15 11:20:00 +0900
 last_modified_at: 2026-05-15 11:35:00 +0900
 categories: [기술 노하우, Kubernetes]
 tags: [kubernetes, kube-proxy, control-plane, ha, daemonset, devops]
-description: >-
-  마스터 노드 1대 재기동이 사용자 트래픽에 영향을 주지 않는 이유. 컨트롤 플레인 HA와 데이터 플레인 자립 구조 정리.
+description: "쿠버네티스 마스터 노드 재기동이 사용자 트래픽을 끊지 않는 이유를 컨트롤 플레인 HA와 데이터 플레인 자립으로 설명합니다."
 ---
 
 > **TL;DR**<br>

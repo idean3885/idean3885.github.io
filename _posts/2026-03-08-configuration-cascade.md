@@ -4,10 +4,7 @@ date: 2026-03-08 00:00:00 +0900
 last_modified_at: 2026-04-06 00:00:00 +0900
 categories: [기술 노하우, 개발 사전]
 tags: [개발사전, 설계, 아키텍처]
-description: >-
-  여러 계층의 설정이 존재할 때,
-  가장 가까운 설정이 먼 설정을 덮어쓰는
-  Configuration Cascade 패턴을 정리합니다.
+description: "여러 계층의 설정에서 가장 가까운 값이 먼 값을 덮어쓰는 Configuration Cascade 패턴을 정리합니다."
 ---
 
 > **TL;DR**<br>

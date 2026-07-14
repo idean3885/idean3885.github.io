@@ -4,9 +4,7 @@ date: 2026-04-16 19:14:00 +0900
 last_modified_at: 2026-04-21 23:15:00 +0900
 categories: [기술 노하우, 개발 사전]
 tags: [아키텍처, 개발사전]
-description: >-
-  Forward Auth는 API Gateway가 요청을 백엔드로 전달하기 전에
-  외부 인증·인가 서비스에 서브리퀘스트로 판정을 위임하는 방식입니다.
+description: "API Gateway가 백엔드로 전달하기 전 외부 서비스에 판정을 위임하는 Forward Auth 방식을 정리합니다."
 ---
 
 > **TL;DR**<br>

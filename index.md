@@ -56,22 +56,13 @@ layout: page
 
 <div class="home-card intro-card" markdown="1">
 
-Spring Boot·Kubernetes 기반 클라우드 서비스를 설계·운영하는
-7년차 백엔드 개발자입니다.
+Spring Boot·Kubernetes 기반 멀티테넌시 서비스를 개발·운영하는 7년차 백엔드 개발자입니다.
+과금 미터링 데이터 파이프라인을 설계해 일 수십만 건을 수집·집계하고,
+서비스 개발과 운영을 함께 맡아 리소스·노드 안정화 같은 운영 이슈를 인프라와 함께 풀어왔습니다.
 
-GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
-백엔드 운영 사례를 다루고,
-마주친 결정과 공부한 것을 꾸준히 기록합니다.
+결과만큼 분석을 중요하게 봅니다. 깊이 분석할수록 방향이 잡히고, 방향이 틀어지면 결과도 달라진다고 생각합니다.
 
-좋은 글은 결과도 중요하지만 분석에서 갈린다고 봅니다.
-얼마나 깊이 분석했는가에 따라 방향이 정해지고,
-시작 방향이 틀어지면 결과도 크게 달라진다고 생각합니다.
-
-- **개발 기록**: 프로젝트 경험과 마주친 결정
-- **생각과 방법론**: 설계 원칙, 판단 기준, 개발에 대한 생각
-- **기술 노하우**: 운영·학습 기반 실전 지식
-
-<a href="https://github.com/idean3885" target="_blank" rel="noopener">GitHub에서 전체 레포와 활동 보기 →</a>
+<a href="https://github.com/idean3885" target="_blank" rel="noopener">GitHub 프로필에서 기술 스택·활동 보기 →</a>
 
 </div>
 
@@ -79,21 +70,13 @@ GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
 
 <div class="home-card" markdown="1">
 
-운영 사례를 정리한 글입니다.
+직접 설계하고 운영한 대표 작업입니다.
 
-- [여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스](/posts/multi-cluster-delegation-layer/)
+- [여러 개발 플러그인을 하나의 에이전트로 통합하기: 1M 컨텍스트와 유지보수 비용](/posts/dev-plugins-into-one-assistant/)
 - [미터링 배치 시스템 설계: 쓰기 경합·청사진·패턴 명명·저장 전략 통일까지](/posts/metering-batch-system-design/)
+- [여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스](/posts/multi-cluster-delegation-layer/)
 - [인증서 자동화: 사용자 도메인 ACME4j 구현부터 와일드카드 Jenkins 갱신까지](/posts/cert-automation-acme-and-wildcard/)
-
-</div>
-
-## 추천 글
-
-<div class="home-card" markdown="1">
-
-다른 글과 묶이지 않고 단독으로 공부한 글입니다.
-
-- [Expand-and-Contract 패턴: 무중단 DB 스키마 변경을 3단계 PR로 분할하기](/posts/expand-and-contract-pattern/)
+- [교차 검증 도구 3개월: 사상·구현·운영과 스스로 찾은 맹점](/posts/cross-verify-tool-3month/)
 
 </div>
 
@@ -101,36 +84,10 @@ GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은
 
 ## 개인 프로젝트
 
-직접 만들고 운영하는 개인 프로젝트입니다.
-
-<div class="card-grid">
+직접 만들고 운영하는 개인 프로젝트는 GitHub 프로필에 정리합니다.
 
 <div class="home-card" markdown="1">
 
-#### <a href="https://github.com/idean3885/claude-ops-agent" target="_blank" rel="noopener">claude-ops-agent</a>
-
-* 이슈 플로우·콘텐츠 작성·교차 검증을 묶은 개인 개발 운영 하네스
-* 작성 원칙·워크플로우 규칙을 하네스(SessionStart·hook·스킬)에 주입
-* 매 세션 같은 출발선에서 시작
-
-</div>
-
-<div class="home-card" markdown="1">
-
-#### <a href="https://github.com/idean3885/trip-planner" target="_blank" rel="noopener">trip-planner</a>
-
-* spec-kit 풀사이클·하네스로 만든 1인 풀스택 프로젝트
-* MCP 20종·RapidAPI(유료) 연동
-* 자연어 숙소·항공·활동 검색을 일정에 자동 반영
-
-</div>
-
-<div class="home-card" markdown="1">
-
-#### <a href="https://github.com/idean3885/claude-slack-to-notion" target="_blank" rel="noopener">claude-slack-to-notion</a>
-
-* Slack 스레드를 Notion으로 정리하는 MCP 플러그인
-
-</div>
+<a href="https://github.com/idean3885" target="_blank" rel="noopener">GitHub 프로필에서 개인 프로젝트 보기 →</a>
 
 </div>

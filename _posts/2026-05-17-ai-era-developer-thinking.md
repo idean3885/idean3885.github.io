@@ -2,13 +2,10 @@
 title: "AI에게 코드를 맡기고, 사람은 무엇을 하는가"
 date: 2026-05-17 19:00:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
+mermaid: true
 categories: [개발 기록, AI 적응기]
 tags: [AI, Claude Code, 개발방법론, 설계, 의사결정, 이슈사이클, Provider]
-description: >-
-  AI로 코드 생성이 빨라지면서 반복 작업이 오히려 늘었고,
-  코드 짜는 시간이 줄어든 자리에는 판단이 들어왔습니다.
-  이슈 사이클을 도구로 만들고, 사상-전략-전술 3겹으로 판단하고,
-  두 플러그인을 Provider 추상화로 통합한 3단계 기록.
+description: "AI로 코드 생성이 빨라진 뒤 개발자의 일이 판단으로 옮겨간 과정을 3단계로 정리합니다."
 redirect_from:
   - /posts/ai-changed-my-workflow/
   - /posts/from-coding-to-thinking/

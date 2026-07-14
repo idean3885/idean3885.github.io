@@ -3,10 +3,7 @@ title: "HTTP 캐시 stale 차단: PUT 덮어쓰기와 freshness lifetime"
 date: 2026-05-08 16:56:23 +0900
 categories: [기술 노하우, 개발 사전]
 tags: [HTTP, Cache-Control, RFC9111, 개발사전]
-description: >-
-  같은 키로 PUT 후 같은 URL을 브라우저로 재방문하니 v1이 응답되는 stale 회귀를 만났습니다.
-  RFC 9111의 heuristic freshness가 진입되어 발생한 문제로,
-  Cache-Control 디렉티브 설정으로 차단했습니다.
+description: "같은 URL에 옛 응답이 뜨는 HTTP 캐시 stale을 heuristic freshness로 진단하고 Cache-Control로 차단합니다."
 ---
 
 > **TL;DR**<br>

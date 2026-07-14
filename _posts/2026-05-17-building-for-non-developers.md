@@ -4,10 +4,7 @@ date: 2026-05-17 18:30:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
 categories: [개발 기록]
 tags: [AI, Claude Code, MCP, mcpb, uvx, 비개발자, UX, 테스트]
-description: >-
-  Slack 스레드를 Notion으로 정리하는 MCP 플러그인을 만들고,
-  여러 번의 테스트와 피드백을 거쳐 비개발자 셀프서비스에 도달한 7개월 기록.
-  비개발자에게 닿는 도구는 코드가 아닌 다른 곳에서 결정된다는 점을 정리합니다.
+description: "Slack 스레드를 Notion으로 정리하는 MCP 플러그인을 비개발자 셀프서비스까지 끌어올린 7개월 기록입니다."
 redirect_from:
   - /posts/building-first-tool-with-ai/
   - /posts/e2e-lessons-from-non-developers/
@@ -27,11 +24,17 @@ redirect_from:
 [claude-slack-to-notion](https://github.com/idean3885/claude-slack-to-notion).
 Slack 채널의 대화를 수집하고, Claude가 분석해서, Notion 페이지로 정리하는 도구입니다.
 
-```mermaid
-graph LR
-    A["Slack API"] -->|메시지 수집| B["MCP 도구"]
-    B -->|포맷팅| C["Claude"]
-    C -->|분석 결과| D["Notion API"]
+```
+Slack API
+  │ 메시지 수집
+  ▼
+MCP 도구
+  │ 포맷팅
+  ▼
+Claude
+  │ 분석 결과
+  ▼
+Notion API
 ```
 
 도구는 수집·포맷팅·기록만 하고, 분석은 AI가, 방향은 사용자가 결정합니다.
