@@ -4,7 +4,7 @@ date: 2026-05-17 23:20:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
 categories: [개발 기록, 미터링 시스템 구축]
 tags: [설계, 아키텍처, 배치, JPA, JobRunr, 멱등성, Tumbling Window, YAGNI]
-description: "미터링 배치 파이프라인을 만들며 내린 쓰기 경합·청사진·패턴 명명·저장 전략 네 의사결정."
+description: "미터링 배치 파이프라인을 만들며 내린 쓰기 경합·청사진·패턴 명명·저장 전략 네 의사결정을 정리합니다."
 redirect_from:
   - /posts/timeseries-write-contention/
   - /posts/timeseries-aggregation-batch-evolution/

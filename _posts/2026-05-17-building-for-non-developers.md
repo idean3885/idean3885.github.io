@@ -4,7 +4,7 @@ date: 2026-05-17 18:30:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
 categories: [개발 기록]
 tags: [AI, Claude Code, MCP, mcpb, uvx, 비개발자, UX, 테스트]
-description: "Slack 스레드를 Notion으로 정리하는 MCP 플러그인을 비개발자 셀프서비스까지 끌어올린 7개월 기록."
+description: "Slack 스레드를 Notion으로 정리하는 MCP 플러그인을 비개발자 셀프서비스까지 끌어올린 7개월 기록입니다."
 redirect_from:
   - /posts/building-first-tool-with-ai/
   - /posts/e2e-lessons-from-non-developers/

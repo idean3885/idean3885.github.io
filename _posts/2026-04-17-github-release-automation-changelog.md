@@ -4,7 +4,7 @@ date: 2026-04-17 01:30:00 +0900
 mermaid: true
 categories: [기술 노하우, 개발 사전]
 tags: [GitHub Actions, CI/CD, 개발사전]
-description: "태그와 Release 생성을 분리하고 CHANGELOG.md를 축으로 삼은 2단계 GitHub Release 자동화."
+description: "태그와 Release 생성을 분리하고 CHANGELOG.md를 축으로 삼은 2단계 GitHub Release 자동화를 정리합니다."
 ---
 
 > **TL;DR**<br>

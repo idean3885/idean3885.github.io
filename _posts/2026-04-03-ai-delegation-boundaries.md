@@ -4,7 +4,7 @@ date: 2026-04-03 02:00:00 +0900
 last_modified_at: 2026-05-15 11:30:00 +0900
 categories: [기술 노하우, 실무 노하우]
 tags: [Claude Code, DevEx, AI, 도구제작, SSH, MySQL]
-description: "SSH 서버 운영과 DB 분석을 AI에게 위임하며 겪은 장애와 성공으로 AI 위임의 경계선을 그린 기록."
+description: "SSH 서버 운영과 DB 분석을 AI에게 위임하며 겪은 장애와 성공으로 AI 위임의 경계선을 그립니다."
 ---
 
 > **TL;DR**<br>

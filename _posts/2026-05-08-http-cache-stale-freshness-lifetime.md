@@ -3,7 +3,7 @@ title: "HTTP 캐시 stale 차단: PUT 덮어쓰기와 freshness lifetime"
 date: 2026-05-08 16:56:23 +0900
 categories: [기술 노하우, 개발 사전]
 tags: [HTTP, Cache-Control, RFC9111, 개발사전]
-description: "같은 URL에 옛 응답이 뜨는 HTTP 캐시 stale을 heuristic freshness로 진단하고 Cache-Control로 차단한 기록."
+description: "같은 URL에 옛 응답이 뜨는 HTTP 캐시 stale을 heuristic freshness로 진단하고 Cache-Control로 차단합니다."
 ---
 
 > **TL;DR**<br>
