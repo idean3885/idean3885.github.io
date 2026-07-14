@@ -27,11 +27,17 @@ redirect_from:
 [claude-slack-to-notion](https://github.com/idean3885/claude-slack-to-notion).
 Slack 채널의 대화를 수집하고, Claude가 분석해서, Notion 페이지로 정리하는 도구입니다.
 
-```mermaid
-graph LR
-    A["Slack API"] -->|메시지 수집| B["MCP 도구"]
-    B -->|포맷팅| C["Claude"]
-    C -->|분석 결과| D["Notion API"]
+```
+Slack API
+  │ 메시지 수집
+  ▼
+MCP 도구
+  │ 포맷팅
+  ▼
+Claude
+  │ 분석 결과
+  ▼
+Notion API
 ```
 
 도구는 수집·포맷팅·기록만 하고, 분석은 AI가, 방향은 사용자가 결정합니다.

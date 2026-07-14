@@ -1,6 +1,7 @@
 ---
 title: "GitHub Release 자동화: CHANGELOG가 중심이 되는 2단계 워크플로우"
 date: 2026-04-17 01:30:00 +0900
+mermaid: true
 categories: [기술 노하우, 개발 사전]
 tags: [GitHub Actions, CI/CD, 개발사전]
 description: >-
@@ -54,7 +55,7 @@ CHANGELOG.md는 단순한 변경 기록 파일이 아니었습니다.
 ```mermaid
 flowchart LR
     A[main push] --> B{pyproject.toml<br>version 변경?}
-    B -->|Yes| C[v{version} 태그 생성/push]
+    B -->|Yes| C["v{version} 태그 생성/push"]
     B -->|No| D[스킵]
 ```
 

@@ -2,6 +2,7 @@
 title: "AI에게 코드를 맡기고, 사람은 무엇을 하는가"
 date: 2026-05-17 19:00:00 +0900
 last_modified_at: 2026-05-18 15:05:00 +0900
+mermaid: true
 categories: [개발 기록, AI 적응기]
 tags: [AI, Claude Code, 개발방법론, 설계, 의사결정, 이슈사이클, Provider]
 description: >-
