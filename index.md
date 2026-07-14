@@ -83,36 +83,10 @@ Spring Boot·Kubernetes 기반 멀티테넌시 서비스를 개발·운영하는
 
 ## 개인 프로젝트
 
-직접 만들고 운영하는 개인 프로젝트입니다.
-
-<div class="card-grid">
+직접 만들고 운영하는 개인 프로젝트는 GitHub 프로필에 정리합니다.
 
 <div class="home-card" markdown="1">
 
-#### <a href="https://github.com/idean3885/claude-ops-agent" target="_blank" rel="noopener">claude-ops-agent</a>
-
-* 이슈 플로우·콘텐츠 작성·교차 검증을 묶은 개인 개발 운영 하네스
-* 작성 원칙·워크플로우 규칙을 하네스(SessionStart·hook·스킬)에 주입
-* 매 세션 같은 출발선에서 시작
-
-</div>
-
-<div class="home-card" markdown="1">
-
-#### <a href="https://github.com/idean3885/trip-planner" target="_blank" rel="noopener">trip-planner</a>
-
-* spec-kit 풀사이클·하네스로 만든 1인 풀스택 프로젝트
-* MCP 20종·RapidAPI(유료) 연동
-* 자연어 숙소·항공·활동 검색을 일정에 자동 반영
-
-</div>
-
-<div class="home-card" markdown="1">
-
-#### <a href="https://github.com/idean3885/claude-slack-to-notion" target="_blank" rel="noopener">claude-slack-to-notion</a>
-
-* Slack 스레드를 Notion으로 정리하는 MCP 플러그인
-
-</div>
+<a href="https://github.com/idean3885" target="_blank" rel="noopener">GitHub 프로필에서 개인 프로젝트 보기 →</a>
 
 </div>
