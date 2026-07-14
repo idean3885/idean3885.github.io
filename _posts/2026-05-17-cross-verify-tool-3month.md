@@ -2,7 +2,7 @@
 title: "교차 검증 도구 3개월: 사상·구현·운영과 스스로 찾은 맹점"
 date: 2026-05-17 19:10:00 +0900
 last_modified_at: 2026-07-14 10:00:00 +0900
-categories: [개발 기록, AI 교차 검증]
+categories: [개발 기록]
 tags: [AI, Claude Code, 교차검증, DevEx, 설계, 비판적사고, 보안, OWASP]
 description: >-
   AI 코딩 도구로 코드 작성은 빨라졌지만 설계 검증 시간이 더 들었습니다.
