@@ -2,10 +2,8 @@
 title: "여러 개발 플러그인을 하나의 에이전트로 통합하기: 1M 컨텍스트와 유지보수 비용"
 date: 2026-07-14 18:33:00 +0900
 categories: [개발 기록, AI 적응기]
-tags: [Claude Code, DevEx, 아키텍처, 설계, 의사결정]
-description: >-
-  도구를 여러 개로 나눌지 하나로 합칠지는 모델 컨텍스트가 좌우합니다.
-  개인 개발 플러그인을 하나의 작업 비서(ops-agent)로 통합한 판단과 설계를 정리합니다.
+tags: [Claude Code, AI 에이전트, 아키텍처, 설계, 의사결정]
+description: 모델 컨텍스트가 커지자 여러 Claude Code 플러그인을 하나의 작업 비서(ops-agent)로 합친 판단과 설계를 정리합니다.
 ---
 
 > **TL;DR**<br>
