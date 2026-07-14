@@ -79,7 +79,7 @@ Spring Boot·Kubernetes 기반 클라우드 서비스를 설계·운영하는
 
 <div class="home-card" markdown="1">
 
-포트폴리오에 실은 핵심 작업 글입니다.
+직접 설계하고 운영한 대표 작업입니다.
 
 - [미터링 배치 시스템 설계: 쓰기 경합·청사진·패턴 명명·저장 전략 통일까지](/posts/metering-batch-system-design/)
 - [여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스](/posts/multi-cluster-delegation-layer/)
