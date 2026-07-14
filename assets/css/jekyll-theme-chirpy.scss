@@ -378,3 +378,11 @@ html[data-sidebar-collapsed='true'] {
 #post-list .card-wrapper:hover .card {
   border-color: rgba(128, 128, 128, 0.45);
 }
+
+/* === 포스트 상단 description 부제 숨김 ===
+   front matter의 description은 검색 스니펫·og:description(<head> meta)로만 쓰고,
+   본문 상단에 부제로 노출하지 않는다. 독자는 제목 → TL;DR로 바로 진입한다.
+   meta 태그는 <head>에서 별도 생성되므로 SEO·미리보기에는 영향 없다. */
+.post-desc {
+  display: none;
+}
