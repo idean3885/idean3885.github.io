@@ -104,22 +104,28 @@ layout: page
         </span>
 
         <!-- arrow -->
-        <a
-          href="#{{ LIST_PREFIX }}{{ group_index }}"
-          data-bs-toggle="collapse"
-          aria-expanded="true"
-          aria-label="{{ HEAD_PREFIX }}{{ group_index }}-trigger"
-          class="category-trigger hide-border-bottom"
-        >
-          <i class="fas fa-fw fa-angle-down"></i>
-        </a>
+        {% if sub_categories_size > 0 %}
+          <a
+            href="#{{ LIST_PREFIX }}{{ group_index }}"
+            data-bs-toggle="collapse"
+            aria-expanded="true"
+            aria-label="{{ HEAD_PREFIX }}{{ group_index }}-trigger"
+            class="category-trigger hide-border-bottom"
+          >
+            <i class="fas fa-fw fa-angle-down"></i>
+          </a>
+        {% else %}
+          <span data-bs-toggle="collapse" class="category-trigger hide-border-bottom disabled">
+            <i class="fas fa-fw fa-angle-right"></i>
+          </span>
+        {% endif %}
       </div>
       <!-- .card-header -->
 
-      <!-- Sub-categories or posts -->
-      <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse show" aria-expanded="true">
-        <ul class="list-group">
-          {% if sub_categories_size > 0 %}
+      <!-- Sub-categories -->
+      {% if sub_categories_size > 0 %}
+        <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse show" aria-expanded="true">
+          <ul class="list-group">
             {% for sub_category in sub_categories %}
               <li class="list-group-item">
                 <i class="far fa-folder fa-fw"></i>
@@ -145,26 +151,9 @@ layout: page
                 </span>
               </li>
             {% endfor %}
-
-            <!-- 상위 카테고리 직속 글 (하위 카테고리 없는 단일 카테고리 글)도 함께 노출 -->
-            {% for post in posts_of_category %}
-              {% unless post.categories[1] %}
-                <li class="list-group-item">
-                  <i class="far fa-file fa-fw"></i>
-                  <a href="{{ post.url | relative_url }}" class="mx-2">{{ post.title }}</a>
-                </li>
-              {% endunless %}
-            {% endfor %}
-          {% else %}
-            {% for post in posts_of_category %}
-              <li class="list-group-item">
-                <i class="far fa-file fa-fw"></i>
-                <a href="{{ post.url | relative_url }}" class="mx-2">{{ post.title }}</a>
-              </li>
-            {% endfor %}
-          {% endif %}
-        </ul>
-      </div>
+          </ul>
+        </div>
+      {% endif %}
     </div>
     <!-- .card -->
 
