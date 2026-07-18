@@ -15,5 +15,4 @@
 
 | 플러그인 | 역할 |
 |----------|------|
-| [claude-ops-agent](https://github.com/idean3885/claude-ops-agent) | 개인 개발 운영 하네스 - 이슈·커밋·PR 플로우 자동화 |
-| [claude-content-publisher](https://github.com/idean3885/claude-content-publisher) | 콘텐츠 발행 - 원고를 블로그 포스트로 변환·발행 |
+| [claude-ops-agent](https://github.com/idean3885/claude-ops-agent) | 개인 개발 운영 하네스 - 이슈·커밋·PR 플로우 자동화 + 콘텐츠 작성·발행·검증 |
