@@ -6,9 +6,9 @@ timezone: Asia/Seoul
 title: idean3885
 tagline: 백엔드 개발자의 일·공부 기록
 description: >-
-  Spring Boot·Kubernetes 기반 클라우드 서비스를 설계·운영하는
+  Spring Boot·Kubernetes 기반 멀티테넌시 서비스를 개발·운영하는
   7년차 백엔드 개발자.
-  GPU 기반 PaaS·시계열 파이프라인·인증서 자동화 같은 운영 사례와
+  과금 미터링 데이터 파이프라인·인증서 자동화 같은 운영 사례와
   공부 기록을 꾸준히 쌓습니다.
 
 url: "https://blog.idean.me"
