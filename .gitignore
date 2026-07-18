@@ -15,5 +15,5 @@ vendor/
 # macOS
 .DS_Store
 
-# devex 로컬 상태
-.devex/
+# ops-agent 로컬 상태
+.ops-agent/
