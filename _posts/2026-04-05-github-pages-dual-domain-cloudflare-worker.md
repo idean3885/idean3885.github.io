@@ -16,10 +16,10 @@ description: "GitHub Pages에서 QR용 기존 도메인을 유지하며 커스�
 ## 배경
 
 모바일 청첩장을 SvelteKit + GitHub Pages로 운영하고 있었습니다.
-커스텀 도메인은 AppPaaS에서 발급받은 긴 주소였습니다.
+커스텀 도메인은 사내 플랫폼에서 발급받은 긴 주소였습니다.
 
 ```
-j4df09bd732eb302e05d225dd6ae40649.apppaas.app
+xxxxxxxx.platform.example
 ```
 
 실물 청첩장의 QR코드에 이 주소가 인쇄되어 있어서 변경이 불가능한 상태였습니다.
@@ -29,7 +29,7 @@ j4df09bd732eb302e05d225dd6ae40649.apppaas.app
 ## 목표
 
 - `wedding.idean.me`로 접속하면 청첩장이 보이고, URL 바에도 이 주소가 유지될 것
-- `j4...apppaas.app` QR코드 링크는 그대로 동작할 것
+- `xxxx.platform.example` QR코드 링크는 그대로 동작할 것
 
 ## GitHub Pages의 제약
 
@@ -38,7 +38,7 @@ GitHub Pages는 **리포지토리당 커스텀 도메인을 1개만** 지원합�
 
 ```
 // static/CNAME
-j4df09bd732eb302e05d225dd6ae40649.apppaas.app
+xxxxxxxx.platform.example
 ```
 
 CNAME을 `wedding.idean.me`로 바꾸면 QR코드 도메인이 죽고,
@@ -51,16 +51,16 @@ CNAME을 `wedding.idean.me`로 바꾸면 QR코드 도메인이 죽고,
 
 가장 먼저 시도한 것은 CNAME을 `wedding.idean.me`로 바꾸는 것이었습니다.
 DNS 설정도 변경하고 배포까지 마쳤지만,
-QR코드 도메인(`apppaas.app`)으로 접속하면 404가 나왔습니다.
+QR코드 도메인(`platform.example`)으로 접속하면 404가 나왔습니다.
 
 GitHub Pages가 더 이상 해당 도메인을 인식하지 못했기 때문입니다.
 
-### 2차: AppPaaS DNS 변경 → SSL 핸드셰이크 실패
+### 2차: 사내 플랫폼 DNS 변경 → SSL 핸드셰이크 실패
 
-AppPaaS 도메인의 CNAME을 `wedding.idean.me`로 변경해봤습니다.
+사내 플랫폼 도메인의 CNAME을 `wedding.idean.me`로 변경해봤습니다.
 
 ```
-apppaas.app → wedding.idean.me → Cloudflare → ???
+platform.example → wedding.idean.me → Cloudflare → ???
 ```
 
 Cloudflare 프록시를 거치게 되면서 SSL 인증서 불일치로 **525 에러**가 발생했습니다.
@@ -81,27 +81,27 @@ const response = await fetch(targetUrl, {
 같은 `idean3885.github.io`에 블로그(`blog.idean.me`)와 청첩장(`wedding.idean.me`)이 모두 연결되어 있었고,
 GitHub Pages가 Worker를 통한 Host 헤더 변경을 기대한 대로 라우팅하지 않았습니다.
 
-## 최종 해결: Worker → AppPaaS → GitHub Pages
+## 최종 해결: Worker → 사내 플랫폼 → GitHub Pages
 
 결국 가장 단순한 구조가 답이었습니다.
 
-1. CNAME은 `apppaas.app` 도메인을 유지 (QR코드 호환)
-2. AppPaaS DNS는 `idean3885.github.io`를 직접 가리킴 (원래 구조 복원)
-3. Cloudflare Worker가 `wedding.idean.me` 요청을 `apppaas.app`으로 프록시
+1. CNAME은 `platform.example` 도메인을 유지 (QR코드 호환)
+2. 사내 플랫폼 DNS는 `idean3885.github.io`를 직접 가리킴 (원래 구조 복원)
+3. Cloudflare Worker가 `wedding.idean.me` 요청을 `platform.example`으로 프록시
 
 ```javascript
 // workers/wedding-proxy/src/index.js
 export default {
   async fetch(request) {
     const url = new URL(request.url);
-    const origin = 'https://j4df09bd732eb302e05d225dd6ae40649.apppaas.app';
+    const origin = 'https://xxxxxxxx.platform.example';
     const targetUrl = origin + url.pathname + url.search;
 
     const response = await fetch(targetUrl, {
       method: request.method,
       headers: {
         ...Object.fromEntries(request.headers),
-        Host: 'j4df09bd732eb302e05d225dd6ae40649.apppaas.app',
+        Host: 'xxxxxxxx.platform.example',
       },
     });
 
@@ -124,8 +124,8 @@ routes = [
 ### 최종 아키텍처
 
 ```
-wedding.idean.me → Cloudflare Worker → apppaas.app → GitHub Pages (프록시, URL 유지)
-apppaas.app      → DNS(CNAME)       → idean3885.github.io → GitHub Pages (직접)
+wedding.idean.me → Cloudflare Worker → platform.example → GitHub Pages (프록시, URL 유지)
+platform.example      → DNS(CNAME)       → idean3885.github.io → GitHub Pages (직접)
 ```
 
 ### DNS 설정
@@ -134,7 +134,7 @@ apppaas.app      → DNS(CNAME)       → idean3885.github.io → GitHub Pages (
 |--------|------|------|--------|
 | `wedding.idean.me` | CNAME | `idean3885.github.io` | 프록싱됨 (주황색 구름) |
 | `blog.idean.me` | CNAME | `idean3885.github.io` | DNS 전용 (회색 구름) |
-| `apppaas.app` | CNAME | `idean3885.github.io` | - (AppPaaS 관리) |
+| `platform.example` | CNAME | `idean3885.github.io` | - (사내 플랫폼 관리) |
 
 핵심은 **프록시 모드의 차이**입니다.
 `wedding`은 주황색 구름(프록싱됨)이어야 Cloudflare Worker가 개입할 수 있고,
@@ -172,7 +172,7 @@ GitHub Pages는 `username.github.io` 도메인으로 여러 리포지토리의 �
 GitHub Pages의 CDN 캐시 레이어에서 기대와 다른 사이트가 응답될 수 있습니다.
 이번 경우에도 Worker에서 `Host: wedding.idean.me`를 보냈지만 블로그가 응답됐습니다.
 
-이미 동작하는 도메인(`apppaas.app`)을 경유하는 것이 가장 확실한 방법이었습니다.
+이미 동작하는 도메인(`platform.example`)을 경유하는 것이 가장 확실한 방법이었습니다.
 
 ## 마무리
 
