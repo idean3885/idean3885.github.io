@@ -57,6 +57,7 @@ layout: page
 <div class="home-card intro-card" markdown="1">
 
 Spring Boot·Kubernetes 기반 멀티테넌시 서비스를 개발·운영하는 7년차 백엔드 개발자입니다.
+
 과금 미터링 데이터 파이프라인을 설계해 일 수십만 건을 수집·집계하고,
 서비스 개발과 운영을 함께 맡아 리소스·노드 안정화 같은 운영 이슈를 인프라와 함께 풀어왔습니다.
 
