@@ -66,3 +66,5 @@ Accepted (YYYY-MM-DD)
 | [0002](0002-kubernetes-as-strength-surface.md) | Kubernetes를 별도 시리즈로 노출하여 강점 가시화 | Accepted | 2026-05-15 |
 | [0003](0003-deprecate-series-keep-category-depth-2.md) | 시리즈 운영 폐지 + 카테고리 뎁스 2 유지 | Accepted | 2026-05-17 |
 | [0004](0004-limit-category-depth-2-to-multi-post-nests.md) | 카테고리 뎁스 2를 다중 글 둥지로 한정 | Accepted | 2026-05-20 |
+| [0005](0005-load-response-as-through-line.md) | 부하 대응을 글 전체의 관통 주제로 둠 | Accepted | 2026-08-27 |
+| [0006](0006-external-platform-as-entry-point.md) | 외부 플랫폼은 원문의 입구를 맡음 (0005 D6 대체) | Accepted | 2026-08-28 |
