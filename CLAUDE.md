@@ -114,7 +114,7 @@ description: >-
 
 | 막히는 지점 | 블로그 원문 | 외부 입구 |
 |---|---|---|
-| 커넥션 | [부하테스트로 커넥션 상한 찾기](_posts/2026-08-28-connection-limit-load-test.md) | 미작성 |
+| 커넥션 | [부하테스트로 커넥션 상한 찾기](_posts/2026-08-28-connection-limit-load-test.md) | [벨로그 요약](https://velog.io/@idean3885/k6-connection-limit-load-test) |
 | 프로토콜 | [MSA 는 왜 gRPC 를 쓰는가](_posts/2026-08-02-grpc-vs-rest-msa-adoption.md) | 없음 |
 | 스레드 모델 | gRPC 글 4장이 겸한다 (단독 글 없음) | [벨로그 전체 글](https://velog.io/@idean3885/java-virtual-thread-benchmark) (ADR-0006 전 발행) |
 | 장애 전파 | 미학습 | 없음 |
