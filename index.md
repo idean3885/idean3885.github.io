@@ -1,5 +1,6 @@
 ---
 layout: page
+title: 백엔드 개발자의 일·공부 기록
 ---
 
 <style>
