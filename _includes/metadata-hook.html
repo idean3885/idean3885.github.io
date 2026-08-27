@@ -1,0 +1,14 @@
+{% comment %}
+  얇은 분류 페이지(개별 태그·개별 카테고리·목록·아카이브)를 색인 대상에서 뺀다.
+
+  이 사이트의 크롤 대상 URL 약 90개 중 본문은 27편뿐이고 나머지는 분류 페이지와
+  리다이렉트 스텁이다. Search Console 크롤링 통계 기준 90일 크롤 요청이 91건까지
+  떨어진 상태라, 남은 크롤을 본문으로 모으려면 링크 목록만 있는 페이지를 색인에서
+  빼야 한다. follow 를 유지해 링크 전달 경로는 그대로 둔다.
+
+  robots.txt 로 막지 않는다. 크롤이 막히면 noindex 자체를 읽지 못한다.
+{% endcomment %}
+{% assign noindex_layouts = 'tag,tags,category,categories,archives' | split: ',' %}
+{% if noindex_layouts contains page.layout %}
+  <meta name="robots" content="noindex, follow">
+{% endif %}
