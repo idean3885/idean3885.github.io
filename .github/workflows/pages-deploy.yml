@@ -9,6 +9,11 @@ on:
       - README.md
       - LICENSE
   workflow_dispatch:
+    inputs:
+      indexnow_all:
+        description: "IndexNow 에 사이트맵 전량을 통보한다 (기본은 최근 7일 갱신분만)"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -58,3 +63,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  notify:
+    name: Notify IndexNow
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Submit updated URLs
+        env:
+          INDEXNOW_KEY: 749c0cdf7a7ff8d8fd280d7677353e8b
+          INDEXNOW_ALL: ${{ inputs.indexnow_all }}
+        run: python3 .github/scripts/indexnow.py
