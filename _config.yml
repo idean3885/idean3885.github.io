@@ -19,13 +19,14 @@ github:
 
 author:
   name: idean3885
-  url: https://github.com/idean3885
+  url: https://blog.idean.me/about/
 logo: /assets/img/favicons/favicon-96x96.png
 
 social:
   name: idean3885
   links:
     - https://github.com/idean3885
+    - https://velog.io/@idean3885
 
 analytics:
   google:
@@ -65,6 +66,7 @@ defaults:
       path: ""
       type: posts
     values:
+      author: idean3885
       layout: post
       comments: true
       toc: true

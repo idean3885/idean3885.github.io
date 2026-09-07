@@ -1,0 +1,4 @@
+# 글 상단 「By」 링크와 JSON-LD author 가 읽는 저자 정의. 글에는 author 를 적지 않고 _config.yml defaults 로 준다.
+idean3885:
+  name: idean3885
+  url: https://blog.idean.me/about/

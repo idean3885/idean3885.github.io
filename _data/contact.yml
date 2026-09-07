@@ -1,0 +1,9 @@
+# 사이드바 하단 소셜 아이콘. github·rss 는 테마가 URL 을 만들고, 그 외는 url 을 직접 준다.
+- type: github
+  icon: "fab fa-github"
+- type: velog
+  icon: "fas fa-v"
+  url: "https://velog.io/@idean3885"
+- type: rss
+  icon: "fas fa-rss"
+  noblank: true
