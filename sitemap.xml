@@ -19,4 +19,7 @@ sitemap: false
   <url>
     <loc>{{ '/' | absolute_url | xml_escape }}</loc>
   </url>
+  <url>
+    <loc>{{ '/about/' | absolute_url | xml_escape }}</loc>
+  </url>
 </urlset>
