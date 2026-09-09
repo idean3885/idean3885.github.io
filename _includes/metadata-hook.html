@@ -12,3 +12,17 @@
 {% if noindex_layouts contains page.layout %}
   <meta name="robots" content="noindex, follow">
 {% endif %}
+
+{% comment %}
+  사이드바 기본값을 접힘으로 둔다 (이슈 #390).
+
+  head 에서 세워야 한다. body 스크립트로 세우면 펼친 260px 사이드바가 한 프레임
+  보이고 접힌다. 세션 간 상태는 저장하지 않는다 — 진입은 항상 접힘이고,
+  펼침은 그 페이지에서만 유지된다.
+
+  compress 레이아웃이 줄바꿈을 제거하므로 인라인 스크립트에 `//` 한 줄 주석을
+  쓰지 않는다. 쓰면 이후 코드가 모두 주석으로 흡수된다 (이슈 #260).
+{% endcomment %}
+<script>
+  document.documentElement.setAttribute('data-sidebar-collapsed', 'true');
+</script>

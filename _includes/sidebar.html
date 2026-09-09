@@ -115,7 +115,6 @@
   (function () {
     var btn = document.getElementById('sidebar-collapse-toggle');
     if (!btn) return;
-    try { localStorage.removeItem('sidebar-collapsed'); } catch (_) {}
     btn.addEventListener('click', function () {
       if (window.innerWidth < 850) return;
       var isCollapsed = document.documentElement.getAttribute('data-sidebar-collapsed') === 'true';
