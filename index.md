@@ -74,7 +74,7 @@ Spring Boot·Kubernetes 기반 멀티테넌시 서비스를 개발·운영하는
 직접 설계하고 운영한 대표 작업입니다.
 
 - [여러 개발 플러그인을 하나의 에이전트로 통합하기: 1M 컨텍스트와 유지보수 비용](/posts/dev-plugins-into-one-assistant/)
-- [미터링 배치 시스템 설계: 쓰기 경합·청사진·패턴 명명·저장 전략 통일까지](/posts/metering-batch-system-design/)
+- [GPU 사용량 미터링 파이프라인 구축기: 병목을 어디에 두고 설계했나](/posts/metering-pipeline-design/)
 - [여러 쿠버네티스 클러스터를 백엔드 하나로 다루는 법: 설정 증설 대신 위임 서비스](/posts/multi-cluster-delegation-layer/)
 - [인증서 자동화: 사용자 도메인 ACME4j 구현부터 와일드카드 Jenkins 갱신까지](/posts/cert-automation-acme-and-wildcard/)
 - [교차 검증 도구 3개월: 사상·구현·운영과 스스로 찾은 맹점](/posts/cross-verify-tool-3month/)
