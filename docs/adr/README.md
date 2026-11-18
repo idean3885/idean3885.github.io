@@ -69,3 +69,4 @@ Accepted (YYYY-MM-DD)
 | [0005](0005-load-response-as-through-line.md) | 부하 대응을 글 전체의 관통 주제로 둠 | Accepted | 2026-08-27 |
 | [0006](0006-external-platform-as-entry-point.md) | 외부 플랫폼은 원문의 입구를 맡음 (0005 D6 대체) | Accepted | 2026-08-28 |
 | [0007](0007-keep-category-for-externally-linked-nest.md) | 외부 고정 링크된 카테고리는 1편이어도 유지 (0004 예외) | Accepted | 2026-09-20 |
+| [0008](0008-categories-overview-as-directory.md) | 카테고리 개요 페이지는 이름과 개수만 보여 줌 | Accepted | 2026-11-18 |
